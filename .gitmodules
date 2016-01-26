@@ -1,0 +1,3 @@
+[submodule "assets/third-party/perch"]
+	path = assets/third-party/perch
+	url = ssh://git@rarebird.io/diffusion/PERCH/perch.git
