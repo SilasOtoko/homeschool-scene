@@ -66,10 +66,10 @@ function rb_remove_admin(){
 /**
  * REWRITE THEME/PLUGIN ASSET URLS
  *
- * Rewrite /birdpress-theme/themes/theme-name/css/    to /css/
- * Rewrite /birdpress-theme/themes/theme-name/js/     to /js/
- * Rewrite /birdpress-theme/themes/theme-name/images/ to /images/
- * Rewrite /birdpress-theme/plugins/                  to /plugins/
+ * Rewrite /content/themes/theme-name/css/    to /css/
+ * Rewrite /content/themes/theme-name/js/     to /js/
+ * Rewrite /content/themes/theme-name/images/ to /images/
+ * Rewrite /content/plugins/                  to /plugins/
  */
 
 add_action('generate_rewrite_rules', 'rb_add_rewrites');
@@ -80,26 +80,26 @@ function rb_add_rewrites($content){
 
 	$theme_name = next(explode('/themes/', $stylesheet_dir));
 	$asset_non_wp_rules = array(
-		'assets/(.*)'     => 'birdpress-theme/themes/'. $theme_name . '/assets/$1',
-		'css/(.*)'     => 'birdpress-theme/themes/'. $theme_name . '/assets/css/$1',
-		'less/(.*)'    => 'birdpress-theme/themes/'. $theme_name . '/assets/less/$1',
-		'js/(.*)'      => 'birdpress-theme/themes/'. $theme_name . '/assets/js/$1',
-		'images/(.*)'  => 'birdpress-theme/themes/'. $theme_name . '/assets/images/$1',
-		'pdf/(.*)'     => 'birdpress-theme/themes/'. $theme_name . '/assets/pdf/$1',
-		'fonts/(.*)'   => 'birdpress-theme/themes/' . $theme_name . '/assets/fonts/$1',
-		'plugins/(.*)' => 'birdpress-theme/plugins/$1',
-		'uploads/(.*)' => 'birdpress-theme/uploads/$1'
+		'assets/(.*)'     => 'content/themes/'. $theme_name . '/assets/$1',
+		'css/(.*)'     => 'content/themes/'. $theme_name . '/assets/css/$1',
+		'less/(.*)'    => 'content/themes/'. $theme_name . '/assets/less/$1',
+		'js/(.*)'      => 'content/themes/'. $theme_name . '/assets/js/$1',
+		'images/(.*)'  => 'content/themes/'. $theme_name . '/assets/images/$1',
+		'pdf/(.*)'     => 'content/themes/'. $theme_name . '/assets/pdf/$1',
+		'fonts/(.*)'   => 'content/themes/' . $theme_name . '/assets/fonts/$1',
+		'plugins/(.*)' => 'content/plugins/$1',
+		'uploads/(.*)' => 'content/uploads/$1'
 	);
 	// add rules if parent and child theme exist
 	if($stylesheet_dir != $template_dir){
 		$theme_name = next(explode('/themes/', $template_dir));
 		$asset_non_wp_rules = array_merge($asset_non_wp_rules, array(
-			'pcss/(.*)'    => 'birdpress-theme/themes/'. $theme_name . '/css/$1',
-			'pless/(.*)'   => 'birdpress-theme/themes/'. $theme_name . '/less/$1',
-			'pjs/(.*)'     => 'birdpress-theme/themes/'. $theme_name . '/js/$1',
-			'pimages/(.*)' => 'birdpress-theme/themes/'. $theme_name . '/images/$1',
-			'ppdf/(.*)'    => 'birdpress-theme/themes/'. $theme_name . '/pdf/$1',
-			'pfonts/(.*)'  => 'birdpress-theme/themes/' . $theme_name . '/fonts/$1'
+			'pcss/(.*)'    => 'content/themes/'. $theme_name . '/css/$1',
+			'pless/(.*)'   => 'content/themes/'. $theme_name . '/less/$1',
+			'pjs/(.*)'     => 'content/themes/'. $theme_name . '/js/$1',
+			'pimages/(.*)' => 'content/themes/'. $theme_name . '/images/$1',
+			'ppdf/(.*)'    => 'content/themes/'. $theme_name . '/pdf/$1',
+			'pfonts/(.*)'  => 'content/themes/' . $theme_name . '/fonts/$1'
 		));
 	}
 	$wp_rewrite->non_wp_rules += $asset_non_wp_rules;
@@ -115,7 +115,7 @@ function rb_add_rewrites($content){
 // clean asset URLs
 function rb_clean_assets($content) {
 	$theme_name = next(explode('/themes/', $content));
-	$current_path = '/birdpress-theme/themes/' . $theme_name;
+	$current_path = '/content/themes/' . $theme_name;
 	$new_path = '';
 	$content = str_replace($current_path, $new_path, $content);
 	return $content;
@@ -123,7 +123,7 @@ function rb_clean_assets($content) {
 
 // clean plugin URLs
 function rb_clean_plugins($content) {
-	$current_path = '/birdpress-theme/plugins';
+	$current_path = '/content/plugins';
 	$new_path = '/plugins';
 	$content = str_replace($current_path, $new_path, $content);
 	return $content;

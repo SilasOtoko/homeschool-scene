@@ -1,1 +1,0 @@
-These are meant to be used for Skeletor purposes only. Delete from final project.

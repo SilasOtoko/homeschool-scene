@@ -3,10 +3,10 @@
 $config["minify_css"]           = FALSE;
 $config["preserve_comments"]    = FALSE;
 $config["debug_comments"]       = TRUE;
-$config["base_path"]            = $_SERVER['DOCUMENT_ROOT'] . "/content/themes/birdpress-theme/assets";
+$config["base_path"]            = $_SERVER['DOCUMENT_ROOT'] . "/content/themes/rb-northamericansigns/assets";
 $config["css_output_dir"]       = "css";      // relative to base_path
 $config["less_dir"]             = "less";     // relative to base_path
-$config["css_url"]              = "//{$_SERVER['HTTP_HOST']}/content/themes/birdpress-theme/assets/css";
+$config["css_url"]              = "//{$_SERVER['HTTP_HOST']}/content/themes/rb-northamericansigns/assets/css";
 $config["import_path"]          = array(
 	$config["less_dir"],
 	// $config["less_dir"] . "/bootstrap",
@@ -47,9 +47,7 @@ $config["header"]               = <<<HEADER
 |  _ < (_| | | |  __/   ) | | | | (_| |
 |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 
-Copyright(c) {{year}}, Rare Bird, Inc. http://rarebirdinc.com | @rarebirdinc
->   CSS Based off of Skeletor 1.0.b.3 Skeletor Creator & Lead: @k_bav.
->   Compiler tool Creator & Lead: @michaelfox
+Copyright(c) {{year}}, Rare Bird Inc. http://rarebirdinc.com | @rarebirdinc
 
 Do not reproduce without written consent. All rights reserved.
 

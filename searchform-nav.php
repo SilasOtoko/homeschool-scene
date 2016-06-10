@@ -1,20 +1,18 @@
-<!-- Global Search // Wrapped like a nav & buried like others on mobile -->
-<div class="full-page-menu global-search" id="global-search">
-	<div class="container hidden-xs">
-		<button class="global-search-closer button-corner-close-minimal">&times;</button>
+<div id="global-search-overlay" class="global-search-overlay full-page-backdrop">
+	<div class="container">
+		<button class="global-search-overlay__corner-closer button-corner-close--minimal" aria-label="Close">&times;</button>
 	</div>
-	<div class="full-page-menu-inner global-search-form-wrap top-level-nav-menu-inner">
-		<form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="searchform" role="search">
-			<input class="global-search-input input-field mousetrap" type="search" id="global-search-input" name="s" size="20" maxlength="100" placeholder="Search">
+	<div class="global-search-overlay__inner full-page-backdrop__inner">
+		<form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="global-search-overlay-form" autocomplete="off" role="search">
+			<input id="global-search-overlay__input" class="global-search-overlay__input input-field mousetrap" type="search" name="global-search-overlay__input" size="20" maxlength="100" placeholder="Enter search keyword(s)">
 
-			<!-- <input class="global-search-submit button button-smaller" type="submit" value="Search" /> -->
-			<button id="button-global-search" class="global-search-submit button button-smaller icon-search" data-icon-text-md="Search" type="submit" title="Click here to search.">
+			<button id="global-search-overlay__submit" class="global-search-overlay__submit icon-search button button--smaller" type="submit" title="Click here to search.">
 				<span class="sr-only">Search</span>
 			</button>
 		</form>
 
-		<div class="full-page-menu-actions visible-xs">
-			<button id="button-close-search" class="button-close-search button button-larger">Close Search</button>
+		<div class="global-search-overlay__actions">
+			<button id="global-search-overlay__close-button" class="global-search-overlay__close-button button button--larger">Close Search</button>
 		</div>
 	</div>
 </div>
