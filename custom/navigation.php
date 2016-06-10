@@ -15,7 +15,7 @@ add_filter('wp_nav_menu', 'custom_wp_nav_menu');
 function custom_wp_nav_menu($text) {
 	$text = preg_replace(array('/(current(-menu-|[-_]page[-_]|[-_]post[-_])(parent|ancestor))/', '/current(-menu-|[-_]page[-_]|[-_]post[-_])item/'), array('active-parent', 'active'), $text);
 	$text = preg_replace(array('/( active(?!-parent)){2,}/', '/( active-parent){2,}/'), array(' active', ' active-parent'), $text);
-	$text = preg_replace('/(menu-item-has-children)/', 'global-nav-item--has-children', $text);
+	$text = preg_replace('/(menu-item-has-children)/', 'global-nav-item--has-children global-nav-item--has-child-nav-opener', $text);
 	return $text;
 } //EF
 

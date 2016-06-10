@@ -3,10 +3,10 @@
 $config["minify_css"]           = FALSE;
 $config["preserve_comments"]    = FALSE;
 $config["debug_comments"]       = TRUE;
-$config["base_path"]            = $_SERVER['DOCUMENT_ROOT'] . "/content/themes/rb-northamericansigns/assets";
+$config["base_path"]            = $_SERVER['DOCUMENT_ROOT'] . "/content/themes/birdpress-theme/assets";
 $config["css_output_dir"]       = "css";      // relative to base_path
 $config["less_dir"]             = "less";     // relative to base_path
-$config["css_url"]              = "//{$_SERVER['HTTP_HOST']}/content/themes/rb-northamericansigns/assets/css";
+$config["css_url"]              = "//{$_SERVER['HTTP_HOST']}/content/themes/birdpress-theme/assets/css";
 $config["import_path"]          = array(
 	$config["less_dir"],
 	// $config["less_dir"] . "/bootstrap",
