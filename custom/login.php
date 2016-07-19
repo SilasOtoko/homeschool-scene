@@ -23,17 +23,19 @@ class customize_wp_login {
     ?>
         <style>
             .login {
-                background-color: #ffffff;
+                background-color: #ececec;
             }
             .login form {
                 background-color: #ffffff;
             }
             .login h1 a {
-                background-image: url('http://placehold.it/260x120/fceb72/726399&text=Birdpress Theme');
-                background-size: 260px 120px;
-                width: 260px;
-                height: 120px;
+                background-image: url('/assets/images/birdpress/screenshot.png');
+                background-size: 320px 240px;
+                width: 320px;
+                height: 240px;
                 margin-bottom: 15px;
+
+                box-shadow: 0 1px 3px rgba(0,0,0,.13);
             }
             .login #nav a {
                 color: #726399;

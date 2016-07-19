@@ -62,7 +62,7 @@ add_action( 'init', 'blankslate_add_shortcodes' );
 
 function blankslate_add_shortcodes() {
 	add_shortcode('wp_caption', 'fixed_img_caption_shortcode');
-	add_shortcode('caption', 'fixed_img_caption_shortcode');
+	// add_shortcode('caption', 'fixed_img_caption_shortcode');
 	add_filter('img_caption_shortcode', 'blankslate_img_caption_shortcode_filter',10,3);
 	add_filter('widget_text', 'do_shortcode');
 }

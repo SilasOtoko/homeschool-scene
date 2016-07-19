@@ -77,14 +77,11 @@
 			<div class="global-header-container container">
 
 				<!-- Global Logo -->
-				<a id="global-logo" class="global-logo" href="/">
-					<span class="svg-wrapper">
-						<?php
-						$global_logo_path = get_template_directory() . '/assets/images/birdpress/logo--birdpress.svg';
-						echo file_get_contents($global_logo_path);
-						?>
-					</span>
-				</a>
+				<div itemscope itemtype="http://schema.org/Organization">
+					<a id="global-logo" class="global-logo" href="/" itemprop="url">
+						<img class="global-logo-image" src="<?php get_template_directory(); ?>/assets/images/birdpress/logo--birdpress--white.svg" alt="" itemprop="logo">
+					</a>
+				</div>
 
 				<!-- Mobile hamburger menu + menu close link -->
 				<a class="hamburger-menu-button" title="Navigation Menu" href="#global-outer-navigation-wrapper" aria-label="navigation menu button" role="button" aria-controls="global-outer-navigation-wrapper" aria-expanded="false">

@@ -20,7 +20,9 @@ Template name: Page - No Sidebar
 							the_post_thumbnail();
 						}
 						?>
+
 						<?php the_content(); ?>
+
 						<?php wp_link_pages('before=<div class="page-link">' . __( 'Pages:', 'blankslate' ) . '&after=</div>') ?>
 						<?php edit_post_link( __( 'Edit', 'blankslate' ), '<div class="edit-link">', '</div>' ) ?>
 					</div>
