@@ -24,42 +24,42 @@
 							</a>
 						</li>
 						<li>
-							<a href="#/" title="Go to our Pinterest Profile »" class="social-icon-link pinterest icon-pinterest-alt">
+							<a href="#/" target="_blank" title="Go to our Pinterest Profile »" class="social-icon-link pinterest icon-pinterest-alt">
 								<span class="sr-only">Pinterest</span>
 							</a>
 						</li>
 						<li>
-							<a href="#/" title="Go to our Instagram Profile »" class="social-icon-link instagram icon-instagram">
+							<a href="#/" target="_blank" title="Go to our Instagram Profile »" class="social-icon-link instagram icon-instagram">
 								<span class="sr-only">Instagram</span>
 							</a>
 						</li>
 						<li>
-							<a href="#/" title="Go to our Google Plus Profile »" class="social-icon-link google-plus icon-google-plus-alt">
+							<a href="#/" target="_blank" title="Go to our Google Plus Profile »" class="social-icon-link google-plus icon-google-plus-alt">
 								<span class="sr-only">Google Plus</span>
 							</a>
 						</li>
 						<li>
-							<a href="#/" title="Go to our LinkedIn Profile »" class="social-icon-link linkedin icon-linkedin">
+							<a href="#/" target="_blank" title="Go to our LinkedIn Profile »" class="social-icon-link linkedin icon-linkedin">
 								<span class="sr-only">LinkedIn</span>
 							</a>
 						</li>
 						<li>
-							<a href="#/" title="Go to our YouTube Profile »" class="social-icon-link youtube icon-youtube">
+							<a href="#/" target="_blank" title="Go to our YouTube Profile »" class="social-icon-link youtube icon-youtube">
 								<span class="sr-only">YouTube</span>
 							</a>
 						</li>
 						<li>
-							<a href="#/" title="Go to our Vimeo Profile »" class="social-icon-link vimeo icon-vimeo-alt">
+							<a href="#/" target="_blank" title="Go to our Vimeo Profile »" class="social-icon-link vimeo icon-vimeo-alt">
 								<span class="sr-only">Vimeo</span>
 							</a>
 						</li>
 						<li>
-							<a href="#/" title="Our Newsletter »" class="social-icon-link mail icon-mail">
+							<a href="#/" target="_blank" title="Our Newsletter »" class="social-icon-link mail icon-mail">
 								<span class="sr-only">Our Newsletter</span>
 							</a>
 						</li>
 						<li>
-							<a href="#/" title="Go to our RSS feeds »" class="social-icon-link rss icon-feed-alt">
+							<a href="#/" target="_blank" title="Go to our RSS feeds »" class="social-icon-link rss icon-feed-alt">
 								<span class="sr-only">RSS</span>
 							</a>
 						</li>
