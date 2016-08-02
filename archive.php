@@ -9,7 +9,9 @@
 		<div class="main-content-column col-xs-12 col-md-8 col-lg-9">
 
 			<section class="main-content">
+
 				<?php the_post(); ?>
+
 				<?php if ( is_day() ) : ?>
 					<h1 class="page-main-heading page-title"><?php printf( __( 'Daily Archives: %s', 'blankslate' ), '<span>' . get_the_time(get_option('date_format')) . '</span>' ) ?></h1>
 				<?php elseif ( is_month() ) : ?>
@@ -29,9 +31,9 @@
 				<?php endwhile; ?>
 
 				<?php get_template_part( 'nav', 'below' ); ?>
-			</section>
+			</section><!-- /.main-content -->
 
-		</div>
+		</div><!-- /.main-content-column -->
 
 		<div class="main-sidebar-column col-xs-12 col-md-4 col-lg-3">
 

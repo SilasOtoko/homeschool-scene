@@ -29,9 +29,9 @@
 						</div>
 					</div>
 				<?php endif; ?>
-			</section>
+			</section><!-- /.main-content -->
 
-		</div>
+		</div><!-- /.main-content-column -->
 
 		<div class="main-sidebar-column col-xs-12 col-md-4 col-lg-3">
 

@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end header -->
 
+<!-- Main content's .container -->
 <div class="main-content-container container">
 
 	<div class="main-content-row row">
@@ -9,10 +10,12 @@
 
 			<section class="main-content">
 				<?php get_template_part( 'nav', 'above' ); ?>
+
 				<?php while ( have_posts() ) : the_post() ?>
-				<?php get_template_part( 'entry' ); ?>
-				<?php comments_template(); ?>
+					<?php get_template_part( 'entry' ); ?>
+					<?php comments_template(); ?>
 				<?php endwhile; ?>
+
 				<?php get_template_part( 'nav', 'below' ); ?>
 			</section><!-- /.main-content -->
 

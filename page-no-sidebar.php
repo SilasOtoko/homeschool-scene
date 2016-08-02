@@ -33,10 +33,9 @@ Template name: Page - No Sidebar
 
 	</div><!-- /.main-content-row -->
 
-	<?php comments_template( '', true ); ?>
+	<?php // comments_template( '', true ); ?>
 
 </div><!-- /.main-content-container container -->
-
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ begin footer -->
 <?php get_footer(); ?>

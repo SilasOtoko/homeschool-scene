@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end header -->
 
+<!-- Main content's .container -->
 <div class="main-content-container container">
 
 	<div class="main-content-row row">

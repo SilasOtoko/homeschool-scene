@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end header -->
 
-
+<!-- Main content's .container -->
 <div class="main-content-container container">
 
 	<div class="main-content-row row">
@@ -31,7 +31,6 @@
 	</div><!-- /.main-content-row -->
 
 </div><!-- /.main-content-container container -->
-
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ begin footer -->
 <?php get_footer(); ?>

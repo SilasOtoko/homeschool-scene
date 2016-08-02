@@ -20,7 +20,7 @@ Template name: Home - Blog
 				<?php endwhile; ?>
 
 				<?php get_template_part( 'nav', 'below' ); ?>
-			</section>
+			</section><!-- /.main-content -->
 
 		</div><!-- /.main-content-column -->
 
