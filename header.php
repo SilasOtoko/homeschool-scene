@@ -162,7 +162,7 @@
 
 		<main id="global-main" class="global-main" role="main">
 
-			<!--[if lt IE 9]>
+			<!--[if lte IE 9]>
 				<p class="browser-outdated-message">
 					<span class="icon-warning-stop"></span> Your browser is outdated. <a href="http://browsehappy.com/" target="_blank" style="text-decoration: underline; font-weight: bold;">Upgrade to a modern browser</a> to better experience this site.
 				</p>
