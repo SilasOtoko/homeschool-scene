@@ -127,9 +127,7 @@
 
 				<!-- Utility nav with its own container inside -->
 				<nav id="global-utility-nav" class="global-utility-nav global-nav" role="navigation" aria-label="Secondary">
-
 					<div class="global-header-container container">
-
 						<ul class="global-utility-nav-list global-nav-list">
 							<li class="global-utility-nav-item global-nav-item">
 								<a class="global-utility-nav-link global-nav-link" href="#/">Utility nav link</a>
@@ -149,9 +147,7 @@
 								</a>
 							</li>
 						</ul>
-
 					</div>
-
 				</nav>
 
 			</div><!-- /.global-outer-navigation-wrapper -->
