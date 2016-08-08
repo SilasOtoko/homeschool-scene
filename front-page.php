@@ -15,7 +15,7 @@ Template name: Front Page
 
 				<h1>This is BirdPress, yo.</h1>
 
-				<p>Refer to the <a href="http://rarebird.io/diffusion/PERCHDOCS/repository/master/" target="_blank">Perch Documentation</a> for markup &amp; styling questions.</p>
+				<p>Refer to the <a href="http://perch.rarebird.io/" target="_blank">Perch Documentation</a> for markup &amp; styling reference.</p>
 
 				<p><small>(The old documentation that used to be here is <strong>super-outdated</strong>, and is gone for good!)</small></p>
 
