@@ -144,6 +144,7 @@
 
 <!-- ###  Custom scripts -->
 <script src="/assets/third-party/perch/js/scripts.js"></script>
+<?php /* <script src="/assets/third-party/perch/js/library/wordpress/wp-hide-show-comments.js"></script> */ ?>
 
 <?php wp_footer(); ?>
 

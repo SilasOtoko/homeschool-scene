@@ -44,7 +44,7 @@
 <!-- _______ Scripts that need load priority ___________ -->
 
 	<!-- Modernizr: Feature detection + HTML5 shiv -->
-	<script src="/assets/third-party/perch/js/modernizr-custom.js"></script>
+	<script><?php include(get_stylesheet_directory() . "/assets/third-party/perch/js/modernizr-custom.js"); ?></script>
 
 
 	<?php /*

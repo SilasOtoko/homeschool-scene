@@ -1,4 +1,29 @@
-<div id="comments">
+<?php /*
+	//
+	// Wordpress: Show/Hide comments by clicking the (added) button
+	// --------------------------------------------------
+	// Requires:
+	// [] Markup uncommented in comments.php
+	// [] LESS file included: /less/library/wordpress/wp-show-comments.less
+	// [] JS file included: /js/library/wordpress/wp-show-comments.js
+	// --------------------------------------------------
+?>
+<div id="comments-opener-section">
+	<?php if ( have_comments() ) { ?>
+		<a class="comments-opener-button button button--subtle" href="#comments">Show comments &amp; Reply</a>
+	<?php } else { ?>
+		<a class="comments-opener-button button button--subtle" href="#respond">Reply to this post</a>
+	<?php } ?>
+</div>
+<?php /* */ ?>
+
+
+
+<?php
+	// Resume our regularly scheduled programming...
+?>
+
+<div id="comments" class="comments-section">
 
 	<?php if ( 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']) ) {
 		die ( 'Please do not load this page directly.' );
