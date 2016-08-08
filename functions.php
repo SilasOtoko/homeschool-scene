@@ -173,7 +173,7 @@ function blankslate_custom_comments($comment, $args, $depth) {
 	<?php edit_comment_link(__('Edit', 'blankslate'), ' <span class="meta-sep"> | </span> <span class="edit-link">', '</span>'); ?>
 </div>
 
-<?php if ($comment->comment_approved == '0') { echo '\t\t\t\t\t<span class="unapproved">'; _e('Your comment is awaiting moderation.', 'blankslate'); echo '</span>\n'; } ?>
+<?php if ($comment->comment_approved == '0') { echo "\t\t\t\t\t<p class=\"unapproved-comment-message text-bold text-italic\">"; _e('Your comment is awaiting moderation.', 'blankslate'); echo "</p>\n\n"; } ?>
 	<div class="comment-content">
 		<?php comment_text() ?>
 	</div>
@@ -200,7 +200,7 @@ function blankslate_custom_pings($comment, $args, $depth) {
 	get_comment_time() );
 	edit_comment_link(__('Edit', 'blankslate'), ' <span class="meta-sep"> | </span> <span class="edit-link">', '</span>'); ?>
 </div>
-<?php if ($comment->comment_approved == '0') { echo '\t\t\t\t\t<span class="unapproved">'; _e('Your trackback is awaiting moderation.', 'blankslate'); echo '</span>\n'; } ?>
+<?php if ($comment->comment_approved == '0') { echo "\t\t\t\t\t<p class=\"unapproved-comment-message text-bold text-italic\">"; _e('Your trackback is awaiting moderation.', 'blankslate'); echo "</p>\n\n"; } ?>
 	<div class="comment-content">
 		<?php comment_text() ?>
 	</div>
