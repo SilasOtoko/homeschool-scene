@@ -165,41 +165,43 @@ function blankslate_custom_comments($comment, $args, $depth) {
 ?>
 
 <li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
-<div class="comment-author vcard"><?php blankslate_commenter_link() ?></div>
-<div class="comment-meta"><?php printf(__('Posted %1$s at %2$s', 'blankslate' ), get_comment_date(), get_comment_time() ); ?>
-	<span class="meta-sep"> | </span>
-	 <a href="#comment-<?php echo get_comment_ID(); ?>" title="<?php _e('Permalink to this comment', 'blankslate' ); ?>"><?php _e('Permalink', 'blankslate' ); ?></a>
+	<div class="comment-author vcard"><?php blankslate_commenter_link() ?></div>
+	<div class="comment-meta">
+	<?php printf(__('Posted %1$s at %2$s', 'blankslate' ), get_comment_date(), get_comment_time() ); ?>
+		<span class="meta-sep"> | </span>
+		 <a href="#comment-<?php echo get_comment_ID(); ?>" title="<?php _e('Permalink to this comment', 'blankslate' ); ?>"><?php _e('Permalink', 'blankslate' ); ?></a>
 
-	<?php edit_comment_link(__('Edit', 'blankslate'), ' <span class="meta-sep"> | </span> <span class="edit-link">', '</span>'); ?>
-</div>
+		<?php edit_comment_link(__('Edit', 'blankslate'), ' <span class="meta-sep"> | </span> <span class="edit-link">', '</span>'); ?>
+
+		<?php
+			if($args['type'] == 'all' || get_comment_type() == 'comment') :
+			comment_reply_link(array_merge($args, array(
+				'reply_text' => __('Reply »','blankslate'),
+				'login_text' => __('Login to reply.', 'blankslate'),
+				'depth' => $depth,
+				'before' => '<span class="comment-reply-link">',
+				'after' => '</span>'
+			)));
+			endif;
+		?>
+	</div>
 
 <?php if ($comment->comment_approved == '0') { echo "\t\t\t\t\t<p class=\"unapproved-comment-message text-bold text-italic\">"; _e('Your comment is awaiting moderation.', 'blankslate'); echo "</p>\n\n"; } ?>
 	<div class="comment-content">
 		<?php comment_text() ?>
 	</div>
-	<?php
-		if($args['type'] == 'all' || get_comment_type() == 'comment') :
-		comment_reply_link(array_merge($args, array(
-			'reply_text' => __('Reply','blankslate'),
-			'login_text' => __('Login to reply.', 'blankslate'),
-			'depth' => $depth,
-			'before' => '<div class="comment-reply-link">',
-			'after' => '</div>'
-		)));
-		endif;
-	?>
 <?php }
 
 function blankslate_custom_pings($comment, $args, $depth) {
 	$GLOBALS['comment'] = $comment;
 ?>
 <li id="comment-<?php comment_ID() ?>" <?php comment_class() ?>>
-<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'blankslate'),
-	get_comment_author_link(),
-	get_comment_date(),
-	get_comment_time() );
-	edit_comment_link(__('Edit', 'blankslate'), ' <span class="meta-sep"> | </span> <span class="edit-link">', '</span>'); ?>
-</div>
+	<div class="comment-author"><?php printf(__('By %1$s on %2$s at %3$s', 'blankslate'),
+		get_comment_author_link(),
+		get_comment_date(),
+		get_comment_time() );
+		edit_comment_link(__('Edit', 'blankslate'), ' <span class="meta-sep"> | </span> <span class="edit-link">', '</span>'); ?>
+	</div>
 <?php if ($comment->comment_approved == '0') { echo "\t\t\t\t\t<p class=\"unapproved-comment-message text-bold text-italic\">"; _e('Your trackback is awaiting moderation.', 'blankslate'); echo "</p>\n\n"; } ?>
 	<div class="comment-content">
 		<?php comment_text() ?>
