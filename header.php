@@ -10,7 +10,7 @@
 	* |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 	*
 	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc.
-	* Built using Rare Bird's Perch Framework v0.5.2 + BirdPress v0.6
+	* Built using Rare Bird's Perch Framework v0.6.1 + BirdPress v0.6.1
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <!-- _______ So Meta ___________________________________ -->

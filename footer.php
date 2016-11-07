@@ -88,8 +88,8 @@
 <?php /* google cdn commented out as it does not have this version of jquery as of this moment --kb  2016-04-29 11:17 AM
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 */ ?>
-<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/third-party/perch/js/jquery-2.2.3.min.js">\x3C/script>')</script>
+<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/assets/third-party/perch/js/jquery-3.1.1.slim.min.js">\x3C/script>')</script>
 
 
 <?php /*
@@ -99,15 +99,7 @@
 
 <?php /*
 <!-- _______ Analytics _________________________________ -->
-
-	<script>
-		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-		ga('create', 'UA-XXXXX-Y', 'auto');
-		ga('require', 'autotrack');
-		ga('send', 'pageview');
-	</script>
-	<script async src='//www.google-analytics.com/analytics.js'></script>
-	<script async src='/assets/third-party/perch/js/autotrack.js'></script>
+	[DEPRECATED / REMOVED -- USE THE GA WP PLUGIN FOR MANAGING THIS]
 */ ?>
 
 
@@ -124,17 +116,17 @@
 <!-- ###  Other Plugins -->
 
 <!-- Mousetrap.js = keyboard shortcuts -->
-<script src="/assets/third-party/perch/js/mousetrap.min.js"></script>
+<script src="/assets/third-party/perch/js/mousetrap.js"></script>
 
 <!-- Parsely.js inline, as-you-go form validation & assistance -->
 	<?php /* Luhn extra validator added for credit card number fields. It MUST be before main parsley script */ ?>
 <script src="/assets/third-party/perch/js/parsley.luhn.js"></script>
-<script src="/assets/third-party/perch/js/parsley.min.js"></script>
+<script src="/assets/third-party/perch/js/parsley.js"></script>
 
 
 <?php /*
 <!-- Smooth-scroll.js -->
-<script src='/assets/third-party/perch/js/smooth-scroll.min.js'></script>
+<script src='/assets/third-party/perch/js/smooth-scroll.js'></script>
 <script>
 	smoothScroll.init();
 </script>
