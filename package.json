@@ -1,0 +1,19 @@
+{
+  "name": "birdpress-theme",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@rarebird.io/diffusion/BPTHEME/birdpress-theme.git"
+  },
+  "author": "Rare Bird, Inc.",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.0"
+  }
+}

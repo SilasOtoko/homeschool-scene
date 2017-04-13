@@ -17,8 +17,6 @@ Template name: Front Page
 
 				<p>Refer to the <a href="http://perch.rarebird.io/" target="_blank">Perch Documentation</a> for markup &amp; styling reference.</p>
 
-				<p><small>(The old documentation that used to be here is <strong>super-outdated</strong>, and is gone for good!)</small></p>
-
 			</section><!-- /.main-content -->
 
 		</div><!-- /.main-content-column -->

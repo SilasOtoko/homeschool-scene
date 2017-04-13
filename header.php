@@ -10,46 +10,52 @@
 	* |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 	*
 	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc.
-	* Built using Rare Bird's Perch Framework v0.6.1 + BirdPress v0.6.1
+	* Built using Rare Bird's Perch Framework v0.7 + BirdPress v0.7
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-<!-- _______ So Meta ___________________________________ -->
-
+<?php
+	// ____ So Meta ___________________________________ */ ?>
 	<meta charset="UTF-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
 
 
-<!-- _______ Site Title & Desc. ________________________ -->
-
+<?php
+	// ____ Site Title & Desc. ________________________ */ ?>
 	<title><?php wp_title(' | ', true, 'right'); ?></title>
 	<!-- <link href="http://domain.com" rel="home"> -->
 
 
-<!-- _______ Social + Icons ____________________________ -->
-
+<?php
+	// ____ Social + Icons ____________________________ */ ?>
 	<link rel="shortcut icon" href="/favicon.ico" />
-	<!-- <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png" /> -->
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png"> <?php /* All iOS versions __ this is a single 180px file that should scale down OK */ ?>
+	<link rel="icon" sizes="192x192" href="/icon-hd.png"> <?php /* Android Devices High Resolution */ ?>
+	<link rel="icon" sizes="128x128" href="/icon.png"> <?php /* Android Devices Normal Resolution */ ?>
+	<link rel="icon" href="/favicon.ico"> <?php /* Combined 16px, 24px, 32px, 48px, 64px favicon
+		----> TIP::: Install ImageMagick and run
+		$convert favicon-16.png favicon-32.png favicon-48.png favicon-64.png favicon.ico
+		*/ ?>
 
-
-<!-- _______ Styles + LESS _____________________________ -->
-
-	<?php /* <!-- required stylesheet for WP -->
+<?php
+	// ____ Styles + LESS _____________________________ */ ?>
+	<?php /* required stylesheet for WP
 	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" /> */ ?>
 
-	<?php /* <!-- backend-compiled LESS --> */ ?>
-	<?php echo Less::stylesheet('global.less'); ?>
+	<?php /* <!-- Gulp Compiled LESS --> */ ?>
+	<link rel="stylesheet" type="text/css" href="/assets/css/global.css">
 
 
-<!-- _______ Scripts that need load priority ___________ -->
-
-	<!-- Modernizr: Feature detection + HTML5 shiv -->
+<?php
+	// ____ Scripts that need load priority ___________ */ ?>
+	<?php // Modernizr: Feature detection + HTML5 shiv ?>
 	<script><?php include(get_stylesheet_directory() . "/assets/third-party/perch/js/modernizr-custom.js"); ?></script>
 
 
-	<?php /*
-<!-- _______ Resource or Page Prefetch or Preload ______ -->
-
+<?php
+	// HELPER CODE IF NEEDED:
+	// ____ Resource or Page Prefetch or Preload ______
+	/*
 	<!-- <link rel="prefetch" href="http://domain.com/hello-world.html" /> -->
 	<!-- <link rel="prefetch" href="/css/alt-stylesheet.css" /> -->
 	<!-- <link rel="prefetch" href="/images/common-non-home-image.png" /> -->
@@ -58,8 +64,8 @@
 	*/ ?>
 
 
-<!-- _______ WordPress Head ____________________________ -->
-
+<?php
+	// ____ WordPress Head ____________________________ */ ?>
 	<?php wp_head(); ?>
 
 </head>

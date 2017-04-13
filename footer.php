@@ -88,8 +88,8 @@
 <?php /* google cdn commented out as it does not have this version of jquery as of this moment --kb  2016-04-29 11:17 AM
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 */ ?>
-<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="/assets/third-party/perch/js/jquery-3.1.1.slim.min.js">\x3C/script>')</script>
+<script src="//code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/third-party/perch/js/jquery-3.1.1.slim.min.js">\x3C/script>')</script>
 
 
 <?php /*
@@ -102,41 +102,7 @@
 	[DEPRECATED / REMOVED -- USE THE GA WP PLUGIN FOR MANAGING THIS]
 */ ?>
 
-
-<!-- _______ Plugins ___________________________________ -->
-
-<!-- ###  Bootstrap Plugins -->
-<script src="/assets/third-party/perch/js/bootstrap-transition.js"></script>
-<script src="/assets/third-party/perch/js/bootstrap-alert.js"></script>
-<script src="/assets/third-party/perch/js/bootstrap-modal.js"></script>
-<?php /* <script src="/assets/third-party/perch/js/bootstrap-collapse.js"></script> */ ?>
-<?php /* <script src="/assets/third-party/perch/js/bootstrap-tab.js"></script> */ ?>
-
-
-<!-- ###  Other Plugins -->
-
-<!-- Mousetrap.js = keyboard shortcuts -->
-<script src="/assets/third-party/perch/js/mousetrap.js"></script>
-
-<!-- Parsely.js inline, as-you-go form validation & assistance -->
-	<?php /* Luhn extra validator added for credit card number fields. It MUST be before main parsley script */ ?>
-<script src="/assets/third-party/perch/js/parsley.luhn.js"></script>
-<script src="/assets/third-party/perch/js/parsley.js"></script>
-
-
-<?php /*
-<!-- Smooth-scroll.js -->
-<script src='/assets/third-party/perch/js/smooth-scroll.js'></script>
-<script>
-	smoothScroll.init();
-</script>
-*/ ?>
-
-<!-- _______ Scripts - Custom __________________________ -->
-
-<!-- ###  Custom scripts -->
-<script src="/assets/third-party/perch/js/perch-scripts.js"></script>
-<?php /* <script src="/assets/third-party/perch/js/library/wordpress/wp-hide-show-comments.js"></script> */ ?>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/app.js"></script>
 
 <?php wp_footer(); ?>
 
