@@ -88,8 +88,8 @@
 <?php /* google cdn commented out as it does not have this version of jquery as of this moment --kb  2016-04-29 11:17 AM
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 */ ?>
-<script src="//code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/third-party/perch/js/jquery-3.1.1.slim.min.js">\x3C/script>')</script>
+<script src="//code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/third-party/perch/js/jquery-3.1.1.min.js">\x3C/script>')</script>
 
 
 <?php /*
