@@ -9,8 +9,8 @@
 	* |  _ < (_| | | |  __/   ) | | | | (_| |
 	* |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 	*
-	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc.
-	* Built using Rare Bird's Perch Framework v0.7 + BirdPress v0.7
+	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc
+	* Built using Rare Bird's Perch Framework v0.8 + BirdPress v0.8
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <?php
@@ -28,7 +28,6 @@
 
 <?php
 	// ____ Social + Icons ____________________________ */ ?>
-	<link rel="shortcut icon" href="/favicon.ico" />
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png"> <?php /* All iOS versions __ this is a single 180px file that should scale down OK */ ?>
 	<link rel="icon" sizes="192x192" href="/icon-hd.png"> <?php /* Android Devices High Resolution */ ?>
 	<link rel="icon" sizes="128x128" href="/icon.png"> <?php /* Android Devices Normal Resolution */ ?>
@@ -37,13 +36,9 @@
 		$convert favicon-16.png favicon-32.png favicon-48.png favicon-64.png favicon.ico
 		*/ ?>
 
-<?php
-	// ____ Styles + LESS _____________________________ */ ?>
-	<?php /* required stylesheet for WP
-	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" /> */ ?>
 
-	<?php /* <!-- Gulp Compiled LESS --> */ ?>
-	<link rel="stylesheet" type="text/css" href="/assets/css/global.css">
+	<?php /* CSS file compiled with Gulp */ ?>
+	<link rel="stylesheet" href="/assets/css/global.css">
 
 
 <?php

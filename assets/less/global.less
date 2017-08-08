@@ -12,22 +12,45 @@
 
 // Perch Library
 // --------------------------
+
+// Elements _________
+@import "../third-party/perch/less/elements/library/_pull-quotes.less";
+
+// Icons _________
+@import "../third-party/perch/icons/style.less"; // For custom icons, change path to your install folder
+
+// Components _________
+// @import "../third-party/perch/less/components/library/_cards.less";
 @import "../third-party/perch/less/components/library/_alerts.less";
 // @import "../third-party/perch/less/components/library/_announcements.less";
 // @import "../third-party/perch/less/components/library/_breadcrumbs.less";
 // @import "../third-party/perch/less/components/library/_pagination.less";
+// @import "../third-party/perch/less/components/library/_action-blocks.less";
 // @import "../third-party/perch/less/components/library/_badges.less";
 // @import "../third-party/perch/less/components/library/_accordions.less";
 // @import "../third-party/perch/less/components/library/_star-ratings.less";
 // @import "../third-party/perch/less/components/library/_line-wings.less";
 // @import "../third-party/perch/less/components/library/_loading-spinner.less";
+// @import "../third-party/perch/less/components/library/_input-addons.less";
 @import "../third-party/perch/less/components/library/_social-icons.less";
 
 @import "../third-party/perch/less/components/library/_hamburger-menu-icon.less";
 @import "../third-party/perch/less/components/library/_search-overlay.less";
 @import "../third-party/perch/less/components/library/_search-reveal-button.less";
 
+// Layout _________
+@import "../third-party/perch/less/layout/library/_global-logo.less";
+
+// Sliders _________
+// @import "../third-party/perch/less/components/library/sliders/_simple-slider.less";
+// @import "../third-party/perch/less/components/library/sliders/_proportional-slider.less";
+// @import "../third-party/perch/less/components/library/sliders/_hero-slider.less";
+// @import "../third-party/perch/less/components/library/sliders/_tab-slider.less";
+
 // Ecommerce _________
+// @import "../third-party/perch/less/components/library/ecommerce/_product-listing-grid.less";
+// @import "../third-party/perch/less/components/library/ecommerce/_product-listing-block-links.less";
+// @import "../third-party/perch/less/components/library/ecommerce/_product-listing-content.less";
 // @import "../third-party/perch/less/components/library/ecommerce/_cart-table.less";
 // @import "../third-party/perch/less/components/library/ecommerce/_checkout-layout.less";
 
@@ -38,15 +61,12 @@
 // Development _________
 @import "../third-party/perch/less/components/library/development/_development.less";
 
-// Perch Extensions
-// --------------------------
-@import "../third-party/perch/icons/style.less";
-
 
 
 // Third Party Plugins
 // ---------------------------------------
 // @import (inline) "../third-party/perch/js/prism/prism.css";
+// @import (inline) "../../../node_modules/flickity/dist/flickity.css";
 
 
 
@@ -54,7 +74,10 @@
 // ---------------------------------------
 
 // Perch customization & overrides
-@import "app/variables.less";
+@import "_site-variables.less";
 
 // Site Styles
-@import "app/main.less";
+@import "_site-main.less";
+
+// Templates
+// @import "templates/_template-product-detail.less";

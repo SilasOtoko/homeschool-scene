@@ -79,32 +79,25 @@
 	</div><!-- end .global-wrapper -->
 
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* 	Bottom Scripts
-* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	* 	Bottom Scripts
+	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
-<!-- jQuery - CDN request with local fallback -->
-<?php /* google cdn commented out as it does not have this version of jquery as of this moment --kb  2016-04-29 11:17 AM
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-*/ ?>
-<script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script>window.jQuery || document.write('<script src="<?php echo get_stylesheet_directory_uri() ?>/assets/third-party/perch/js/jquery-3.1.1.min.js">\x3C/script>')</script>
+	<?php /* jQuery - CDN request with local fallback brought in by `gulp copy:jquery` */ ?>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js">\x3C/script>')</script>
 
 
-<?php /*
-<!-- _______ Polyfills _________________________________ -->
-*/ ?>
+	<?php /* Polyfills */ ?>
 
+	<?php /* Analytics [DEPRECATED / REMOVED -- USE THE GA WP PLUGIN FOR MANAGING THIS] */ ?>
 
-<?php /*
-<!-- _______ Analytics _________________________________ -->
-	[DEPRECATED / REMOVED -- USE THE GA WP PLUGIN FOR MANAGING THIS]
-*/ ?>
+	<?php /* Gulp compiled JS */ ?>
+	<script src="/assets/js/global.js"></script>
 
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/app.js"></script>
-
-<?php wp_footer(); ?>
+	<?php /* WP Footer */ ?>
+	<?php wp_footer(); ?>
 
 </body>
 </html>
