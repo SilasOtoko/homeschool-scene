@@ -84,7 +84,7 @@
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
-	<?php /* jQuery - CDN request with local fallback brought in by `gulp copy:jquery` */ ?>
+	<?php /* jQuery - CDN request with local fallback (included via npm) brought in by `gulp copy:jquery` */ ?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>window.jQuery || document.write('<script src="/assets/js/jquery.min.js">\x3C/script>')</script>
 
