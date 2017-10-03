@@ -20,6 +20,7 @@
 @import "../third-party/perch/icons/style.less"; // For custom icons, change path to your install folder
 
 // Components _________
+// @import "../third-party/perch/less/components/library/_islands.less";
 // @import "../third-party/perch/less/components/library/_cards.less";
 @import "../third-party/perch/less/components/library/_alerts.less";
 // @import "../third-party/perch/less/components/library/_announcements.less";
@@ -66,7 +67,7 @@
 // Third Party Plugins
 // ---------------------------------------
 // @import (inline) "../third-party/perch/js/prism/prism.css";
-// @import (inline) "../../../node_modules/flickity/dist/flickity.css";
+// @import (inline) "../../node_modules/flickity/dist/flickity.css";
 
 
 
@@ -77,7 +78,10 @@
 @import "_site-variables.less";
 
 // Site Styles
-@import "_site-main.less";
+@import "_site-elements.less";
+@import "_site-layout.less";
+@import "_site-components.less";
+@import "_site-utilities.less";
 
 // Templates
 // @import "templates/_template-product-detail.less";

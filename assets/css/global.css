@@ -1,37 +1,18 @@
 /*!
- * Built with Perch Framework v. 0.8.0
+ * Built with Perch Framework v. 0.8.1
  * --------------------------------------------------
  * A Rare Bird Inc. (http://rarebirdinc.com/) framework.
  * Made with love & bird puns by our development & front-end teams.
  * --------------------------------------------------
  */
-@font-family-system : 		BlinkMacSystemFont, -apple-system, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-@-webkit-keyframes pulse {
-  50% {
-    -webkit-transform: scale(1.05);
-  }
-}
 @keyframes pulse {
   50% {
     transform: scale(1.05);
   }
 }
-@-webkit-keyframes bigPulse {
-  50% {
-    -webkit-transform: scale(1.2);
-  }
-}
 @keyframes bigPulse {
   50% {
     transform: scale(1.2);
-  }
-}
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }
 @keyframes fadeIn {
@@ -42,30 +23,12 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
 @keyframes fadeOut {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
-  }
-}
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translateY(-50px);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translateY(0);
   }
 }
 @keyframes fadeInUp {
@@ -78,47 +41,14 @@
     transform: translateY(0);
   }
 }
-@-webkit-keyframes levitate {
-  to {
-    -webkit-transform: translateY(-20%);
-  }
-}
 @keyframes levitate {
   to {
     transform: translateY(-20%);
   }
 }
-@-webkit-keyframes full-rotation {
-  to {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
 @keyframes full-rotation {
   to {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes shake {
-  from,
-  to {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
   }
 }
 @keyframes shake {
@@ -143,16 +73,6 @@
     transform: translate3d(10px, 0, 0);
   }
 }
-@-webkit-keyframes zoomIn {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-  50% {
-    opacity: 1;
-  }
-}
 @keyframes zoomIn {
   from {
     opacity: 0;
@@ -161,17 +81,6 @@
   }
   50% {
     opacity: 1;
-  }
-}
-@-webkit-keyframes jump-link-target {
-  from {
-    background-color: rgba(253, 238, 128, 0);
-  }
-  50% {
-    background-color: #FDEE80;
-  }
-  to {
-    background-color: rgba(253, 238, 128, 0);
   }
 }
 @keyframes jump-link-target {
@@ -1665,7 +1574,6 @@ a img:hover {
   opacity: .8;
 }
 .jump-link-target:target {
-  -webkit-animation: jump-link-target 3s ease-out;
   animation: jump-link-target 3s ease-out;
 }
 .footnotes-block {
@@ -1681,7 +1589,6 @@ a img:hover {
   padding: 0 10px;
 }
 .footnote:target {
-  -webkit-animation: jump-link-target 3s ease-out;
   animation: jump-link-target 3s ease-out;
 }
 p:first-child {
@@ -2358,14 +2265,12 @@ tbody.collapse.in {
   min-height: 2000px;
   min-height: 100vh;
   background-color: rgba(216, 33, 78, 0.8);
-  -webkit-animation: fadeIn 0.25s ease;
   animation: fadeIn 0.25s ease;
 }
 .full-page-backdrop.is-active {
   display: block;
 }
 .full-page-backdrop.animating-out {
-  -webkit-animation: fadeOut 0.25s ease 0s 1 normal forwards;
   animation: fadeOut 0.25s ease 0s 1 normal forwards;
 }
 .grid-list {
@@ -2505,11 +2410,9 @@ body {
   bottom: 0;
   max-height: none;
   overflow-y: scroll;
-  -webkit-animation: fadeIn 0.25s ease;
   animation: fadeIn 0.25s ease;
 }
 .global-outer-navigation-wrapper.animating-out {
-  -webkit-animation: fadeOut 0.25s ease 0s 1 normal forwards;
   animation: fadeOut 0.25s ease 0s 1 normal forwards;
 }
 .global-nav {
@@ -2523,7 +2426,6 @@ body {
   text-align: left;
 }
 .global-outer-navigation-wrapper.is-active .global-nav-list {
-  -webkit-animation: fadeInUp 0.4s ease;
   animation: fadeInUp 0.4s ease;
 }
 .global-nav-item {
@@ -2597,7 +2499,6 @@ body {
   margin: 0;
   list-style-type: none;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-animation: none !important;
   animation: none !important;
 }
 .global-nav-child-list .global-nav-link {
@@ -2742,14 +2643,12 @@ body {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0);
-    -webkit-animation: none !important;
     animation: none !important;
   }
   .global-outer-navigation-wrapper > .container {
     padding: 0 20px;
   }
   .global-nav-list {
-    -webkit-animation: none !important;
     animation: none !important;
   }
   .mod-flexbox .global-nav-list {
@@ -2954,7 +2853,7 @@ body {
   max-width: 1200px;
   padding: 3.5% 1em;
   margin: auto auto 1rem;
-  background-color: #eecfcf;
+  background-color: #EECFCF;
   text-align: center;
   line-height: 1.5;
   color: #B94A48;
@@ -3117,14 +3016,35 @@ body {
   display: inline-block !important;
   width: auto !important;
 }
+.no-padding {
+  padding: 0 !important;
+}
+.no-padding-top {
+  padding-top: 0 !important;
+}
+.no-padding-right {
+  padding-right: 0 !important;
+}
+.no-padding-bottom {
+  padding-bottom: 0 !important;
+}
+.no-padding-left {
+  padding-left: 0 !important;
+}
 .no-margin {
   margin: 0 !important;
 }
 .no-margin-top {
   margin-top: 0 !important;
 }
+.no-margin-right {
+  margin-right: 0 !important;
+}
 .no-margin-bottom {
   margin-bottom: 0 !important;
+}
+.no-margin-left {
+  margin-left: 0 !important;
 }
 .margin-center {
   margin-left: auto !important;
@@ -3156,13 +3076,16 @@ body {
     padding-bottom: 60px;
   }
 }
-.pull-right {
+.pull-right,
+.float-right {
   float: right !important;
 }
-.pull-left {
+.pull-left,
+.float-left {
   float: left !important;
 }
-.no-float {
+.no-float,
+.float-none {
   float: none !important;
 }
 .clearfix:after {
@@ -3736,14 +3659,13 @@ blockquote {
   padding-top: -moz-calc(60px + 2em);
   padding-top: calc(60px + 2em);
   text-align: center;
-  background-color: rgba(216, 33, 78, 0.8);
+  background-color: rgba(51, 51, 51, 0.75);
   cursor: auto;
   cursor: pointer;
   cursor: url("/content/themes/birdpress-theme/assets/third-party/perch/images/cursor-close-shadowed.png"), pointer;
   cursor: url("/content/themes/birdpress-theme/assets/third-party/perch/images/cursor-close-shadowed.png") 15 15, pointer;
 }
 .global-search-overlay__inner {
-  -webkit-animation: fadeInUp 0.4s ease;
   animation: fadeInUp 0.4s ease;
   cursor: default;
 }
@@ -4435,6 +4357,10 @@ html::before:hover {
     display: none !important;
   }
 }
+.global-logo g,
+.global-logo path {
+  fill: #FFF;
+}
 .global-footer {
   padding-top: 0;
 }
@@ -4445,17 +4371,6 @@ html::before:hover {
 .global-footer .footer-bottom {
   padding: 1em 0;
   color: #555;
-}
-.svg-wrapper {
-  display: block;
-}
-.svg-wrapper > svg {
-  max-width: 100%;
-  height: auto;
-}
-.global-logo g,
-.global-logo path {
-  fill: #FFF;
 }
 
 /*# sourceMappingURL=maps/global.css.map */
