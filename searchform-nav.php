@@ -1,7 +1,4 @@
 <div id="global-search-overlay" class="global-search-overlay full-page-backdrop">
-	<div class="container">
-		<button class="global-search-overlay__corner-closer button-corner-close--minimal" aria-label="Close">&times;</button>
-	</div>
 	<div class="global-search-overlay__inner full-page-backdrop__inner">
 		<form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="global-search-overlay-form" autocomplete="off" role="search">
 			<div class="global-search-overlay-input-wrapper">

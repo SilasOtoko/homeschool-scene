@@ -18,9 +18,9 @@
 
 						<h2>The page or file requested cannot be found or has been moved.</h2>
 
-						<p>We appreciate you visiting our web site! Continue exploring by clicking on the links in the navigation.</p>
+						<p>We appreciate you visiting our site! Continue exploring by clicking on the links in the navigation.</p>
 
-						<h4 style="margin-bottom: .5em;">From here you can:</h4>
+						<h3>From here you can:</h3>
 						<ul>
 							<?php /*
 							<li class="">

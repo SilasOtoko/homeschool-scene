@@ -49,18 +49,8 @@
 							</a>
 						</li>
 						<li>
-							<a href="#/" target="_blank" title="Go to our Vimeo Profile »" class="social-icon-link vimeo icon-vimeo-alt">
-								<span class="sr-only">Vimeo</span>
-							</a>
-						</li>
-						<li>
 							<a href="#/" target="_blank" title="Our Newsletter »" class="social-icon-link mail icon-mail">
 								<span class="sr-only">Our Newsletter</span>
-							</a>
-						</li>
-						<li>
-							<a href="#/" target="_blank" title="Go to our RSS feeds »" class="social-icon-link rss icon-feed-alt">
-								<span class="sr-only">RSS</span>
 							</a>
 						</li>
 					</ul>

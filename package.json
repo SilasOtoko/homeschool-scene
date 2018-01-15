@@ -1,6 +1,6 @@
 {
   "name": "birdpress-theme",
-  "version": "0.8.1",
+  "version": "0.9.0-beta",
   "description": "BirdPress Theme site starter",
   "repository": {
     "type": "git",
@@ -10,23 +10,32 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.0",
+    "@fortawesome/fontawesome-free-brands": "^5.0.2",
+    "@fortawesome/fontawesome-pro-light": "^5.0.2",
+    "@fortawesome/fontawesome-pro-regular": "^5.0.2",
+    "@fortawesome/fontawesome-pro-solid": "^5.0.2",
     "autotrack": "^2.4.1",
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.5",
+    "flickity": "^2.0.9",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.0.3",
-    "gulp-clone": "^1.0.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-clone": "^1.1.1",
     "gulp-concat": "^2.6.1",
     "gulp-if": "^2.0.2",
-    "gulp-less": "^3.3.0",
+    "gulp-less": "^3.4.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.4.1",
+    "gulp-sourcemaps": "^2.6.3",
     "gulp-uglify": "^2.1.2",
     "jquery": "3.2.1",
     "lazysizes": "^3.0.0",
     "merge-stream": "^1.0.1",
     "mousetrap": "^1.6.1",
-    "parsleyjs": "^2.7.2",
-    "smooth-scroll": "cferdinandi/smooth-scroll",
+    "parsleyjs": "^2.8.0",
+    "smooth-scroll": "github:cferdinandi/smooth-scroll",
     "yargs": "^7.1.0"
+  },
+  "devDependencies": {
+    "holderjs": "^2.9.4"
   }
 }
