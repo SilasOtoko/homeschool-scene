@@ -13,15 +13,15 @@ node_modules/
 vendor/
 logs/*
 
-web/assets/css/**
-web/assets/js/**
-web/assets/third-party/**
-web/assets/icons/**
+assets/css/**
+assets/js/**
+assets/third-party/**
+assets/icons/**
 
-!web/assets/css/
-!web/assets/js/
-!web/assets/images/
-!web/assets/icons/
+!assets/css/
+!assets/js/
+!assets/images/
+!assets/icons/
 
-!web/assets/js/header-comment.js
-!web/assets/js/sample-es2015-scripts.js
+!assets/js/header-comment.js
+!assets/js/sample-es2015-scripts.js
