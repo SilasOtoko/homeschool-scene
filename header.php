@@ -10,34 +10,27 @@
 	* |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 	*
 	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc
-	* Built using Rare Bird’s Perch Framework v0.9.0-beta + BirdPress v0.9.0-beta
+	* Built using Rare Bird’s Perch Framework v0.9.0 + BirdPress v0.9.0
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-<?php
-	// ____ So Meta ___________________________________ */ ?>
+	<?php /* Meta Tags */ ?>
 	<meta charset="UTF-8" />
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
 
-
-<?php
-	// ____ Site Title & Desc. ________________________ */ ?>
+	<?php /* Site Title & Description */ ?>
 	<title><?php wp_title(' | ', true, 'right'); ?></title>
 	<!-- <link href="http://domain.com" rel="home"> -->
 
-
-<?php /* Preconnect + Preload for speedier performance
+	<?php /* Preconnect + Preload for speedier performance
 	<link rel="preconnect" href="https://use.typekit.net" crossorigin>
 	<link rel="preload" href="https://use.typekit.net/{{TYPEKIT_KIT_ID}}.js" as="script" crossorigin>
 	*/ ?>
 
+	<?php /* CSS file compiled with Gulp */ ?>
+	<link rel="stylesheet" type="text/css" href="/assets/css/global.css">
 
-<?php /* CSS file compiled with Gulp */ ?>
-	<link rel="stylesheet" href="/assets/css/global.css">
-
-
-<?php
-	// ____ Favicons + Device Icons ___________________ */ ?>
+	<?php /* Favicons + Device Icons */ ?>
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png"> <?php /* All iOS versions __ this is a single 180px file that should scale down OK */ ?>
 	<link rel="icon" sizes="192x192" href="/icon-hd.png"> <?php /* Android Devices High Resolution */ ?>
 	<link rel="icon" sizes="128x128" href="/icon.png"> <?php /* Android Devices Normal Resolution */ ?>
@@ -46,11 +39,8 @@
 		$convert favicon-16.png favicon-32.png favicon-48.png favicon-64.png favicon.ico
 		*/ ?>
 
-
-<?php
-	// ____ Scripts that need load priority ___________ */ ?>
-	<?php // Modernizr: Feature detection ?>
-	<script><?php include(get_stylesheet_directory() . "/assets/third-party/perch/js/modernizr-custom.js"); ?></script>
+	<?php /* <!-- Modernizr: Feature detection --> */ ?>
+	<script><?php include(get_stylesheet_directory() . "/assets/js/modernizr-custom.js"); ?></script>
 
 	<?php /* TypeKit Advanced Embed Code */ ?>
 	<?php /*
@@ -66,9 +56,7 @@
 	</script>
 	*/ ?>
 
-
-<?php
-	// ____ WordPress Head ____________________________ */ ?>
+	<?php /* WordPress Head */ ?>
 	<?php wp_head(); ?>
 </head>
 
@@ -101,7 +89,7 @@
 				</div>
 
 				<!-- Mobile hamburger menu + menu close link -->
-				<a class="hamburger-menu-button" title="Navigation Menu Access Button" href="#global-outer-navigation-wrapper" aria-label="navigation menu access button" role="button" aria-controls="global-outer-navigation-wrapper" aria-expanded="false">
+				<a class="hamburger-menu-button" title="Navigation Menu Access Button" href="#global-outer-navigation-wrapper" aria-label="navigation menu access button" role="button" aria-controls="global-outer-navigation-wrapper" aria-expanded="false" aria-pressed="false">
 					<span class="sr-only">Menu</span>
 					<span class="bar bar-1"></span>
 					<span class="bar bar-2"></span>
@@ -144,12 +132,11 @@
 				</div>
 
 				<!-- Utility nav with its own container inside -->
+				<?php /* NOTE: If using Utility Nav...
+						Change the aria-label="Secondary Navigation" to something more descriptive,
+						like "Account and Store pages navigation" (if an account / store was linked) */ ?>
 				<nav id="global-utility-nav" class="global-utility-nav global-nav" aria-label="Secondary Navigation">
-
-					<?php /* NOTE: If using Utility Nav...
-								Change the "Secondary Navigation" label to something more descriptive,
-								like "Account and Store pages navigation" (if an account / store was linked) */ ?>
-					<div class="global-header-container container">
+					<div class="container"><!-- global-header-container -->
 						<ul class="global-utility-nav-list global-nav-list">
 							<li class="global-utility-nav-item global-nav-item">
 								<a class="global-utility-nav-link global-nav-link" href="#/">Utility nav link</a>
