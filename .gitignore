@@ -1,8 +1,27 @@
-node_modules
-*.min.css
-*.min.js
-assets/css/maps/
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.log
+.env
 
-assets/js/app.js
-assets/css/global.css
+*.tar.gz
 
+node_modules/
+vendor/
+logs/*
+
+web/assets/css/**
+web/assets/js/**
+web/assets/third-party/**
+web/assets/icons/**
+
+!web/assets/css/
+!web/assets/js/
+!web/assets/images/
+!web/assets/icons/
+
+!web/assets/js/header-comment.js
+!web/assets/js/sample-es2015-scripts.js
