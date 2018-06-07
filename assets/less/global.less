@@ -3,96 +3,111 @@
  */
 
 
+// Path Variables
+// ---------------------------------------
+// These can be changed here but should not be moved into child/import files;
+// they are used *only* for visually shortening path strings
+// and simplifying project setup.
+
+// If changing the Perch location, make sure to also update gulpfile.js
+// Perch via NPM:
+@perch-path: "@{node-modules-path}@rarebirdinc/perch/";
+// Perch via Git or manual install:
+// @perch-path: "../third-party/perch/";
+
+// Where the node modules directory is
+@node-modules-path: "../../node_modules/";
+
+// Where to find the IcoMoon icons files for importing the IcoMoon style.less file
+@icons-path: "../icons/";
+	// The ../icons/ path default is an assumption that the gulpfile will copy over the Perch /icons/ directory to /assets/icons/
+
+
+
+// Third Party Plugins
+// ---------------------------------------
+// @import (inline) "@{node-modules-path}prismjs/themes/prism.css";
+@import (inline) "@{node-modules-path}flickity/dist/flickity.css";
+
+
+
 // Perch Imports
 // ---------------------------------------
 
-// Path Variables
-// --------------------------
-// These can be changed here but cannot be moved into child/import files;
-// they are used *only* for visually shortening path strings
-// and simplifying project setup.
-@perch-path: "../third-party/perch";
-	// Common options:
-	// "../third-party/perch"
-	// "../../../node_modules/@rarebirdinc/perch"
-
-@node-modules-path: "../../node_modules";
-
-
 // (IcoMoon) Icons
 // --------------------------
-// This *must* be imported before Perch Core; @icomoon-font-path is overridden in Perch Core
-// For custom icons, change this path to your install folder, and update @icomoon-font-path
-@import "@{perch-path}/icons/style.less";
+// > For custom icons, change @icons-path in this file to point to your install folder (eg. custom-icons/),
+@import "@{icons-path}style.less";
+// This path override, which must come after this import, is what allows the CSS in icons/style.less to import the font icons correctly. So long as we continue to use IcoMoon with its current setup, this variable likely shouldn't need changed — just the @icons-path variable.
+@icomoon-font-path: "@{icons-path}fonts"; // this path must NOT have a trailing slash
 
 
 // Perch Core
 // --------------------------
-@import "@{perch-path}/less/perch-core.less";
+@import "@{perch-path}less/perch-core.less";
 
 
 // Perch Library
 // --------------------------
 
 // Elements _________
-// @import "@{perch-path}/less/elements/library/_code-elements.less";
-// @import "@{perch-path}/less/elements/library/_pull-quotes.less";
+// @import "@{perch-path}less/elements/library/_code-elements.less";
+// @import "@{perch-path}less/elements/library/_pull-quotes.less";
 
 // Components _________
-// @import "@{perch-path}/less/components/library/_accordions.less";
-// @import "@{perch-path}/less/components/library/_action-blocks.less";
-// @import "@{perch-path}/less/components/library/_announcements.less";
-// @import "@{perch-path}/less/components/library/_badges.less";
-@import "@{perch-path}/less/components/library/_breadcrumbs.less";
-// @import "@{perch-path}/less/components/library/_cards.less";
-// @import "@{perch-path}/less/components/library/_figure-feature.less";
-// @import "@{perch-path}/less/components/library/_footnotes.less";
-@import "@{perch-path}/less/components/library/_hamburger-menu-icon.less";
-// @import "@{perch-path}/less/components/library/_horizontal-accordions.less";
-// @import "@{perch-path}/less/components/library/_input-addons.less";
-// @import "@{perch-path}/less/components/library/_jump-link-target.less";
-// @import "@{perch-path}/less/components/library/_line-wings.less";
-// @import "@{perch-path}/less/components/library/_loading-spinner.less";
-// @import "@{perch-path}/less/components/library/_pagination.less";
-@import "@{perch-path}/less/components/library/_search-overlay.less";
-@import "@{perch-path}/less/components/library/_search-reveal-button.less";
-@import "@{perch-path}/less/components/library/_social-icons.less";
-// @import "@{perch-path}/less/components/library/_star-ratings.less";
+// @import "@{perch-path}less/components/library/_accordions.less";
+// @import "@{perch-path}less/components/library/_action-blocks.less";
+// @import "@{perch-path}less/components/library/_announcements.less";
+// @import "@{perch-path}less/components/library/_badges.less";
+@import "@{perch-path}less/components/library/_breadcrumbs.less";
+// @import "@{perch-path}less/components/library/_cards.less";
+// @import "@{perch-path}less/components/library/_dashed-text-division.less";
+// @import "@{perch-path}less/components/library/_figure-feature.less";
+// @import "@{perch-path}less/components/library/_footnotes.less";
+@import "@{perch-path}less/components/library/_hamburger-menu-icon.less";
+// @import "@{perch-path}less/components/library/_horizontal-accordions.less";
+// @import "@{perch-path}less/components/library/_input-addons.less";
+// @import "@{perch-path}less/components/library/_jump-link-target.less";
+// @import "@{perch-path}less/components/library/_line-wings.less";
+// @import "@{perch-path}less/components/library/_loading-spinner.less";
+// @import "@{perch-path}less/components/library/_outlier-image-grid.less";
+// @import "@{perch-path}less/components/library/_overlays.less";
+// @import "@{perch-path}less/components/library/_pagination.less";
+@import "@{perch-path}less/components/library/_search-overlay.less";
+@import "@{perch-path}less/components/library/_search-reveal-button.less";
+@import "@{perch-path}less/components/library/_social-icons.less";
+// @import "@{perch-path}less/components/library/_star-ratings.less";
 
 // (Flickity) Sliders _________
-// @import "@{perch-path}/less/components/library/sliders/_simple-slider.less";
-// @import "@{perch-path}/less/components/library/sliders/_proportional-slider.less";
-// @import "@{perch-path}/less/components/library/sliders/_hero-slider.less";
-// @import "@{perch-path}/less/components/library/sliders/_tab-slider.less";
+// @import "@{perch-path}less/components/library/sliders/_simple-slider.less";
+// @import "@{perch-path}less/components/library/sliders/_proportional-slider.less";
+// @import "@{perch-path}less/components/library/sliders/_hero-slider.less";
+// @import "@{perch-path}less/components/library/sliders/_tab-slider.less";
 
 // Ecommerce _________
-// @import "@{perch-path}/less/components/library/ecommerce/_cart-table.less";
-// @import "@{perch-path}/less/components/library/ecommerce/_checkout-layout.less";
-// @import "@{perch-path}/less/components/library/ecommerce/_product-listing-grid.less";
-// @import "@{perch-path}/less/components/library/ecommerce/_product-listing-block-links.less";
-// @import "@{perch-path}/less/components/library/ecommerce/_product-listing-content.less";
+// @import "@{perch-path}less/components/library/ecommerce/_cart-table.less";
+// @import "@{perch-path}less/components/library/ecommerce/_checkout-cards.less";
+// @import "@{perch-path}less/components/library/ecommerce/_checkout-layout.less";
+// @import "@{perch-path}less/components/library/ecommerce/_product-listing-grid.less";
+// @import "@{perch-path}less/components/library/ecommerce/_product-listing-block-links.less";
+// @import "@{perch-path}less/components/library/ecommerce/_product-listing-content.less";
+// @import "@{perch-path}less/components/library/ecommerce/_product-listing-fitted-rows.less";
+// @import "@{perch-path}less/components/library/ecommerce/_product-listing-slider.less";
 
 // Wordpress _________
-@import "@{perch-path}/less/components/library/wordpress/_wordpress-resets-overrides.less";
-// @import "@{perch-path}/less/components/library/wordpress/_wp-hide-show-comments.less";
-// @import "@{perch-path}/less/components/library/wordpress/_wordpress-featured-images.less";
+@import "@{perch-path}less/components/library/wordpress/_wordpress-resets-overrides.less";
+// @import "@{perch-path}less/components/library/wordpress/_wp-hide-show-comments.less";
+// @import "@{perch-path}less/components/library/wordpress/_wordpress-featured-images.less";
 
 // Layout _________
-@import "@{perch-path}/less/layout/library/_layout-main.less";
-@import "@{perch-path}/less/layout/library/_layout-footer.less";
-@import "@{perch-path}/less/layout/library/positioned_layout/_layout-header.less";
-@import "@{perch-path}/less/layout/library/positioned_layout/_layout-desktop.less";
-@import "@{perch-path}/less/layout/library/_global-logo.less";
+@import "@{perch-path}less/layout/library/_layout-main.less";
+@import "@{perch-path}less/layout/library/_layout-footer.less";
+@import "@{perch-path}less/layout/library/positioned_layout/_layout-header.less";
+@import "@{perch-path}less/layout/library/positioned_layout/_layout-desktop.less";
+@import "@{perch-path}less/layout/library/_global-logo.less";
 
 // Development _________
-@import "@{perch-path}/less/components/library/development/_development.less";
-
-
-
-// Third Party Plugins
-// ---------------------------------------
-// @import (inline) "@{node-modules-path}/prismjs/themes/prism.css";
-// @import (inline) "@{node-modules-path}/flickity/dist/flickity.css";
+@import (multiple) "@{perch-path}less/components/library/development/_development.less";
 
 
 
