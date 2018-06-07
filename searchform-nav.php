@@ -11,7 +11,7 @@
 		</form>
 
 		<div class="global-search-overlay__actions">
-			<button id="global-search-overlay__close-button" class="global-search-overlay__close-button button button--larger">Close Search</button>
+			<button id="global-search-overlay__close-button" class="global-search-overlay__close-button button button--outline">Close Search</button>
 		</div>
 	</div>
 </div>
