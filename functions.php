@@ -6,9 +6,6 @@ require_once("custom/navigation.php"); // nav walker and such
 require_once("custom/rogue.php");      // going rogue
 require_once("custom/login.php");      // custom login screen
 
-// LESS Compiler
-require_once("lib/Less.php");
-
 add_action('after_setup_theme', 'blankslate_setup');
 
 function blankslate_setup() {
