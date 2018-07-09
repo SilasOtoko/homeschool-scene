@@ -56,6 +56,9 @@ gulp.task("less", function() {
 // ---------------------------------------
 gulp.task("js", function() {
   var srcFiles = [
+    // File Header Comment & Compilation Warning _________
+    "assets/js/header-comment.js",
+
     // Bootstrap _________
     "assets/third-party/perch/js/bootstrap-transition.js",
     "assets/third-party/perch/js/bootstrap-alert.js",

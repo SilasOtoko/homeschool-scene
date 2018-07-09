@@ -10,7 +10,7 @@
 	* |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 	*
 	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc
-	* Built using Rare Bird's Perch Framework v0.8 + BirdPress v0.8
+	* Built using Rare Bird’s Perch Framework v0.8.1 + BirdPress v0.8.1
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <?php
@@ -46,6 +46,20 @@
 	<?php // Modernizr: Feature detection + HTML5 shiv ?>
 	<script><?php include(get_stylesheet_directory() . "/assets/third-party/perch/js/modernizr-custom.js"); ?></script>
 
+	<?php /* TypeKit Advanced Embed Code */ ?>
+	<?php /*
+	<script>
+	  (function(d) {
+	    var config = {
+	      kitId: '{{TYPEKIT_KIT_ID}}',
+	      scriptTimeout: 3000,
+	      async: true
+	    },
+	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	  })(document);
+	</script>
+	*/ ?>
+
 
 <?php
 	// HELPER CODE IF NEEDED:
@@ -66,8 +80,7 @@
 </head>
 
 
-<!--[if lt IE 9]>      <body <?php body_class('page-preloading lt-ie9'); ?>> <![endif]-->
-<!--[if IE 9]>         <body <?php body_class('page-preloading ie9'); ?>> <![endif]-->
+<!--[if lte IE 9]>      <body <?php body_class('page-preloading lte-ie9'); ?>> <![endif]-->
 <!--[if gt IE 9]><!--> <body <?php body_class('page-preloading'); ?>> <!--<![endif]-->
 	<a href="#global-main" class="sr-only">Skip to content</a>
 
@@ -163,8 +176,15 @@
 
 		<main id="global-main" class="global-main" role="main">
 
-			<!--[if lte IE 9]>
-				<p class="browser-outdated-message">
-					<span class="icon-warning-stop"></span> Your browser is outdated. <a href="http://browsehappy.com/" target="_blank" style="text-decoration: underline; font-weight: bold;">Upgrade to a modern browser</a> to better experience this site.
-				</p>
-			<![endif]-->
+			<?php /* Browser Outdated Message -- hidden by default but shown if browser has class `.lte-ie9` or fails the Modernizr detect for CSS Transitions (has class `mod-no-csstransitions`).
+			The styles are defined in Perch's _browser-fixes.less file. */ ?>
+			<div class="browser-outdated-message browser-message" style="display: none;">
+				<span class="icon-warning-stop"></span> Your browser is outdated. <a href="https://browsehappy.com/" target="_blank" style="text-decoration: underline; font-weight: bold;">Upgrade to a modern browser</a> to better experience this site.
+			</div>
+			<?php /* Browser No JS Message -- hidden by default but shown if browser has class `mod-no-js`. This method, which relies on Modernizr's successful initialization, might give us better coverage for browsers that have JS turned on but are blocking JS with a tool/plugin/blocker on top.
+			The styles are defined in Perch's _browser-fixes.less file. */ ?>
+			<div class="browser-no-js-message browser-message" style="display: none;">
+				<p><span class="icon-warning-stop"></span> Your browser has turned off or is blocking Javascript.</p>
+				<p>If you are using a content blocker, check to see that you have not globally turned off Javascript.</p>
+				<p>If you have turned it off manually in your browser, please enable it to better experience this site.</p>
+			</div>

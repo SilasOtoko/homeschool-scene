@@ -1,5 +1,42 @@
+//
+// Compiled Site Scripts
+// ----------------------------------------------------------------------------
+// Warning: Global.js is a COMPILED file! Edit a source file, or create a new
+// one. See gulpfile.js!
+//
+//  #######
+//     #    #    # #  ####      #  ####        ##
+//     #    #    # # #          # #           #  #
+//     #    ###### #  ####      #  ####      #    #
+//     #    #    # #      #     #      #     ######
+//     #    #    # # #    #     # #    #     #    #
+//     #    #    # #  ####      #  ####      #    #
+
+//  #####  ####### #     # ######  ### #       ####### ######
+// #     # #     # ##   ## #     #  #  #       #       #     #
+// #       #     # # # # # #     #  #  #       #       #     #
+// #       #     # #  #  # ######   #  #       #####   #     #
+// #       #     # #     # #        #  #       #       #     #
+// #     # #     # #     # #        #  #       #       #     #
+//  #####  ####### #     # #       ### ####### ####### ######
+//
+// ####### ### #       #######
+// #        #  #       #
+// #        #  #       #
+// #####    #  #       #####
+// #        #  #       #
+// #        #  #       #
+// #       ### ####### #######
+//
+// Warning: Global.js is a COMPILED file! Edit a source file, or create a new
+// one. See gulpfile.js!
+// ----------------------------------------------------------------------------
+
+
+
+
 /* ========================================================================
- * Bootstrap: transition.js v3.3.6
+ * Bootstrap: transition.js v3.3.7
  * http://getbootstrap.com/javascript/#transitions
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -59,7 +96,7 @@
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: alert.js v3.3.6
+ * Bootstrap: alert.js v3.3.7
  * http://getbootstrap.com/javascript/#alerts
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -78,7 +115,7 @@
     $(el).on('click', dismiss, this.close)
   }
 
-  Alert.VERSION = '3.3.6'
+  Alert.VERSION = '3.3.7'
 
   Alert.TRANSITION_DURATION = 150
 
@@ -91,7 +128,7 @@
       selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
     }
 
-    var $parent = $(selector)
+    var $parent = $(selector === '#' ? [] : selector)
 
     if (e) e.preventDefault()
 
@@ -154,7 +191,7 @@
 }(jQuery);
 
 /* ========================================================================
- * Bootstrap: modal.js v3.3.6
+ * Bootstrap: modal.js v3.3.7
  * http://getbootstrap.com/javascript/#modals
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -188,7 +225,7 @@
     }
   }
 
-  Modal.VERSION  = '3.3.6'
+  Modal.VERSION  = '3.3.7'
 
   Modal.TRANSITION_DURATION = 300
   Modal.BACKDROP_TRANSITION_DURATION = 150
@@ -5109,9 +5146,9 @@ $(document).ready(function(){
 // 		 ground up by @k_bav as an exercise.
 //		 This JS is Bootstrap's for .alert dismissal.
 // --------------------------------------------------
-$(document).ready(function(){
-	$(".alert").alert();
-});
+// $(document).ready(function(){
+// 	$(".alert").alert();
+// });
 
 
 
