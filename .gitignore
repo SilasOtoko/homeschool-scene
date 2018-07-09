@@ -24,4 +24,5 @@ assets/icons/**
 !assets/icons/
 
 !assets/js/header-comment.js
+!web/assets/js/icons-import.js
 !assets/js/sample-es2015-scripts.js
