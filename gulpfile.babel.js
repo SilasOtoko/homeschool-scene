@@ -14,8 +14,11 @@ var clone        = require("gulp-clone");
 var concat       = require("gulp-concat");
 var less         = require("gulp-less");
 var rename       = require("gulp-rename");
+var resolve      = require("rollup-plugin-node-resolve");
+var rollup       = require("rollup-stream");
 var sourcemaps   = require("gulp-sourcemaps");
 var uglify       = require("gulp-uglify");
+var source       = require("vinyl-source-stream");
 // var browserSync  = require('browser-sync').create();
 // var gulpif       = require("gulp-if");
 
@@ -122,7 +125,7 @@ gulp.task("js", /*['babeljs'],*/ () => {
     paths.npm+"lazysizes/lazysizes.js",
     // paths.npm+"flickity/dist/flickity.pkgd.js",
     // paths.npm+"smooth-scroll/dist/js/smooth-scroll.js",
-    // paths.npm+"gumshoe/dist/js/gumshoe.js",
+    // paths.npm+"gumshoejs/dist/js/gumshoe.js",
     // paths.npm+"prismjs/prism.js",
     // paths.npm+"prismjs/components/prism-less.js",
 
@@ -144,6 +147,9 @@ gulp.task("js", /*['babeljs'],*/ () => {
     // paths.perch+"js/library/ecommerce/product-thumbnails.js",
     // paths.perch+"js/library/ecommerce/billing-same-as-shipping.js",
     // paths.perch+"js/library/ecommerce/cart-quantity-updater.js",
+
+    // Font Awesome Icons _________
+    // paths.srcJS+"tree-shaken-icons.js",
   ];
 
   // an array of all source files to be used only in the development process (for final site JS files, see the srcFiles array above)
@@ -178,6 +184,32 @@ gulp.task("js", /*['babeljs'],*/ () => {
     return merge(sourceDevelopment, sourceProduction);
   }
   return sourceDevelopment;
+});
+
+
+// Icons Task (Font Awesome)
+// ---------------------------------------
+gulp.task('icons', function() {
+  return rollup({
+    input: paths.srcJS+'icons-import.js',
+    format: 'es',
+    plugins: [
+      // this is needed for helping Rollup to resolve node paths
+      resolve({
+        // some package.json files have a `browser` field which
+        // specifies alternative files to load for people bundling
+        // for the browser. If that's you, use this option, otherwise
+        // pkg.browser will be ignored
+        browser: true,  // Default: false
+      })
+    ]
+  })
+
+  // give the file the name you want to output with
+  .pipe(source('tree-shaken-icons.js'))
+
+  // output
+  .pipe(gulp.dest(paths.srcJS));
 });
 
 
