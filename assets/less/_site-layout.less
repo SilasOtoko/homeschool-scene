@@ -11,8 +11,15 @@
 
 // Logo
 // ---------------------------------------
+@global-logo-width: 			5rem;
+@global-logo-desktop-width: 			7rem;
+@global-desktop-logo-vertical-padding: 	1rem;
+
 .global-logo {
-	color: #FFF;
+	width: 5rem;
+	@media (min-width: @desktop-styles-min) {
+		width: 7rem;
+	}
 }
 
 
@@ -30,18 +37,18 @@
 
 // Footer
 // ---------------------------------------
-.global-footer {
-	padding-top: 0;
+// .global-footer {
+// 	padding-top: 0;
 
-	.footer-body {
-		padding: 1em 0;
+// 	.footer-body {
+// 		padding: 1em 0;
 
-		background-color: #EFEFEF;
-	}
+// 		background-color: #EFEFEF;
+// 	}
 
-	.footer-bottom {
-		padding: 1em 0;
+// 	.footer-bottom {
+// 		padding: 1em 0;
 
-		color: #555;
-	}
-}
+// 		color: #555;
+// 	}
+// }

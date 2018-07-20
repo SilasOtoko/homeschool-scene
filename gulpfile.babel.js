@@ -95,6 +95,7 @@ gulp.task("less", function() {
 //     .pipe(gulp.dest(paths.distJS));
 // });
 
+
 // Default JS task
 // --------------------------
 gulp.task("js", /*['babeljs'],*/ () => {
@@ -137,9 +138,11 @@ gulp.task("js", /*['babeljs'],*/ () => {
     // Nav link opening methods — choose one of these at most.
     paths.perch+"js/library/child-nav-open-with-parent-click.js",
     // paths.perch+"js/library/child-nav-open-with-generated-button.js",
+    paths.perch+"js/library/drawer-navigation.js",
 
     paths.perch+"js/library/hiding-sticky-nav.js",
-    paths.perch+"js/library/modal-search-system.js",
+    // paths.perch+"js/library/modal-search-system.js",
+    paths.perch+"js/library/panel-search-system.js",
     paths.perch+"js/library/mousetrap-keyboard-shortcuts.js",
     // paths.perch+"js/library/wordpress/wp-hide-show-comments.js",
 
@@ -156,6 +159,7 @@ gulp.task("js", /*['babeljs'],*/ () => {
   var devOnlySrcFiles = [
     paths.npm+"holderjs/holder.js",
   ];
+
 
   // The "pure" source of files intended to be used on the final, live site
   var source = gulp.src(srcFiles)
