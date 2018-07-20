@@ -49,7 +49,7 @@ class custom_simplify_walker extends Walker_Nav_Menu {
 		return preg_match('/(current[-_])|(has-children)/', $classes);
 	} //EF
 
-	function start_el(&$output, $item, $depth, $args){
+	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0){
 
 		$indent = ($depth) ? str_repeat("\t", $depth) : '';
 
@@ -91,7 +91,7 @@ class custom_simplify_walker extends Walker_Nav_Menu {
 		$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
 	} //EF
 
-	function start_lvl(&$output, $depth, $args){
+	function start_lvl(&$output, $depth = 0, $args = array()){
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<ul class=\"{$args->sub_menu_class}\">\n";
 	}
