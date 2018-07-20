@@ -9,13 +9,17 @@
   "author": "Rare Bird, Inc.",
   "license": "UNLICENSED",
   "private": true,
+  "engines": {
+    "node": ">=8.11.2",
+    "npm": ">=6.1.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.0",
     "@fortawesome/free-brands-svg-icons": "^5.1.0",
     "@fortawesome/pro-light-svg-icons": "^5.1.0",
     "@fortawesome/pro-regular-svg-icons": "^5.1.0",
     "@fortawesome/pro-solid-svg-icons": "^5.1.0",
-    "@rarebirdinc/perch": "git+ssh://git@rarebird.io/diffusion/PERCH/perch.git#v0.9.1-alpha.1",
+    "@rarebirdinc/perch": "git+ssh://git@rarebird.io/diffusion/PERCH/perch.git#v0.9.1-alpha.2",
     "autotrack": "^2.4.1",
     "babel-core": "^6.26.3",
     "babel-polyfill": "^6.26.0",
