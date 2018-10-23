@@ -8,7 +8,7 @@
 				<?php include(get_stylesheet_directory() . "/assets/images/birdpress/logo--birdpress.svg"); ?>
 			</span>
 			<?php /* schema.org itemprop markup */ ?>
-			<link itemprop="logo" content="<?php get_stylesheet_directory(); ?>/assets/images/logo--birdpress.png" />
+			<link itemprop="logo" href="<?php get_stylesheet_directory(); ?>/assets/images/logo--birdpress.png" />
 
 			<?php /* If creating a mobile version of a logo that reduces the amount of logo shown, you can "re-use" the original/main logo SVG with the code below. The key is in the <use> tag to reference the xlink:href attribute to the original/main logo SVG's id attribute.
 
@@ -60,6 +60,8 @@
 				'sub_menu_class'  => 'global-nav-child-list global-nav-list',
 				'element_class'   => 'global-main-nav-item global-nav-item',
 				'link_class'      => 'global-main-nav-link global-nav-link',
+				'link_before'     => '<span class="nav-link-inner">',
+				'link_after'      => '</span>',
 				'walker'          => new custom_simplify_walker
 			);
 			wp_nav_menu( $defaults );
@@ -70,9 +72,8 @@
 
 	<?php /* Utility nav with its own container inside */ ?>
 	<?php /* NOTE: If using Utility Nav...
-			Change the aria-label="Secondary Navigation" to something more descriptive,
-			like "Account and Store pages navigation" (if an account / store was linked) */ ?>
-	<nav id="global-utility-nav" class="global-utility-nav global-nav" aria-label="Secondary Navigation">
+		Mind the aria-label value! Make sure it's descriptive for the items it contains. */ ?>
+	<nav id="global-utility-nav" class="global-utility-nav global-nav" aria-label="Account and Store pages navigation">
 		<div class="container"><!-- global-header-container -->
 			<ul class="global-utility-nav-list global-nav-list">
 				<li class="global-utility-nav-item global-nav-item">
@@ -92,5 +93,20 @@
 
 
 <?php /* Global Search Overlay */ ?>
-<?php get_template_part('searchform', 'nav') ?>
-<?php // get_search_form(); ?>
+<div id="global-search-overlay" class="global-search-overlay full-page-backdrop">
+	<div class="global-search-overlay__inner full-page-backdrop__inner">
+		<form action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get" id="global-search-overlay-form" autocomplete="off" role="search">
+			<div class="global-search-overlay-input-wrapper">
+				<input id="global-search-overlay__input" class="global-search-overlay__input input-field mousetrap" type="search" name="s" size="20" maxlength="100" placeholder="Enter search keyword(s)">
+
+				<button id="global-search-overlay__submit" class="global-search-overlay__submit icon-search button button--smaller" type="submit" title="Click here to search.">
+					<span class="sr-only">Search</span>
+				</button>
+			</div>
+		</form>
+
+		<div class="global-search-overlay__actions">
+			<button id="global-search-overlay__close-button" class="global-search-overlay__close-button button button--outline">Close Search</button>
+		</div>
+	</div>
+</div>

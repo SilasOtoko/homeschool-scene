@@ -91,7 +91,7 @@
 				<div class="global-footer-legal-and-social">
 					<p class="global-footer-legal">
 					<?php
-						echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'blankslate' ), '&copy;', date('Y'), esc_html(get_bloginfo('name')) . ' by <a href="http://rarebirdinc.com/" target="_blank">Rare Bird Inc.</a>' );
+						echo sprintf( __( '%1$s %2$s %3$s All Rights Reserved.', 'blankslate' ), '&copy;', date('Y'), esc_html(get_bloginfo('name')) . ' by <a href="http://rarebirdinc.com/" target="_blank">Rare Bird Inc.</a>' );
 					?>
 					</p>
 

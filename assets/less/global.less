@@ -51,80 +51,93 @@
 // --------------------------
 
 // Elements _________
-// @import "@{perch-path}less/elements/library/_code-elements.less";
-@import "@{perch-path}less/elements/library/_input-with-embedded-button.less";
-// @import "@{perch-path}less/elements/library/_pull-quotes.less";
+@perch-elements-library-path: "@{perch-path}less/elements/library/";
+
+// @import "@{perch-elements-library-path}_code-elements.less";
+@import "@{perch-elements-library-path}_input-with-embedded-button.less";
+// @import "@{perch-elements-library-path}_pull-quotes.less";
 
 // Components _________
-// @import "@{perch-path}less/components/library/_accordions.less";
-// @import "@{perch-path}less/components/library/_action-blocks.less";
-// @import "@{perch-path}less/components/library/_announcements.less";
-// @import "@{perch-path}less/components/library/_badges.less";
-@import "@{perch-path}less/components/library/_breadcrumbs.less";
-// @import "@{perch-path}less/components/library/_cards.less";
-// @import "@{perch-path}less/components/library/_dashed-text-division.less";
-// @import "@{perch-path}less/components/library/_figure-feature.less";
-// @import "@{perch-path}less/components/library/_footnotes.less";
-@import "@{perch-path}less/components/library/_hamburger-menu-icon.less";
-// @import "@{perch-path}less/components/library/_horizontal-accordions.less";
-@import "@{perch-path}less/components/library/_input-addons.less";
-// @import "@{perch-path}less/components/library/_jump-link-target.less";
-// @import "@{perch-path}less/components/library/_line-wings.less";
-// @import "@{perch-path}less/components/library/_link-listing.less";
-// @import "@{perch-path}less/components/library/_loading-spinner.less";
-// @import "@{perch-path}less/components/library/_outlier-image-grid.less";
-// @import "@{perch-path}less/components/library/_overlays.less";
-// @import "@{perch-path}less/components/library/_pagination.less";
-@import "@{perch-path}less/components/library/_search-overlay.less";
-@import "@{perch-path}less/components/library/_search-reveal-button.less";
-@import "@{perch-path}less/components/library/_social-icons.less";
-// @import "@{perch-path}less/components/library/_star-ratings.less";
+@perch-components-library-path: "@{perch-path}less/components/library/";
+
+// @import "@{perch-components-library-path}_accordions.less";
+// @import "@{perch-components-library-path}_action-blocks.less";
+// @import "@{perch-components-library-path}_announcements.less";
+// @import "@{perch-components-library-path}_badges.less";
+@import "@{perch-components-library-path}_breadcrumbs.less";
+// @import "@{perch-components-library-path}_cards.less";
+// @import "@{perch-components-library-path}_dashed-text-division.less";
+@import "@{perch-components-library-path}_figure-feature.less";
+@import "@{perch-components-library-path}_flex-image-grid.less";
+// @import "@{perch-components-library-path}_footnotes.less";
+@import "@{perch-components-library-path}_hamburger-menu-icon.less";
+// @import "@{perch-components-library-path}_horizontal-accordions.less";
+@import "@{perch-components-library-path}_hover-shadow-block-links.less";
+@import "@{perch-components-library-path}_input-addons.less";
+// @import "@{perch-components-library-path}_jump-link-target.less";
+// @import "@{perch-components-library-path}_line-wings.less";
+@import "@{perch-components-library-path}_link-listing.less";
+// @import "@{perch-components-library-path}_loading-spinner.less";
+// @import "@{perch-components-library-path}_overlays.less";
+// @import "@{perch-components-library-path}_pagination.less";
+@import "@{perch-components-library-path}_search-overlay.less";
+@import "@{perch-components-library-path}_search-reveal-button.less";
+@import "@{perch-components-library-path}_social-icons.less";
+// @import "@{perch-components-library-path}_star-ratings.less";
 
 // (Flickity) Sliders _________
 // @import "@{perch-path}less/components/library/sliders/_simple-slider.less";
 // @import "@{perch-path}less/components/library/sliders/_proportional-slider.less";
 
 // Ecommerce _________
-// @import "@{perch-path}less/components/library/ecommerce/_cart-table.less";
-// @import "@{perch-path}less/components/library/ecommerce/_checkout-cards.less";
-// @import "@{perch-path}less/components/library/ecommerce/_checkout-layout.less";
-// @import "@{perch-path}less/components/library/ecommerce/_product-listing-grid.less";
-// @import "@{perch-path}less/components/library/ecommerce/_product-listing-block-links.less";
-// @import "@{perch-path}less/components/library/ecommerce/_product-listing-content.less";
-// @import "@{perch-path}less/components/library/ecommerce/_product-listing-fitted-rows.less";
-// @import "@{perch-path}less/components/library/ecommerce/_product-listing-slider.less";
+@ecommerce-components-path: "@{perch-path}less/components/library/ecommerce/";
+
+// @import "@{ecommerce-components-path}_cart-table.less";
+// @import "@{ecommerce-components-path}_checkout-cards.less";
+// @import "@{ecommerce-components-path}_checkout-layout.less";
+// @import "@{ecommerce-components-path}_product-listing-grid.less";
+// @import "@{ecommerce-components-path}_product-listing-block-links.less";
+// @import "@{ecommerce-components-path}_product-listing-content.less";
+// @import "@{ecommerce-components-path}_product-listing-fitted-rows.less";
+// @import "@{ecommerce-components-path}_product-listing-slider.less";
 
 // Wordpress _________
-// @import "@{perch-path}less/components/library/wordpress/_wp-admin-bar-overrides-for-positioned-layout.less";
-@import "@{perch-path}less/components/library/wordpress/_wp-comments.less";
-@import "@{perch-path}less/components/library/wordpress/_wp-post-and-page.less";
-@import "@{perch-path}less/components/library/wordpress/_wp-sidebar.less";
-@import "@{perch-path}less/components/library/wordpress/_wp-captions.less";
-@import "@{perch-path}less/components/library/wordpress/_wp-alignment.less";
-@import "@{perch-path}less/components/library/wordpress/_wp-media-elements.less";
-@import "@{perch-path}less/components/library/wordpress/_wp-utilities.less";
-// @import "@{perch-path}less/components/library/wordpress/_wp-hide-show-comments.less";
-// @import "@{perch-path}less/components/library/wordpress/_wordpress-featured-images.less";
+@wordpress-components-path: "@{perch-path}less/components/library/wordpress/";
 
-// Simple Layout Helpers _________
-@import "@{perch-path}less/layout/library/_layout-main.less";
-@import "@{perch-path}less/layout/library/_layout-footer.less";
-@import "@{perch-path}less/layout/library/_footer-links.less";
+@import "@{wordpress-components-path}_wp-admin-bar-mobile-fixes.less";
+// @import "@{wordpress-components-path}_wp-admin-bar-overrides-for-positioned-layout.less"; // only used in combination with "Positioned Layout" starter layout
+@import "@{wordpress-components-path}_wp-comments.less";
+@import "@{wordpress-components-path}_wp-captions.less";
+@import "@{wordpress-components-path}_wp-alignment.less";
+@import "@{wordpress-components-path}_wp-utilities.less";
+@import "@{wordpress-components-path}_wp-widgets.less";
+// @import "@{wordpress-components-path}_wp-hide-show-comments.less";
 
-// Positioned Layout _________
-// @import "@{perch-path}less/layout/library/positioned_layout/_PL--layout-header.less";
-// @import "@{perch-path}less/layout/library/positioned_layout/_PL--layout-desktop.less";
-// @import "@{perch-path}less/layout/library/positioned_layout/_PL--global-logo.less";
-// @import "@{perch-path}less/layout/library/positioned_layout/_PL--positioned-layout-variable-overrides.less";
+// Layout Helpers _________
+@layout-helpers-path: "@{perch-path}less/layout/library/layout_helpers/";
 
-// Stacked Layout _________
-@import "@{perch-path}less/layout/library/stacked_layout/_SL--global-search.less";
-@import "@{perch-path}less/layout/library/stacked_layout/_SL--global-logo.less";
-@import "@{perch-path}less/layout/library/stacked_layout/_SL--main-nav.less";
-@import "@{perch-path}less/layout/library/stacked_layout/_SL--utility-nav.less";
-@import "@{perch-path}less/layout/library/stacked_layout/_SL--nav-drawer.less";
-@import "@{perch-path}less/layout/library/stacked_layout/_SL--hamburger-button-overrides.less";
-@import "@{perch-path}less/layout/library/stacked_layout/_SL--search-reveal-button-overrides.less";
+@import "@{layout-helpers-path}_layout-main.less";
+@import "@{layout-helpers-path}_layout-footer.less";
+@import "@{layout-helpers-path}_footer-links.less";
+
+// Starter Layouts _________
+@starter-layouts-path: "@{perch-path}less/layout/library/starter_layouts/";
+
+// Positioned Layout
+@import "@{starter-layouts-path}positioned_layout/_PL--layout-header.less";
+@import "@{starter-layouts-path}positioned_layout/_PL--layout-desktop.less";
+@import "@{starter-layouts-path}positioned_layout/_PL--global-logo.less";
+@import "@{starter-layouts-path}positioned_layout/_PL--positioned-layout-variable-overrides.less";
+
+// Stacked Layout
+// @import "@{starter-layouts-path}stacked_layout/_SL--global-search.less";
+// @import "@{starter-layouts-path}stacked_layout/_SL--global-logo.less";
+// @import "@{starter-layouts-path}stacked_layout/_SL--global-header.less";
+// @import "@{starter-layouts-path}stacked_layout/_SL--main-nav.less";
+// @import "@{starter-layouts-path}stacked_layout/_SL--utility-nav.less";
+// @import "@{starter-layouts-path}stacked_layout/_SL--nav-drawer.less";
+// @import "@{starter-layouts-path}stacked_layout/_SL--hamburger-button-overrides.less";
+// @import "@{starter-layouts-path}stacked_layout/_SL--search-reveal-button-overrides.less";
 
 // Development _________
 @import (multiple) "@{perch-path}less/components/library/development/_development.less";
@@ -145,3 +158,6 @@
 
 // Templates
 // @import "templates/_template-product-detail.less";
+
+// Birdpress Site specific styles
+@import "demo/_birdpress-demo-site-styles.less";

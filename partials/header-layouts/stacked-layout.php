@@ -1,52 +1,25 @@
-<?php /* Utility Nav */ ?>
-<nav id="global-utility-nav" class="global-utility-nav global-nav" aria-label="Account and Store pages navigation">
-	<div class="global-utility-nav-container container">
-		<ul class="global-utility-nav-list global-nav-list u-hide-mobile">
-			<li class="global-utility-nav-item global-nav-item">
-				<a class="global-utility-nav-link global-nav-link" href="/login.php">
-					Sign In
-				</a>
-			</li>
-			<li class="global-utility-nav-item global-nav-item">
-				<a class="global-utility-nav-link global-nav-link" href="#/">
-					My Favorites
-				</a>
-			</li>
-		</ul>
-		<div class="global-store-message">
-			<span class="number-of-members u-text-uppercase u-text-smaller">000,000,000</span> Members &amp; Growing!
-		</div>
-	</div>
-
-</nav><!-- /#global-utility-nav -->
-
-
 <div class="header-body-container container">
 
 	<?php /* Global Logo */ ?>
-	<div itemscope="" itemtype="http://schema.org/Organization">
-		<?php /* If using a separate, "re-used" version of logo for mobile (cf. commented out block below), add class `u-hide-mobile` to this logo */ ?>
-		<a id="global-logo" class="global-desktop-logo global-logo" href="/" title="Go to the home page &raquo;" itemprop="url">
-			<span class="svg-wrapper">
-				<?php include(get_stylesheet_directory() . "/assets/images/birdpress/logo--birdpress.svg"); ?>
-			</span>
-			<?php /* schema.org itemprop markup */ ?>
-			<link itemprop="logo" content="<?php get_stylesheet_directory(); ?>/assets/images/logo--birdpress.png" />
-		</a>
+	<?php /* If using a separate, "re-used" version of logo for mobile (cf. commented out block below), add class `u-hide-mobile` to this logo */ ?>
+	<a id="global-logo" class="global-desktop-logo global-logo" href="/" title="Go to the home page &raquo;">
+		<span class="svg-wrapper">
+			<?php include(get_stylesheet_directory() . "/assets/images/birdpress/logo--birdpress.svg"); ?>
+		</span>
+	</a>
 
-		<?php /* If creating a mobile version of a logo that reduces the amount of logo shown, you can "re-use" the original/main logo SVG with the code below. The key is in the <use> tag to reference the xlink:href attribute to the original/main logo SVG's id attribute.
+	<?php /* If creating a mobile version of a logo that reduces the amount of logo shown, you can "re-use" the original/main logo SVG with the code below. The key is in the <use> tag to reference the xlink:href attribute to the original/main logo SVG's id attribute.
 
-		To achieve the visual reduction for this version, you can set the <svg>'s height or width to a different value to visually crop items out — or use CSS to hide relevant group ID's */ 
-		/*
-		<a class="global-mobile-logo global-logo u-hide-desktop" href="/" title="Go to the home page &raquo;" itemprop="url">
-			<span class="svg-wrapper">
-				<svg id="global-mobile-logo-used-svg" width="100%" height="54.307" class="footer-logo-used-svg" version="1.1" viewBox="0 0 277.945 41">
-					<use xlink:href="#logo--takeoff"/>
-				</svg>
-			</span>
-		</a>
-		*/ ?>
-	</div>
+	To achieve the visual reduction for this version, you can set the <svg>'s height or width to a different value to visually crop items out — or use CSS to hide relevant group ID's */ 
+	/*
+	<a class="global-mobile-logo global-logo u-hide-desktop" href="/" title="Go to the home page &raquo;">
+		<span class="svg-wrapper">
+			<svg id="global-mobile-logo-used-svg" width="100%" height="54.307" class="footer-logo-used-svg" version="1.1" viewBox="0 0 277.945 41">
+				<use xlink:href="#logo--takeoff"/>
+			</svg>
+		</span>
+	</a>
+	*/ ?>
 
 	<?php /* Mobile hamburger menu + menu close link */ ?>
 	<a class="hamburger-menu-button" title="Navigation Menu Access Button" href="#global-outer-navigation-wrapper" aria-label="navigation menu access button" role="button" aria-controls="global-outer-navigation-wrapper" aria-expanded="false" aria-pressed="false">
@@ -88,6 +61,28 @@
 
 </div><!-- /.header-body-container -->
 
+
+<?php /* Utility Nav */ ?>
+<?php /* NOTE: If using Utility Nav...
+	Mind the aria-label value! Make sure it's descriptive for the items it contains. */ ?>
+<nav id="global-utility-nav" class="global-utility-nav global-nav" aria-label="Account and Store pages navigation">
+	<div class="global-utility-nav-container container">
+		<ul class="global-utility-nav-list global-nav-list u-hide-mobile">
+			<li class="global-utility-nav-item global-nav-item">
+				<a class="global-utility-nav-link global-nav-link" href="/login.php">
+					Sign In
+				</a>
+			</li>
+			<li class="global-utility-nav-item global-nav-item">
+				<a class="global-utility-nav-link global-nav-link" href="#/">
+					My Favorites
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav><!-- /#global-utility-nav -->
+
+
 <?php /* Global Outer Navigation Wrapper / navigation drawer wrapper */ ?>
 <div id="global-outer-navigation-wrapper" class="navigation-drawer-wrapper">
 	<div class="navigation-drawer-overlay" aria-hidden="true"></div>
@@ -102,9 +97,11 @@
 				// 'container_id'    => 'global-nav',
 				// 'container_class' => 'global-nav',
 				'menu_class'      => 'global-main-nav-list global-nav-list',
-				'sub_menu_class'  => 'global-nav-child-list global-nav-list',
+				'sub_menu_class'  => 'global-main-nav-child-list global-nav-child-list global-nav-list',
 				'element_class'   => 'global-main-nav-item global-nav-item',
 				'link_class'      => 'global-main-nav-link global-nav-link',
+				'link_before'     => '<span class="nav-link-inner">',
+				'link_after'      => '</span>',
 				'walker'          => new custom_simplify_walker
 			);
 			wp_nav_menu( $defaults );

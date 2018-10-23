@@ -29,7 +29,7 @@
 // #       ### ####### #######
 //
 // Warning: Global.js is a COMPILED file! Edit a source file, or create a new
-// one. See gulpfile.js!
+// one. See gulpfile.babel.js!
 // ----------------------------------------------------------------------------
 
 

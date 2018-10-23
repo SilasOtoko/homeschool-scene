@@ -10,7 +10,7 @@
 	* |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 	*
 	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc
-	* Built using Rare Bird’s Perch Framework v0.9.1-alpha.1 + BirdPress v0.9.1-alpha.1
+	* Built using Rare Bird’s Perch Framework v0.9.1-beta.5 + BirdPress v1.0.0-alpha.1
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 	<?php /* Meta Tags */ ?>
@@ -19,7 +19,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
 
 	<?php /* Site Title & Description */ ?>
-	<title><?php wp_title(' | ', true, 'right'); ?></title>
+	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 	<!-- <link href="http://domain.com" rel="home"> -->
 
 	<?php /* Preconnect + Preload for speedier performance
@@ -68,14 +68,12 @@
 
 	<div id="global-wrapper" class="global-wrapper hfeed">
 
-		<header id="global-header" class="global-header show">
-
+		<header id="global-header" class="global-header is-showing-default">
 			<?php
-				/* Header layout treatments. Relavant LESS and JS will need to be switched around in global.less and in gulpfile.babel.js */
-				include 'partials/header-layouts/stacked-layout.php';
-				// include 'partials/header-layouts/positioned-layout.php';
+				/* Sample Header layout treatments. Relavant LESS and JS will need to be switched around in global.less and in gulpfile.babel.js */
+				// include 'partials/header-layouts/stacked-layout.php';
+				include 'partials/header-layouts/positioned-layout.php';
 			?>
-
 		</header>
 
 		<main id="global-main" class="global-main">
@@ -83,7 +81,7 @@
 			<?php /* Browser Outdated Message -- hidden by default but shown if the browser does not support the HTML <picture> element -- with an exception for IE 11.
 			The styles are defined in Perch's _browser-fixes.less file. */ ?>
 			<div class="browser-outdated-message browser-message" style="display: none;">
-				<span class="icon-warning-stop"></span> Your browser is outdated. <a href="https://browsehappy.com/" target="_blank" style="text-decoration: underline; font-weight: bold;">Upgrade to a modern browser</a> to better experience this&nbsp;site.
+				<span class="icon-warning-stop"></span> Your browser is outdated. <a href="https://browsehappy.com/" target="_blank" rel="noopener" style="text-decoration: underline; font-weight: bold;">Upgrade to a modern browser</a> to better experience this&nbsp;site.
 			</div>
 			<?php /* Browser No JS Message -- hidden by default but shown if browser has class `mod-no-js`. This method, which relies on Modernizr's successful initialization, might give us better coverage for browsers that have JS turned on but are blocking JS with a tool/plugin/blocker on top.
 			The styles are defined in Perch's _browser-fixes.less file. */ ?>
