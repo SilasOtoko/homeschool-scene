@@ -32,7 +32,7 @@ var paths = {
   // Perch via NPM:
   perch:     "node_modules/@rarebirdinc/perch/",
   // Perch via Git or manual install:
-  // perch:     "web/assets/third-party/perch/",
+  // perch:     "assets/third-party/perch/",
 
   srcAssets: "assets/",
   srcLESS:   "assets/less/",
@@ -71,6 +71,17 @@ gulp.task("less", function() {
   return stylesPipe1;
 });
 
+// Critical LESS => CSS
+// --------------------------
+// gulp.task("critical", function() {
+//   var source = gulp.src(paths.srcLESS+"critical.less")
+//     .pipe( less() )
+//     .pipe( gulp.dest(paths.distCSS) )
+//     .pipe( cleanCSS({ compatibility: "ie11" }) )
+//     .pipe( rename({suffix: ".min"}) )
+//     .pipe( gulp.dest(paths.distCSS));
+// });
+
 
 // JS
 // ---------------------------------------
@@ -94,6 +105,7 @@ gulp.task("less", function() {
 //     .pipe(concat('gulp-babel-transpiled-scripts.js'))
 //     .pipe(gulp.dest(paths.distJS));
 // });
+
 
 // Default JS task
 // --------------------------
@@ -124,23 +136,34 @@ gulp.task("js", /*['babeljs'],*/ () => {
     paths.npm+"parsleyjs/dist/parsley.js",
     paths.npm+"lazysizes/lazysizes.js",
     // paths.npm+"flickity/dist/flickity.pkgd.js",
-    // paths.npm+"smooth-scroll/dist/js/smooth-scroll.js",
+    // paths.npm+"smooth-scroll/dist/js/smooth-scroll.polyfills.js",
     // paths.npm+"gumshoejs/dist/js/gumshoe.js",
     // paths.npm+"prismjs/prism.js",
     // paths.npm+"prismjs/components/prism-less.js",
 
     // Homegrown _________
+
+    // *** High priority & load first
     paths.perch+"js/perch-core-scripts.js",
     paths.perch+"js/library/dispatcher.js",
     paths.perch+"js/library/navigation-system.js",
 
-    // Nav link opening methods — choose one of these at most.
+    // *** Nav link opening methods — !! choose one of these at most !!
     paths.perch+"js/library/child-nav-open-with-parent-click.js",
     // paths.perch+"js/library/child-nav-open-with-generated-button.js",
 
-    paths.perch+"js/library/hiding-sticky-nav.js",
+    // *** Part of the Stacked Layout starter layout
+    // paths.perch+"js/library/drawer-navigation.js",
+    // paths.perch+"js/library/panel-search-system.js",
+
+    // *** Part of the Positioned Layout starter layout
+    // paths.perch+"js/library/hiding-sticky-nav.js",
     paths.perch+"js/library/modal-search-system.js",
+
+    // *** Misc other scripts
+    // paths.perch+"js/library/reactive-shine-hover.js",
     paths.perch+"js/library/mousetrap-keyboard-shortcuts.js",
+    // paths.perch+"js/library/video-autoplay-fallback.js",
     // paths.perch+"js/library/wordpress/wp-hide-show-comments.js",
 
     // Homegrown Ecommerce _________
@@ -156,6 +179,7 @@ gulp.task("js", /*['babeljs'],*/ () => {
   var devOnlySrcFiles = [
     paths.npm+"holderjs/holder.js",
   ];
+
 
   // The "pure" source of files intended to be used on the final, live site
   var source = gulp.src(srcFiles)
