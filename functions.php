@@ -15,6 +15,7 @@ require_once("custom/shortcodes.php");
 require_once("custom/widgets.php");
 require_once("custom/content.php");
 require_once("custom/scripts.php");
+// require_once("custom/editor_styles.php");
 
 
 // Birdpress theme setup
