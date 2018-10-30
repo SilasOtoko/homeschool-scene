@@ -3,10 +3,12 @@
 
 <?php /* Often the home page requires a unique layout with multiple content containers. This is a sample treatment. */ ?>
 
+<?php the_post(); ?>
+
 <div id="page-<?php the_ID(); ?>" <?php post_class("home-page-page-wrapper page-wrapper"); ?>>
 
 	<div class="home-hero-block hero-wrapper">
-		<div class="home-hero-panel hero-panel" style="background: #777 linear-gradient(#CDB8C9, #F1EEFB);">
+		<div class="home-hero-panel hero-panel" style="background: #777 linear-gradient(#EDA1B9, #DADDEF);">
 			<div class="home-hero-container hero-container container common-content-vertical-spacing">
 				<h1 class="home-hero-heading hero-heading"><?php the_title(); ?></h1>
 				<?php if( get_field('sub_heading') ): ?>
