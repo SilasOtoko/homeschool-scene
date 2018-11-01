@@ -10,7 +10,7 @@
 	* |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 	*
 	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc
-	* Built using Rare Bird’s Perch Framework v0.9.1-beta.5 + BirdPress v1.0.0-alpha.1
+	* Built using Rare Bird’s Perch Framework v0.9.1-rc.1 + BirdPress v1.0.0-alpha.1
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 	<?php /* Meta Tags */ ?>
@@ -66,7 +66,7 @@
 
 	<a href="#global-main" class="sr-only">Skip to main content</a>
 
-	<div id="global-wrapper" class="global-wrapper hfeed">
+	<div id="global-wrapper" class="global-wrapper">
 
 		<header id="global-header" class="global-header is-showing-default">
 			<?php
