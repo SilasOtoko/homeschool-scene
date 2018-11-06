@@ -64,7 +64,7 @@
 <!--[if lte IE 9]>     <body <?php body_class('dom-not-yet-loaded lte-ie9'); ?>> <![endif]-->
 <!--[if gt IE 9]><!--> <body <?php body_class('dom-not-yet-loaded'); ?>> <!--<![endif]-->
 
-	<a href="#global-main" class="sr-only">Skip to main content</a>
+	<a href="#global-main" class="skip-link-button button button--smaller button--subtle sr-only sr-only-focusable">Skip to main content</a>
 
 	<div id="global-wrapper" class="global-wrapper">
 
