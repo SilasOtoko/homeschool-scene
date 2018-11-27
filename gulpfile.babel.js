@@ -123,6 +123,9 @@ gulp.task("js", /*['babeljs'],*/ () => {
     // Babel Transpiled Scripts _________
     // paths.distJS+"gulp-babel-transpiled-scripts.js",
 
+    // Polyfills _________
+    paths.perch+"js/library/polyfills/nodelist-foreach.js",
+
     // Bootstrap _________
     paths.perch+"js/library/bootstrap-plugins/bootstrap-transition.js",
     paths.perch+"js/library/bootstrap-plugins/bootstrap-alert.js",

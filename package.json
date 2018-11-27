@@ -14,11 +14,11 @@
     "npm": ">=6.1.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.5",
-    "@fortawesome/free-brands-svg-icons": "^5.4.0",
-    "@fortawesome/pro-light-svg-icons": "^5.4.0",
-    "@fortawesome/pro-regular-svg-icons": "^5.4.0",
-    "@fortawesome/pro-solid-svg-icons": "^5.4.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.8",
+    "@fortawesome/free-brands-svg-icons": "^5.5.0",
+    "@fortawesome/pro-light-svg-icons": "^5.5.0",
+    "@fortawesome/pro-regular-svg-icons": "^5.5.0",
+    "@fortawesome/pro-solid-svg-icons": "^5.5.0",
     "@rarebirdinc/perch": "git+ssh://git@rarebird.io/diffusion/PERCH/perch.git#v0.9.1-rc.2",
     "autotrack": "^2.4.1",
     "babel-core": "^6.26.3",
@@ -42,14 +42,14 @@
     "mousetrap": "^1.6.2",
     "parsleyjs": "^2.8.1",
     "porthole": "^0.5.1",
-    "rollup": "^0.66.4",
+    "rollup": "^0.67.3",
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-stream": "^1.24.1",
-    "smooth-scroll": "^14.2.1",
+    "smooth-scroll": "^15.0.0",
     "vinyl-source-stream": "^2.0.0",
-    "yargs": "^12.0.2"
+    "yargs": "^12.0.5"
   },
   "devDependencies": {
-    "holderjs": "^2.9.4"
+    "holderjs": "^2.9.6"
   }
 }
