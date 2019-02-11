@@ -10,7 +10,7 @@ function make_featured_image_shortcode($atts, $content = null) {
 	), $atts );
 
 	if(has_post_thumbnail()) {
-		$thumb = get_the_post_thumbnail(null, $a['size']);
+		$thumb = get_the_post_thumbnail(null, $a['size'], array( 'class' => 'img-responsive' ));
 		if($caption = get_the_post_thumbnail_caption()) {
 			$caption = sprintf("<figcaption class=\"wp-figcaption-text\">%s</figcaption>", $caption);
 		}

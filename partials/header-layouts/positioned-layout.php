@@ -6,20 +6,20 @@
 		<span class="svg-wrapper">
 			<?php include(get_stylesheet_directory() . "/assets/images/birdpress/logo--birdpress.svg"); ?>
 		</span>
-
-		<?php /* If creating a mobile version of a logo that reduces the amount of logo shown, you can "re-use" the original/main logo SVG with the code below. The key is in the <use> tag to reference the xlink:href attribute to the original/main logo SVG's id attribute.
-
-		To achieve the visual reduction for this version, you can set the <svg>'s height or width to a different value to visually crop items out — or use CSS to hide relevant group ID's. */ 
-		/*
-		<a class="global-mobile-logo global-logo u-hide-desktop" href="/" title="Go to the home page &raquo;">
-			<span class="svg-wrapper">
-				<svg id="global-mobile-logo-used-svg" width="100%" height="54.307" class="footer-logo-used-svg" version="1.1" viewBox="0 0 277.945 41">
-					<use xlink:href="#logo--birdpress"/>
-				</svg>
-			</span>
-		</a>
-		*/ ?>
 	</a>
+
+	<?php /* If creating a mobile version of a logo that reduces the amount of logo shown, you can "re-use" the original/main logo SVG with the code below. The key is in the <use> tag to reference the xlink:href attribute to the original/main logo SVG's id attribute.
+
+	To achieve the visual reduction for this version, you can set the <svg>'s height or width to a different value to visually crop items out — or use CSS to hide relevant group ID's. */ 
+	/*
+	<a class="global-mobile-logo global-logo u-hide-desktop" href="/" title="Go to the home page &raquo;">
+		<span class="svg-wrapper">
+			<svg id="global-mobile-logo-used-svg" width="100%" height="54.307" class="footer-logo-used-svg" version="1.1" viewBox="0 0 277.945 41">
+				<use xlink:href="#logo--birdpress"/>
+			</svg>
+		</span>
+	</a>
+	*/ ?>
 
 	<?php /* Mobile hamburger menu + menu close link */ ?>
 	<a class="hamburger-menu-button" title="Navigation Menu Access Button" href="#global-outer-navigation-wrapper" aria-label="navigation menu access button" role="button" aria-controls="global-outer-navigation-wrapper" aria-expanded="false" aria-pressed="false">
@@ -32,8 +32,9 @@
 
 	<?php /* search reveal button */ ?>
 	<button class="global-search-reveal-button global-search-trigger" aria-controls="global-search-overlay" aria-expanded="false" aria-pressed="false">
-		<span class="global-search-reveal-icon icon-search">
+		<span class="global-search-reveal-icon">
 			<span class="sr-only">Search</span>
+			<span class="far fa-search"></span>
 		</span>
 	</button>
 
@@ -70,7 +71,7 @@
 	<?php /* NOTE: If using Utility Nav...
 		Mind the aria-label value! Make sure it's descriptive for the items it contains. */ ?>
 	<nav id="global-utility-nav" class="global-utility-nav global-nav" aria-label="Account and Store pages navigation">
-		<div class="container"><!-- global-header-container -->
+		<div class="container">
 			<ul class="global-utility-nav-list global-nav-list">
 				<li class="global-utility-nav-item global-nav-item">
 					<a class="global-utility-nav-link global-nav-link" href="#/">Utility nav link</a>
@@ -95,8 +96,9 @@
 			<div class="global-search-overlay-input-wrapper">
 				<input id="global-search-overlay__input" class="global-search-overlay__input input-field mousetrap" type="search" name="s" size="20" maxlength="100" placeholder="Enter search keyword(s)">
 
-				<button id="global-search-overlay__submit" class="global-search-overlay__submit icon-search button button--smaller" type="submit" title="Click here to search.">
+				<button id="global-search-overlay__submit" class="global-search-overlay__submit button" type="submit" title="Click here to search.">
 					<span class="sr-only">Search</span>
+					<span class="far fa-search"></span>
 				</button>
 			</div>
 		</form>

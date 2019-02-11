@@ -97,43 +97,45 @@
 
 					<ul class="global-footer_social social-icons list-ui">
 						<li>
-							<a class="social-icon-link social-icon-link--subtle facebook icon-facebook2" href="#/" target="_blank" rel="noopener" title="Go to our Facebook page »">
+							<a class="social-icon-link social-icon-link--subtle facebook" href="#/" target="_blank" rel="noopener" title="Go to our Facebook page »">
 								<span class="sr-only">Facebook</span>
+								<span class="social-icon fab fa-facebook-f"></span>
 							</a>
 						</li>
 						<li>
-							<a class="social-icon-link social-icon-link--subtle twitter icon-twitter-alt" href="#/" target="_blank" rel="noopener" title="Go to our Twitter profile »">
+							<a class="social-icon-link social-icon-link--subtle twitter" href="#/" target="_blank" rel="noopener" title="Go to our Twitter profile »">
 								<span class="sr-only">Twitter</span>
+								<span class="social-icon fab fa-twitter"></span>
 							</a>
 						</li>
 						<li>
-							<a class="social-icon-link social-icon-link--subtle pinterest icon-pinterest-alt" href="#/" target="_blank" rel="noopener" title="Go to our Pinterest Profile »">
+							<a class="social-icon-link social-icon-link--subtle pinterest" href="#/" target="_blank" rel="noopener" title="Go to our Pinterest Profile »">
 								<span class="sr-only">Pinterest</span>
+								<span class="social-icon fab fa-pinterest"></span>
 							</a>
 						</li>
 						<li>
-							<a class="social-icon-link social-icon-link--subtle instagram icon-instagram" href="#/" target="_blank" rel="noopener" title="Go to our Instagram Profile »">
+							<a class="social-icon-link social-icon-link--subtle instagram" href="#/" target="_blank" rel="noopener" title="Go to our Instagram Profile »">
 								<span class="sr-only">Instagram</span>
+								<span class="social-icon fab fa-instagram"></span>
 							</a>
 						</li>
 						<li>
-							<a class="social-icon-link social-icon-link--subtle google-plus icon-google-plus-alt" href="#/" target="_blank" rel="noopener" title="Go to our Google Plus Profile »">
-								<span class="sr-only">Google Plus</span>
-							</a>
-						</li>
-						<li>
-							<a class="social-icon-link social-icon-link--subtle linkedin icon-linkedin" href="#/" target="_blank" rel="noopener" title="Go to our LinkedIn Profile »">
+							<a class="social-icon-link social-icon-link--subtle linkedin" href="#/" target="_blank" rel="noopener" title="Go to our LinkedIn Profile »">
 								<span class="sr-only">LinkedIn</span>
+								<span class="social-icon fab fa-linkedin"></span>
 							</a>
 						</li>
 						<li>
-							<a class="social-icon-link social-icon-link--subtle youtube icon-youtube" href="#/" target="_blank" rel="noopener" title="Go to our YouTube Profile »">
+							<a class="social-icon-link social-icon-link--subtle youtube" href="#/" target="_blank" rel="noopener" title="Go to our YouTube Profile »">
 								<span class="sr-only">YouTube</span>
+								<span class="social-icon fab fa-youtube"></span>
 							</a>
 						</li>
 						<li>
-							<a class="social-icon-link social-icon-link--subtle mail icon-mail" href="#/" target="_blank" rel="noopener" title="Our Newsletter »">
+							<a class="social-icon-link social-icon-link--subtle mail" href="#/" target="_blank" rel="noopener" title="Our Newsletter »">
 								<span class="sr-only">Our Newsletter</span>
+								<span class="social-icon far fa-envelope"></span>
 							</a>
 						</li>
 					</ul>

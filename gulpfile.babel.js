@@ -39,8 +39,8 @@ var paths = {
   srcJS:     "assets/js/",
 
   distCSS:   "assets/css/",
-  distJS:    "assets/js/",
-  distIcons: "assets/icons/"
+  distJS:    "assets/js/"
+  // distIcons: "assets/icons/"
 };
 
 
@@ -58,7 +58,7 @@ gulp.task("less", function() {
     //   stream: true
     // }));
 
-  if (argv.production) {
+  if (argv.production || argv.prod) {
     var stylesPipe2 = source.pipe(clone()) // Create minified + sourcemap
       .pipe( cleanCSS({ compatibility: "ie10" }) )
       .pipe( rename({suffix: ".min"}) )
@@ -126,6 +126,9 @@ gulp.task("js", /*['babeljs'],*/ () => {
     // Polyfills _________
     paths.perch+"js/library/polyfills/nodelist-foreach.js",
 
+    // Font Awesome Icons _________
+    paths.srcJS+"tree-shaken-icons.js",
+
     // Bootstrap _________
     paths.perch+"js/library/bootstrap-plugins/bootstrap-transition.js",
     paths.perch+"js/library/bootstrap-plugins/bootstrap-alert.js",
@@ -146,8 +149,13 @@ gulp.task("js", /*['babeljs'],*/ () => {
 
     // Homegrown _________
 
-    // *** High priority & load first
-    paths.perch+"js/perch-core-scripts.js",
+    // *** Feature detects, behavior overrides, and enhancements
+    paths.perch+"js/passive-event-listener-feature-detect.js",
+    paths.perch+"js/remove-number-input-scroll-value-change.js",
+    paths.perch+"js/exclude-hidden-elements-from-parsley.js",
+    paths.perch+"js/dom-loaded-body-class.js",
+
+    // *** Navigation tools
     paths.perch+"js/library/dispatcher.js",
     paths.perch+"js/library/navigation-system.js",
 
@@ -173,9 +181,6 @@ gulp.task("js", /*['babeljs'],*/ () => {
     // paths.perch+"js/library/ecommerce/product-thumbnails.js",
     // paths.perch+"js/library/ecommerce/billing-same-as-shipping.js",
     // paths.perch+"js/library/ecommerce/cart-quantity-updater.js",
-
-    // Font Awesome Icons _________
-    // paths.srcJS+"tree-shaken-icons.js",
   ];
 
   // an array of all source files to be used only in the development process (for final site JS files, see the srcFiles array above)
@@ -201,7 +206,7 @@ gulp.task("js", /*['babeljs'],*/ () => {
 
   // The minified global.min.js file.
   // When the "--production" argument is given, this refers to the pure source (which omits developement only source files)
-  if (argv.production) {
+  if (argv.production || argv.prod) {
     var sourceProduction = source.pipe(clone())
       .pipe(uglify())
       .pipe(rename({suffix: ".min"}))
@@ -245,7 +250,7 @@ gulp.task('icons', function() {
 gulp.task('copy', [
   'copy:jquery',
   'copy:modernizr',
-  'copy:icons',
+  // 'copy:icons',
   'copy:autotrack'
 ]);
 
@@ -268,10 +273,10 @@ gulp.task('copy:autotrack', function() {
 });
 
 // Icons files
-gulp.task('copy:icons', function() {
-  gulp.src([paths.perch+'icons/**/*'])
-    .pipe(gulp.dest(paths.distIcons));
-});
+// gulp.task('copy:icons', function() {
+//   gulp.src([paths.perch+'icons/**/*'])
+//     .pipe(gulp.dest(paths.distIcons));
+// });
 
 
 // Browser Sync

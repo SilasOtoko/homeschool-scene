@@ -27,16 +27,16 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faGooglePlus } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 // Demo: Light, Solid, and Regular versions of the same icon _________
-import { faEnvelope as falEnvelope } from '@fortawesome/pro-light-svg-icons';
-import { faEnvelope as fasEnvelope } from '@fortawesome/pro-solid-svg-icons';
-import { faEnvelope as farEnvelope } from '@fortawesome/pro-regular-svg-icons';
+// import { faEnvelope as falEnvelope } from '@fortawesome/pro-light-svg-icons';
+// import { faEnvelope as fasEnvelope } from '@fortawesome/pro-solid-svg-icons';
+// import { faEnvelope as farEnvelope } from '@fortawesome/pro-regular-svg-icons';
 
 // Common Icons that RB uses on sites _________
+import { faEnvelope } from '@fortawesome/pro-regular-svg-icons';
 import { faFilter } from '@fortawesome/pro-regular-svg-icons';
 import { faFilePdf } from '@fortawesome/pro-regular-svg-icons';
 import { faExclamationTriangle } from '@fortawesome/pro-regular-svg-icons';
@@ -56,16 +56,16 @@ import { faChevronLeft } from '@fortawesome/pro-regular-svg-icons';
 // [Step 2] Add desired icons to library
 // ---------------------------------------
 library.add(
+	faEnvelope,
 	faFacebookF,
 	faTwitter,
 	faPinterest,
 	faInstagram,
-	faGooglePlus,
 	faLinkedin,
 	faYoutube,
-	falEnvelope,
-	fasEnvelope,
-	farEnvelope,
+	// falEnvelope,
+	// fasEnvelope,
+	// farEnvelope,
 	faFilter,
 	faFilePdf,
 	faExclamationTriangle,

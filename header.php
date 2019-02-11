@@ -10,12 +10,11 @@
 	* |_| \_\__,_|_|  \___|  /_/|_|_|  \__,_|
 	*
 	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc
-	* Built using Rare Bird’s Perch Framework v0.9.1 + BirdPress v1.0.0-alpha.1
+	* Built using Rare Bird’s Perch Framework v0.10.0-alpha.4 + BirdPress v1.0.0-alpha.2
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 	<?php /* Meta Tags */ ?>
 	<meta charset="UTF-8" />
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
 
 	<?php /* Site Title & Description */ ?>
@@ -61,8 +60,7 @@
 </head>
 
 
-<!--[if lte IE 9]>     <body <?php body_class('dom-not-yet-loaded lte-ie9'); ?>> <![endif]-->
-<!--[if gt IE 9]><!--> <body <?php body_class('dom-not-yet-loaded'); ?>> <!--<![endif]-->
+<body <?php body_class('dom-not-yet-loaded'); ?>>
 
 	<a href="#global-main" class="skip-link-button button button--smaller button--subtle sr-only sr-only-focusable">Skip to main content</a>
 
@@ -81,12 +79,12 @@
 			<?php /* Browser Outdated Message -- hidden by default but shown if the browser does not support the HTML <picture> element -- with an exception for IE 11.
 			The styles are defined in Perch's _browser-fixes.less file. */ ?>
 			<div class="browser-outdated-message browser-message" style="display: none;">
-				<span class="icon-warning-stop"></span> Your browser is outdated. <a href="https://browsehappy.com/" target="_blank" rel="noopener" style="text-decoration: underline; font-weight: bold;">Upgrade to a modern browser</a> to better experience this&nbsp;site.
+				<span class="far fa-exclamation-triangle"></span> Your browser is outdated. <a href="https://browsehappy.com/" target="_blank" rel="noopener" style="text-decoration: underline; font-weight: bold;">Upgrade to a modern browser</a> to better experience this&nbsp;site.
 			</div>
 			<?php /* Browser No JS Message -- hidden by default but shown if browser has class `mod-no-js`. This method, which relies on Modernizr's successful initialization, might give us better coverage for browsers that have JS turned on but are blocking JS with a tool/plugin/blocker on top.
 			The styles are defined in Perch's _browser-fixes.less file. */ ?>
 			<div class="browser-no-js-message browser-message" style="display: none;">
-				<p><span class="icon-warning-stop"></span> Your browser has turned off or is blocking Javascript.</p>
+				<p><span class="far fa-exclamation-triangle"></span> Your browser has turned off or is blocking Javascript.</p>
 				<p>If you are using a content blocker, check to see that you have not globally turned off Javascript.</p>
 				<p>If you have turned it off manually in your browser, please enable it to better experience this site.</p>
 			</div>

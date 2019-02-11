@@ -31,7 +31,7 @@ if ( is_page() ) : the_post();
 						// Will defer to the usage of the featured-image shortcode if present.
 						if ( has_post_thumbnail() && !has_shortcode(get_the_content(), 'featured-image') ) {
 							echo "<figure class='featured-image figure-feature'>";
-							the_post_thumbnail();
+							the_post_thumbnail('post-thumbnail', array( 'class' => 'img-responsive' ));
 							$caption = get_the_post_thumbnail_caption();
 							if (!empty($caption)) {
 								echo "<figcaption class='wp-figcaption-text'>";
@@ -113,7 +113,7 @@ else:
 								// Will defer to the usage of the featured-image shortcode if present.
 								if ( has_post_thumbnail() && !has_shortcode(get_the_content(), 'featured-image') ) {
 									echo "<figure class='featured-image figure-feature'>";
-									the_post_thumbnail();
+									the_post_thumbnail('post-thumbnail', array( 'class' => 'img-responsive' ));
 									$caption = get_the_post_thumbnail_caption();
 									if (!empty($caption)) {
 										echo "<figcaption class='wp-figcaption-text'>";

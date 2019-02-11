@@ -32,8 +32,9 @@
 
 	<?php /* search reveal button */ ?>
 	<button class="global-search-reveal-button global-search-trigger" aria-controls="global-search-panel" aria-expanded="false" aria-pressed="false">
-		<span class="global-search-reveal-icon icon-search">
+		<span class="global-search-reveal-icon">
 			<span class="sr-only">Search</span>
+			<span class="far fa-search"></span>
 		</span>
 	</button>
 
@@ -44,16 +45,16 @@
 				<div class="global-search-panel-input-wrapper input-embedded-button">
 					<input id="global-search-panel__input" class="global-search-panel__input input-embedded-button__input input-field mousetrap" type="search" name="s" size="20" maxlength="100" placeholder="Search keyword(s)">
 
-					<button id="global-search-panel__submit" class="global-search-panel__submit input-embedded-button__button icon-search button button--smaller" type="submit" title="Click here to search.">
+					<button id="global-search-panel__submit" class="global-search-panel__submit input-embedded-button__button button" type="submit" title="Click here to search.">
 						<span class="sr-only">Search</span>
+						<span class="far fa-search"></span>
 					</button>
 				</div>
 			</form>
 
 			<div class="global-search-panel__actions">
 				<button id="global-search-panel__close-button" class="global-search-panel__close-button button button--outline button--subtle button--single-icon u-border-radius-rounded-circle" aria-label="Use this button to close the search panel">
-					<?php /* AKA Perch's /assets/images/icon--times--thicker.svg */ ?>
-					<svg class="svg-icon--times--thicker" width="1em" height="1em" viewBox="0 0 89 89" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="icon--times" transform="translate(44.709875, 44.709875) rotate(45.273138) translate(-44.709875, -44.709875) translate(-5.290125, -5.290125)" fill="currentColor"><polygon points="44.1799658 -6.01898966 56.1799039 -5.98043219 55.8200342 106.01899 43.8200961 105.980432"></polygon><polygon points="-6 56 -6 44 106 44 106 56"></polygon></g></svg>
+					<span class="far fa-times"></span>
 				</button>
 			</div>
 		</div>
@@ -88,6 +89,12 @@
 	<div class="navigation-drawer-overlay" aria-hidden="true"></div>
 
 	<div class="navigation-drawer">
+		<?php /* Close button */ ?>
+		<button class="navigation-drawer-close-button">
+			<span class="sr-only">Close navigation drawer</span>
+			<span class="far fa-times"></span>
+		</button>
+
 		<?php /* Main navigation */ ?>
 		<nav id="global-main-nav" class="global-main-nav global-nav" aria-label="Primary Navigation">
 			<?php
