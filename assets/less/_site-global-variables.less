@@ -1,5 +1,5 @@
 //
-// Site Variables
+// Site Global Variables
 // --------------------------------------------------
 // Resets for _perch-global-variables.less
 // --------------------------------------------------
@@ -10,9 +10,8 @@
 // @site-max-width: 			1200px;
 // @site-min-width: 			@iphone-original-width;
 
-// @common-gutter: 			20px;
-// @common-lesser-gutter: 		10px;
-// @common-vertical-gutter: 	1.00rem; // how to calculate to a (i.e. 20) pixel size: unit((20 / @font-size-base), rem);
+// @common-gutter: 			unit((20 / @font-size-base), rem); // 20px;
+// @common-vertical-gutter: 	@common-gutter; //1rem; // how to calculate to a (i.e. 20) pixel size: unit((20 / @font-size-base), rem);
 
 
 // Mobile
@@ -20,9 +19,9 @@
 // @mobile-column-gutter: 		(@grid-gutter-width / 2); //(@common-gutter / 4);
 // @mobile-container-gutter: 	(@grid-gutter-width / 2); //(@common-gutter / 2);
 
-// @mobile-common-gutter: 		10px;
+// @mobile-common-gutter: 		(@common-gutter / 2);
 
-// @mobile-nav-menu-gutter: 	20px;
+// @mobile-nav-menu-gutter: 	@common-gutter; // 20px;
 
 
 // Grid breakpoints
@@ -94,7 +93,13 @@
 // @font-family-clean: 		@font-family-helvetica;
 // @font-family-system: 		system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 // @font-family-code: 			Monaco, Menlo, Consolas, "Courier New", monospace, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+// ☠☠☠☠ DEPRECATED ☠☠☠☠
+// Deprecated because:
+//  - perch icons are no longer driven by font icons
+// > > > > > > > > > > > > > > > > > > > > > > > > 
 // @font-family-iconfont: 		'perch-icons';
+// < < < < < < < < < < < < < < < < < < < < < < < < 
+// end deprecated code ☠☠☠☠
 
 // @font-family-base: 			@font-family-sans;
 // @font-family-alternate: 	@font-family-serif;
@@ -105,6 +110,11 @@
 // @font-size-base: 			18px;
 // @font-weight-base: 			normal;
 // @line-height-base: 			1.5;
+
+
+// Weights
+// --------------------------
+// @font-weight-base: 			normal;
 
 
 // Font size scaling _________
@@ -119,7 +129,7 @@
 
 // Misc elements
 // ---------------------------------------
-// @common-border-radius: 		7px;
+// @common-border-radius: 		unit((7 / @font-size-base), rem);
 
 
 
@@ -132,8 +142,8 @@
 @brand-color-primary: 		#D8214E; // default: #204F3C;
 @brand-color-secondary: 	#726399; // default: #9f675c;
 // @brand-color-tertiary: 		#f5b62e;
-// @brand-color-gray: 			#b6bfcd;
-// @brand-color-gray-lighter: 	#ededed;
+// @brand-color-gray: 			#AAAAAA;
+// @brand-color-gray-lighter: 	#DDDDDD;
 
 
 // Functional Global Colors
@@ -151,8 +161,8 @@
 // @focus-highlight-color: 	@site-color-primary;
 //	|	|
 // @ui-highlight-bg-color: 	fade(#FFF, 15%);
-// @ui-shade-bg-color: 		fade(#000, 15%);
-// @ui-lesser-shade-bg-color: 	fade(#000,  5%);
+// @ui-shade-bg-color: 		fade(#000, 9%);
+// @ui-lesser-shade-bg-color: 	fade(#000, 4.5%);
 // @ui-overlay-shade-bg-color:	fade(#333333, 75%);
 
 

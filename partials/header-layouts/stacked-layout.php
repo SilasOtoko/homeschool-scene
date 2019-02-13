@@ -66,16 +66,16 @@
 <?php /* Utility Nav */ ?>
 <?php /* NOTE: If using Utility Nav...
 	Mind the aria-label value! Make sure it's descriptive for the items it contains. */ ?>
-<nav id="global-utility-nav" class="global-utility-nav global-nav" aria-label="Account and Store pages navigation">
+<nav id="global-utility-nav" class="global-utility-nav" aria-label="Account and Store pages navigation">
 	<div class="global-utility-nav-container container">
-		<ul class="global-utility-nav-list global-nav-list u-hide-mobile">
-			<li class="global-utility-nav-item global-nav-item">
-				<a class="global-utility-nav-link global-nav-link" href="/login.php">
+		<ul class="global-utility-nav-list u-hide-mobile">
+			<li class="global-utility-nav-item">
+				<a class="global-utility-nav-link" href="/login.php">
 					Sign In
 				</a>
 			</li>
-			<li class="global-utility-nav-item global-nav-item">
-				<a class="global-utility-nav-link global-nav-link" href="#/">
+			<li class="global-utility-nav-item">
+				<a class="global-utility-nav-link" href="#/">
 					My Favorites
 				</a>
 			</li>
@@ -103,10 +103,10 @@
 				'container'       => 'false',
 				// 'container_id'    => 'global-nav',
 				// 'container_class' => 'global-nav',
-				'menu_class'      => 'global-main-nav-list global-nav-list',
-				'sub_menu_class'  => 'global-main-nav-child-list global-nav-child-list global-nav-list',
-				'element_class'   => 'global-main-nav-item global-nav-item',
-				'link_class'      => 'global-main-nav-link global-nav-link',
+				'menu_class'      => 'global-nav-list',
+				'sub_menu_class'  => 'global-nav-child-list global-nav-list',
+				'element_class'   => 'global-nav-item',
+				'link_class'      => 'global-nav-link',
 				'link_before'     => '<span class="nav-link-inner">',
 				'link_after'      => '</span>',
 				'walker'          => new custom_simplify_walker
