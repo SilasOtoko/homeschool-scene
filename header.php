@@ -18,16 +18,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
 
 	<?php /* Site Title & Description */ ?>
-	<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
 	<!-- <link href="http://domain.com" rel="home"> -->
 
 	<?php /* Preconnect + Preload for speedier performance
 	<link rel="preconnect" href="https://use.typekit.net" crossorigin>
 	<link rel="preload" href="https://use.typekit.net/{{TYPEKIT_KIT_ID}}.js" as="script" crossorigin>
 	*/ ?>
-
-	<?php /* CSS file compiled with Gulp */ ?>
-	<link rel="stylesheet" type="text/css" href="/assets/css/global.css">
 
 	<?php /* Favicons + Device Icons */ ?>
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png"> <?php /* All iOS versions __ this is a single 180px file that should scale down OK */ ?>
@@ -37,23 +33,6 @@
 		----> TIP::: Install ImageMagick and run
 		$convert favicon-16.png favicon-32.png favicon-48.png favicon-64.png favicon.ico
 		*/ ?>
-
-	<?php /* <!-- Modernizr: Feature detection --> */ ?>
-	<script><?php include(get_stylesheet_directory() . "/assets/js/modernizr-custom.js"); ?></script>
-
-	<?php /* TypeKit Advanced Embed Code */ ?>
-	<?php /*
-	<script>
-	  (function(d) {
-	    var config = {
-	      kitId: '{{TYPEKIT_KIT_ID}}',
-	      scriptTimeout: 3000,
-	      async: true
-	    },
-	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-	  })(document);
-	</script>
-	*/ ?>
 
 	<?php /* WordPress Head */ ?>
 	<?php wp_head(); ?>
@@ -70,7 +49,7 @@
 			<?php
 				/* Sample Header layout treatments. Relavant LESS and JS will need to be switched around in global.less and in gulpfile.babel.js */
 				// include 'partials/header-layouts/stacked-layout.php';
-				include 'partials/header-layouts/positioned-layout.php';
+				// include 'partials/header-layouts/positioned-layout.php';
 			?>
 		</header>
 
