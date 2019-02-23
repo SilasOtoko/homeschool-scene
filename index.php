@@ -16,13 +16,21 @@ if ( is_page() ) : the_post();
 					<div class="page-main-headings">
 						<h1 class="page-main-heading entry-title"><?php the_title(); ?></h1>
 
-						<?php if( get_field('sub_heading') ): ?>
-							<div class="page-main-sub-heading"><?php the_field('sub_heading'); ?></div>
+						<?php if( function_exists( 'get_field' ) ): ?>
+
+							<?php if( get_field('sub_heading') ): ?>
+								<div class="page-main-sub-heading"><?php the_field('sub_heading'); ?></div>
+							<?php endif; ?>
+
 						<?php endif; ?>
 					</div>
 
-					<?php if( get_field('lead_in_copy') ): ?>
-						<div class="lead-in-copy"><?php the_field('lead_in_copy'); ?></div>
+					<?php if( function_exists( 'get_field' ) ): ?>
+
+						<?php if( get_field('lead_in_copy') ): ?>
+							<div class="lead-in-copy"><?php the_field('lead_in_copy'); ?></div>
+						<?php endif; ?>
+
 					<?php endif; ?>
 
 					<div class="entry-content">
