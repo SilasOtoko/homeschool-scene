@@ -13,6 +13,9 @@
     "node": ">=8.11.2",
     "npm": ">=6.1.0"
   },
+  "scripts": {
+    "start": "gulp"
+  },
   "dependencies": {
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.3.1",

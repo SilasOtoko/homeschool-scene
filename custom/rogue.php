@@ -114,7 +114,8 @@ function rb_add_rewrites($content){
 
 // clean asset URLs
 function rb_clean_assets($content) {
-	$theme_name = next(explode('/themes/', $content));
+	$dirs = explode('/themes/', $content);
+	$theme_name = next($dirs);
 	$current_path = '/content/themes/' . $theme_name;
 	$new_path = '';
 	$content = str_replace($current_path, $new_path, $content);
