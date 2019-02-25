@@ -78,7 +78,8 @@ function rb_add_rewrites($content){
 	$stylesheet_dir = get_stylesheet_directory();
 	$template_dir   = get_template_directory();
 
-	$theme_name = next(explode('/themes/', $stylesheet_dir));
+	$dirs = explode('/themes/', $stylesheet_dir);
+	$theme_name = next($dirs);
 	$asset_non_wp_rules = array(
 		'assets/(.*)'     => 'content/themes/'. $theme_name . '/assets/$1',
 		'css/(.*)'     => 'content/themes/'. $theme_name . '/assets/css/$1',
