@@ -1,2 +1,2 @@
+import './modernizr-custom';
 import './rarebird-includes';
-console.log('bundle');
