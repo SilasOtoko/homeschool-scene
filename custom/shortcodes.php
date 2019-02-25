@@ -1,6 +1,6 @@
 <?php
 //
-// Birdpress custom shortcodes
+// Goshawk custom shortcodes
 // --------------------------------------------------
 
 
@@ -13,16 +13,16 @@ require_once("shortcodes/flex_image_grid.php");
 
 // Images w/captions get proper HTML5 figure markup
 // ---------------------------------------
-add_action( 'init', 'birdpress_add_shortcodes' );
+add_action( 'init', 'goshawk_add_shortcodes' );
 
-function birdpress_add_shortcodes() {
-	add_filter('img_caption_shortcode', 'birdpress_img_caption_shortcode_filter',10,3);
+function goshawk_add_shortcodes() {
+	add_filter('img_caption_shortcode', 'goshawk_img_caption_shortcode_filter',10,3);
 
 	// TODO: what does this do?
 	add_filter('widget_text', 'do_shortcode');
 }
 
-function birdpress_img_caption_shortcode_filter($val, $attr, $content = null) {
+function goshawk_img_caption_shortcode_filter($val, $attr, $content = null) {
 	extract(shortcode_atts(array(
 		'id'	=> '',
 		'align'	=> '',

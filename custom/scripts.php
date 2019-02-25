@@ -1,12 +1,12 @@
 <?php
 //
-// Birdpress custom scripts
+// Goshawk custom scripts
 // --------------------------------------------------
 
 
 // Performance enhancement: remove extra scripts
 // ---------------------------------------
-function birdpress_strip_unnecessary_scripts() {
+function goshawk_strip_unnecessary_scripts() {
 	// emojis
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
@@ -21,16 +21,16 @@ function birdpress_strip_unnecessary_scripts() {
 	/* MOVE TO CHILD THEME */
 	remove_action( 'rest_api_init', 'wp_oembed_register_route' );
 }
-add_action('init', 'birdpress_strip_unnecessary_scripts');
+add_action('init', 'goshawk_strip_unnecessary_scripts');
 
 
 // Performance enhancement: remove footer scripts
 // ---------------------------------------
-function birdpress_remove_footer_scripts(){
+function goshawk_remove_footer_scripts(){
 	// revisit in the future (does Gutenberg take care of Youtube and other embeds automatically?)
 	wp_deregister_script( 'wp-embed' );
 }
-add_action( 'wp_footer', 'birdpress_remove_footer_scripts' );
+add_action( 'wp_footer', 'goshawk_remove_footer_scripts' );
 
 // include custom jQuery
 function goshawk_include_custom_jquery() {

@@ -1,6 +1,6 @@
 <?php
 //
-// Birdpress Helper Functions
+// Goshawk Helper Functions
 // --------------------------------------------------
 
 
@@ -45,7 +45,7 @@ function fix_custom_media_dir($path){
 
 // Category list creation (may need to be rewritten... used maybe in HHP?)
 // ---------------------------------------
-function birdpress_catz($glue) {
+function goshawk_catz($glue) {
 	$current_cat = single_cat_title( '', false );
 	$separator = "\n";
 	$cats = explode( $separator, get_the_category_list($separator) );
@@ -65,7 +65,7 @@ function birdpress_catz($glue) {
 
 // Tag list creation (may need to be rewritten... used maybe in HHP?)
 // ---------------------------------------
-function birdpress_tag_it($glue) {
+function goshawk_tag_it($glue) {
 	$current_tag = single_tag_title( '', '',  false );
 	$separator = "\n";
 	$tags = explode( $separator, get_the_tag_list( "", "$separator", "" ) );

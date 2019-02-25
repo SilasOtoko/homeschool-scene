@@ -1,16 +1,16 @@
 <?php
 //
-// Birdpress custom widgets
+// Goshawk custom widgets
 // --------------------------------------------------
 
 
 // Widgets placement and default markup
 // ---------------------------------------
-add_action( 'widgets_init', 'birdpress_widgets_init' );
+add_action( 'widgets_init', 'goshawk_widgets_init' );
 
-function birdpress_widgets_init() {
+function goshawk_widgets_init() {
 	register_sidebar( array (
-		'name'          => __('Sidebar Widget Area', 'birdpress'),
+		'name'          => __('Sidebar Widget Area', 'goshawk'),
 		'id'            => 'primary-widget-area',
 		'description'   => 'The primary sidebar',
 		'class'         => '',

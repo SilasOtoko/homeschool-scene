@@ -1,6 +1,6 @@
 <?php
 //
-// Birdpress content customization
+// Goshawk content customization
 // --------------------------------------------------
 
 
