@@ -46,11 +46,19 @@
 	<div id="global-wrapper" class="global-wrapper">
 
 		<header id="global-header" class="global-header is-showing-default">
-			<?php
-				/* Sample Header layout treatments. Relavant LESS and JS will need to be switched around in global.less and in gulpfile.babel.js */
-				// include 'partials/header-layouts/stacked-layout.php';
-				// include 'partials/header-layouts/positioned-layout.php';
-			?>
+			
+			<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'main-menu',
+						'menu_class'     => 'main-menu',
+						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
+
 		</header>
 
 		<main id="global-main" class="global-main">

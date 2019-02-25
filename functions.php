@@ -1,10 +1,10 @@
 <?php
 //
-// Birdpress Functions
+// goshawk Functions
 // --------------------------------------------------
 
 
-// Siloed Birdpress function groups
+// Siloed goshawk function groups
 // ---------------------------------------
 require_once("custom/helpers.php");
 // require_once("custom/navigation.php");
@@ -18,16 +18,16 @@ require_once("custom/scripts.php");
 // require_once("custom/editor_styles.php");
 
 
-// Birdpress theme setup
+// goshawk theme setup
 // ---------------------------------------
-add_action('after_setup_theme', 'birdpress_setup');
+add_action('after_setup_theme', 'goshawk_setup');
 
-function birdpress_setup() {
+function goshawk_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 
 	register_nav_menus(
-		array( 'main-menu' => __( 'Main Menu', 'birdpress' ) )
+		array( 'main-menu' => __( 'Main Menu', 'goshawk' ) )
 	);
 }
 
