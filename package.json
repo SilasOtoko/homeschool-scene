@@ -35,5 +35,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "webpack-stream": "^5.2.1",
     "yargs": "^13.2.1"
+  },
+  "dependencies": {
+    "@rarebirdinc/perch": "git+ssh://git@rarebird.io/diffusion/PERCH/perch.git#v0.10.0-beta"
   }
 }

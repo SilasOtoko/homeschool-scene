@@ -7,6 +7,8 @@
 
 <div id="page-<?php the_ID(); ?>" <?php post_class("home-page-page-wrapper page-wrapper"); ?>>
 
+  <h1>This is the front page</h1>
+
 	
 
 </div><!-- #page-<?php the_ID(); ?> -->
