@@ -14,13 +14,13 @@ import webpack from 'webpack-stream';
 const PRODUCTION = yargs.argv.prod;
 
 export const styles = () => {
-  return src('src/less/global.less')
+  return src('src/less/style.less')
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(less())
     .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
     .pipe(gulpif(PRODUCTION, cleanCss({compatibility: 'ie8'})))
     .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-    .pipe(dest('dist/css'));
+    .pipe(dest('./'));
 }
 
 export const watchForChanges = () => {
@@ -33,16 +33,12 @@ export const watchForChanges = () => {
 export const images = () => {
   return src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
     .pipe(gulpif(PRODUCTION, imagemin()))
-    .pipe(dest('dist/images'));
+    .pipe(dest('./images'));
 }
 
 export const copy = () => {
   return src(['src/**/*', '!src/{images,js,less}','!src/{images,js,scss}/**/*'])
-    .pipe(dest('dist'));
-}
-
-export const clean = () => {
-  return del(['dist']);
+    .pipe(dest('./'));
 }
 
 export const scripts = () => {
@@ -70,9 +66,9 @@ export const scripts = () => {
       jquery: 'jQuery'
     },
   }))
-  .pipe(dest('dist/js'));
+  .pipe(dest('./js'));
 }
 
-export const dev = series(clean, parallel(styles, images, copy, scripts), watchForChanges);
-export const build = series(clean, parallel(styles, images, copy, scripts));
+export const dev = series(parallel(styles, images, copy, scripts), watchForChanges);
+export const build = series(parallel(styles, images, copy, scripts));
 export default dev;
