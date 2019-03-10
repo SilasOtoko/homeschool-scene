@@ -45,6 +45,20 @@
 	<div id="global-wrapper" class="global-wrapper">
 
 		<header id="global-header" class="global-header is-showing-default">
+
+			<div class="global-header__logo">
+
+				<?php if( get_custom_logo() ): ?>
+
+					<?php the_custom_logo( 'logo' ); ?>
+				    
+				<?php else: ?>
+					
+					<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+
+				<?php endif; ?>
+				
+			</div>
 			
 			<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
 				<?php
