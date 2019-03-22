@@ -41,7 +41,7 @@ if( function_exists('acf_add_options_page') ) {
 function goshawk_theme_styles(){
 
   wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/css/global.css');
-  // wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700' );
+  wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700' );
 
 }
 add_action( 'wp_enqueue_scripts', 'goshawk_theme_styles' );

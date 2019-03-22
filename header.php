@@ -54,7 +54,7 @@
 				    
 				<?php else: ?>
 					
-					<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+					<a class="global-header__site-title" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
 
 				<?php endif; ?>
 				
@@ -83,8 +83,8 @@
 			</div>
 			<?php /* Browser No JS Message -- hidden by default but shown if browser has class `mod-no-js`. This method, which relies on Modernizr's successful initialization, might give us better coverage for browsers that have JS turned on but are blocking JS with a tool/plugin/blocker on top.
 			The styles are defined in Perch's _browser-fixes.less file. */ ?>
-			<div class="browser-no-js-message browser-message" style="display: none;">
+			<!-- <div class="browser-no-js-message browser-message" style="display: none;">
 				<p><span class="far fa-exclamation-triangle"></span> Your browser has turned off or is blocking Javascript.</p>
 				<p>If you are using a content blocker, check to see that you have not globally turned off Javascript.</p>
 				<p>If you have turned it off manually in your browser, please enable it to better experience this site.</p>
-			</div>
+			</div> -->
