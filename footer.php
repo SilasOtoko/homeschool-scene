@@ -8,14 +8,14 @@
 
         <?php $currentDate = date("Y"); ?>
         
-        <?php if ($currentDate == "2018") {
+        <?php if ($currentDate == "2019") {
           $date = $currentDate;
         } else {
           $date = "2018-" . $currentDate;
         }; ?>
 
-        <p class="legal">&copy; <?php echo $date; ?> <?php bloginfo( 'name' ); ?></p>
-        <p class="credits">by: <a href="http:/rarebirdinc.com">Rare Bird Inc</a></p>
+        <span class="legal">&copy; <?php echo $date; ?> <?php bloginfo( 'name' ); ?></span>
+        <span class="credits">by <a href="http:/rarebirdinc.com">Rare Bird Inc</a></span>
 
       </section>
 
