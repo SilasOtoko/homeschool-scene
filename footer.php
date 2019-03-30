@@ -19,10 +19,6 @@
 
       </section>
 
-      <a href="#page-top" class="scroll-button">
-        <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/img/arrow-up.svg" />
-      </a>
-
 		</div><!-- /.footer-container -->
 
 	</footer>
