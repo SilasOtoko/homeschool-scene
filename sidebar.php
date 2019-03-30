@@ -1,18 +1,17 @@
-<?php /*
-<ul class="parent-sidebar-link-listing sidebar-link-listing link-listing">
-	<li>
-		<a href="/blog/">Blog</a>
-	</li>
-</ul>
-*/ ?>
+<?php
+/**
+ * The sidebar containing the main widget area
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Goshawk
+ */
 
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+  return;
+}
+?>
 
-<?php if ( is_active_sidebar('primary-widget-area') ) : ?>
-
-	<div id="primary-widget-area" class="primary-widget-area widget-area">
-		<div class="sid sidebar-widget-listing widget-listing">
-			<?php dynamic_sidebar('primary-widget-area'); ?>
-		</div>
-	</div>
-
-<?php endif; ?>
+<aside id="secondary" class="widget-area">
+  <?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->

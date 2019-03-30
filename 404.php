@@ -1,47 +1,64 @@
-<?php get_header(); ?>
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end header -->
+<?php
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ *
+ * @package Goshawk
+ */
 
-<!-- Main content's .container -->
-<div class="main-content-container container">
+get_header();
+?>
 
-	<div class="main-content-row row">
+	<div class="main-content-container container">
+    <div class="main-content-row row">
+      <div class="main-content-column col-xs-12">
+        <section class="main-content">
 
-		<div class="main-content-column col-xs-12">
+					<div class="error-404 not-found">
+						<header class="page-header">
+							<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'goshawk' ); ?></h1>
+						</header><!-- .page-header -->
 
-			<section class="main-content">
+						<div class="page-content">
+							<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'goshawk' ); ?></p>
 
-				<div id="post-0" class="post error404 not-found">
-					<h1 class="entry-title"><?php _e('Oops! File Not Found &ndash; Error 404.', 'blankslate'); ?></h1>
-					<div class="entry-content">
-						<!-- <p><?php _e('Nothing found for the requested page. Try a search instead?', 'blankslate'); ?></p> -->
-						<?php // get_search_form(); ?>
+							<?php
+							get_search_form();
 
-						<h2>The page or file requested cannot be found or has been moved.</h2>
+							the_widget( 'WP_Widget_Recent_Posts' );
+							?>
 
-						<p>We appreciate you visiting our site! Continue exploring by clicking on the links in the navigation.</p>
+							<div class="widget widget_categories">
+								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'goshawk' ); ?></h2>
+								<ul>
+									<?php
+									wp_list_categories( array(
+										'orderby'    => 'count',
+										'order'      => 'DESC',
+										'show_count' => 1,
+										'title_li'   => '',
+										'number'     => 10,
+									) );
+									?>
+								</ul>
+							</div><!-- .widget -->
 
-						<h3>From here you can:</h3>
-						<ul>
-							<?php /*
-							<li class="">
-								Search the site:
-								<?php get_template_part('searchform', 'general') ?>
-							</li>
-							*/ ?>
-							<li>Return to <a href="javascript:history.go(-1);">previous page</a>.</li>
-							<li>Go to the <a href="/">home page</a>.</li>
-							<li><a href="/contact">Contact us</a>.</li>
-						</ul>
-					</div><!-- /.entry-content -->
-				</div><!-- /.post.error404 -->
+							<?php
+							/* translators: %1$s: smiley */
+							$goshawk_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'goshawk' ), convert_smilies( ':)' ) ) . '</p>';
+							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$goshawk_archive_content" );
 
-			</section><!-- /.main-content -->
+							the_widget( 'WP_Widget_Tag_Cloud' );
+							?>
 
-		</div><!-- /.main-content-column -->
+						</div><!-- .page-content -->
+					</div><!-- .error-404 -->
 
-	</div><!-- /.main-content-row -->
+				</section>
+			</div>
+		</div>
+	</div>
 
-</div><!-- /.main-content-container container -->
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ begin footer -->
-<?php get_footer(); ?>
+<?php
+get_footer();

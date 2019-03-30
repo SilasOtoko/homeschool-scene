@@ -12,28 +12,10 @@
 	* Rare Bird, Inc. | http://rarebirdinc.com/ | @rarebirdinc
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-	<?php /* Meta Tags */ ?>
-	<meta charset="UTF-8" />
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php /* Site Title & Description */ ?>
-	<!-- <link href="http://domain.com" rel="home"> -->
-
-	<?php /* Preconnect + Preload for speedier performance
-	<link rel="preconnect" href="https://use.typekit.net" crossorigin>
-	<link rel="preload" href="https://use.typekit.net/{{TYPEKIT_KIT_ID}}.js" as="script" crossorigin>
-	*/ ?>
-
-	<?php /* Favicons + Device Icons */ ?>
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png"> <?php /* All iOS versions __ this is a single 180px file that should scale down OK */ ?>
-	<link rel="icon" sizes="192x192" href="/icon-hd.png"> <?php /* Android Devices High Resolution */ ?>
-	<link rel="icon" sizes="128x128" href="/icon.png"> <?php /* Android Devices Normal Resolution */ ?>
-	<link rel="icon" href="/favicon.ico"> <?php /* Combined 16px, 32px, 48px, 64px favicon
-		----> TIP::: Install ImageMagick and run
-		$convert favicon-16.png favicon-32.png favicon-48.png favicon-64.png favicon.ico
-		*/ ?>
-
-	<?php /* WordPress Head */ ?>
 	<?php wp_head(); ?>
 </head>
 
@@ -48,15 +30,17 @@
 
 			<div class="global-header__logo">
 
-				<?php if( get_custom_logo() ): ?>
-
-					<?php the_custom_logo( 'logo' ); ?>
-				    
-				<?php else: ?>
-					
-					<a class="global-header__site-title" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
-
-				<?php endif; ?>
+				<?php
+				the_custom_logo();
+				if ( is_front_page() && is_home() ) :
+					?>
+					<h1 class="global-header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<?php
+				else :
+					?>
+					<p class="global-header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<?php
+				endif; ?>
 				
 			</div>
 			
