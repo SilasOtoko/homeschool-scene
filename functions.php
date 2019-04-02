@@ -40,7 +40,7 @@ if( function_exists('acf_add_options_page') ) {
 // Set up Style References
 function goshawk_theme_styles(){
 
-  wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css');
+  wp_enqueue_style( 'goshawk-style', get_stylesheet_uri() );
   wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700' );
 
 }
