@@ -40,8 +40,8 @@ if( function_exists('acf_add_options_page') ) {
 // Set up Style References
 function goshawk_theme_styles(){
 
-  wp_enqueue_style( 'main', get_template_directory_uri() . '/dist/css/global.css');
-  // wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700' );
+  wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css');
+  wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700' );
 
 }
 add_action( 'wp_enqueue_scripts', 'goshawk_theme_styles' );
@@ -57,3 +57,23 @@ function goshawk_theme_setup() {
      */
     add_theme_support( 'title-tag' );
 }
+
+/**
+ * Implement the Custom Header feature.
+ */
+require get_template_directory() . '/inc/custom-header.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Functions which enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';

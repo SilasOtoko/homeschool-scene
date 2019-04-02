@@ -1,5 +1,18 @@
 .global-header {
   display: flex;
   display: -webkit-flex;
-  padding: @content-container-padding;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  padding: 1.5rem @content-container-side-padding;
+  background-color: @site-color-blue-dark;
+  &__logo {
+    a {
+      text-decoration: none;
+      color: @site-color-white;
+    }
+  }
+  &__site-title {
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
 }

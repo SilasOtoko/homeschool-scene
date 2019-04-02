@@ -1,12 +1,20 @@
 .main-navigation {
   margin-left: auto;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
 }
 
 .main-menu {
-  ul {
-    padding: 0;
-  }
+  padding: 0;
+  margin-bottom: 0;
   li {
     display: inline-block;
+  }
+  a {
+    padding: 10px;
+    color: @site-color-white;
+    text-decoration: none;
   }
 }
