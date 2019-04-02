@@ -1,11 +1,17 @@
 .wp-block-image {
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 1.5rem 0;
   img {
     display: block;
+    margin: 0 auto;
+    width: 100%;
   }
   figcaption {
     background-color: @site-color-gray-light;
     padding: 0.5rem;
     margin-top: 0;
+    margin: 0 auto;
   }
 }
 
@@ -28,4 +34,46 @@
   cite {
     color: @site-color-black-lighter;
   }
+}
+
+.wp-block-media-text {
+  margin: 2.5rem 0;
+
+  @media (max-width: 680px) {
+    grid-template-columns: 100%!important;
+    grid-template-areas: "media-text-media" "media-text-content";
+  }
+
+  .wp-block-media-text__content {
+    margin-top: 1.5rem;
+  }
+}
+
+.highlight-block {
+  padding: 5rem;
+}
+
+.large-width {
+  max-width: 980px;
+  width: 100%;
+  // Allow for relative positioning
+  position: relative;
+  // Relative to its container width, it is pushed 50% to the left
+  left: 50%;
+  // Relative to its own width (100vw), it is pulled back 50% to the left
+  transform: translate(-50%);
+
+  @media (min-width: 680px) {
+    width: 100vw;
+  }
+}
+
+.full-width {
+  width: 100vw;
+  // Allow for relative positioning
+  position: relative;
+  // Relative to its container width, it is pushed 50% to the left
+  left: 50%;
+  // Relative to its own width (100vw), it is pulled back 50% to the left
+  transform: translate(-50%);
 }
