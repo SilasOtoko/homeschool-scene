@@ -26,6 +26,7 @@ function goshawk_setup() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
   add_theme_support( 'custom-logo' );
+  add_theme_support( 'align-wide' );
 
 	register_nav_menus(
 		array( 'main-menu' => __( 'Main Menu', 'goshawk' ) )
@@ -57,6 +58,54 @@ function goshawk_theme_setup() {
      */
     add_theme_support( 'title-tag' );
 }
+
+add_theme_support( 'editor-color-palette', array(
+    array(
+        'name' => __( 'Dark Blue', 'themeLangDomain' ),
+        'slug' => 'blue-dark',
+        'color' => '#323F4B',
+    ),
+    array(
+        'name' => __( 'Blue', 'themeLangDomain' ),
+        'slug' => 'blue',
+        'color' => '#486581',
+    ),
+    array(
+        'name' => __( 'Light Blue', 'themeLangDomain' ),
+        'slug' => 'blue-light',
+        'color' => '#7B8189',
+    ),
+    array(
+        'name' => __( 'Dark Gray', 'themeLangDomain' ),
+        'slug' => 'gray-dark',
+        'color' => '#7B8189',
+    ),
+    array(
+        'name' => __( 'Gray', 'themeLangDomain' ),
+        'slug' => 'gray',
+        'color' => '#A5A9AF',
+    ),
+    array(
+        'name' => __( 'Light Gray', 'themeLangDomain' ),
+        'slug' => 'gray-light',
+        'color' => '#E4E7EB',
+    ),
+    array(
+        'name' => __( 'Black', 'themeLangDomain' ),
+        'slug' => 'black',
+        'color' => '#212932',
+    ),
+    array(
+        'name' => __( 'Light Black', 'themeLangDomain' ),
+        'slug' => 'black-light',
+        'color' => '#666666',
+    ),
+    array(
+        'name' => __( 'White', 'themeLangDomain' ),
+        'slug' => 'white',
+        'color' => '#ffffff',
+    ),
+) );
 
 /**
  * Implement the Custom Header feature.
