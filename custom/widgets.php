@@ -11,7 +11,7 @@ add_action( 'widgets_init', 'goshawk_widgets_init' );
 function goshawk_widgets_init() {
 	register_sidebar( array (
 		'name'          => __('Sidebar Widget Area', 'goshawk'),
-		'id'            => 'primary-widget-area',
+		'id'            => 'sidebar-1',
 		'description'   => 'The primary sidebar',
 		'class'         => '',
 		'before_widget' => '<div id="%1$s" class="widget-container %2$s">',

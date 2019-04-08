@@ -10,26 +10,28 @@
 get_header();
 ?>
 
+  <div class="page-banner">
+    <?php goshawk_post_thumbnail(); ?>
+  </div>
+
   <div class="main-content-container container">
     <div class="main-content-row row">
       <div class="main-content-column col-xs-12">
         <section class="main-content">
 
           <?php
-          while ( have_posts() ) :
+            while ( have_posts() ) :
             the_post();
 
-            get_template_part( 'template-parts/content', get_post_type() );
+            get_template_part( 'template-parts/content/content', get_post_type() ); ?>
 
-            the_post_navigation();
+            <div class="text-wrapper">
 
-            // If comments are open or we have at least one comment, load up the comment template.
-            if ( comments_open() || get_comments_number() ) :
-              comments_template();
-            endif;
+              <?php the_post_navigation(); ?>
 
-          endwhile; // End of the loop.
-          ?>
+            </div>
+
+          <?php endwhile; // End of the loop. ?>
 
         </section>
       </div>

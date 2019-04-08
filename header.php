@@ -39,7 +39,7 @@
 						<?php
 					else :
 						?>
-						<p class="global-header__site-title sr-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<span class="global-header__site-title sr-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 						<?php
 					endif; ?>
 
@@ -51,7 +51,7 @@
 
 					<?php else: ?>
 
-						<p class="global-header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<span class="global-header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
 
 						<?php endif; ?>
 

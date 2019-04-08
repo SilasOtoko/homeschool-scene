@@ -2,7 +2,7 @@
 
 <div class="main-content-container container">
 	<div class="main-content-row row">
-		<div class="main-content-column col-xs-12">
+		<div class="main-content-column content-column">
 			<section class="main-content">
 
 				<?php
@@ -61,6 +61,8 @@
 
 			</section>
 		</div>
+
+		<?php get_sidebar(); ?>
 	</div>
 </div>
 

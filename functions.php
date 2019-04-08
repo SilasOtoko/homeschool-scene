@@ -23,15 +23,42 @@ require_once("custom/editor_styles.php");
 add_action('after_setup_theme', 'goshawk_setup');
 
 function goshawk_setup() {
-	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'post-thumbnails' );
-  add_theme_support( 'custom-logo' );
+  add_theme_support( 'automatic-feed-links' );
+  add_theme_support( 'post-thumbnails' );
   add_theme_support( 'align-wide' );
+  add_theme_support( 'title-tag' );
 
 	register_nav_menus(
 		array( 'main-menu' => __( 'Main Menu', 'goshawk' ) )
 	);
 }
+
+function goshawk_custom_logo_setup() {
+    $defaults = array(
+      'flex-width' => true,
+      'header-text' => array( 'site-title', 'site-description' ),
+    );
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'goshawk_custom_logo_setup' );
+
+ // To set post count format in sidebar
+function categories_postcount_filter ($variable) {
+  $variable = str_replace('(', '<span class="post-count">', $variable);
+  $variable = str_replace(')', ' Posts</span>', $variable);
+  return $variable;
+}
+add_filter('wp_list_categories','categories_postcount_filter');
+
+function archive_postcount_filter ($variable) {
+   $variable = str_replace('(', '<span class="post-count">', $variable);
+   $variable = str_replace(')', ' Posts</span>', $variable);
+   return $variable;
+}
+add_filter('get_archives_link', 'archive_postcount_filter');
+
+// Add default posts and comments RSS feed links to head.
+  add_theme_support( 'automatic-feed-links' );
 
 // Enable Options Tab
 if( function_exists('acf_add_options_page') ) {
@@ -46,18 +73,6 @@ function goshawk_theme_styles(){
 
 }
 add_action( 'wp_enqueue_scripts', 'goshawk_theme_styles' );
-
-// Handle Page Title
-add_action( 'after_setup_theme', 'goshawk_theme_setup' );
-function goshawk_theme_setup() {
-    /*
-     * Let WordPress manage the document title.
-     * By adding theme support, we declare that this theme does not use a
-     * hard-coded <title> tag in the document head, and expect WordPress to
-     * provide it for us.
-     */
-    add_theme_support( 'title-tag' );
-}
 
 add_theme_support( 'editor-color-palette', array(
     array(

@@ -2,5 +2,19 @@
 // Site Components - Component overrides & unique styles
 // --------------------------------------------------
 
+.button {
+  border-radius: @common-border-radius;
+  font-weight: 700;
+  padding: 10px 20px;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
 
-
+.button--primary {
+  background-color: @site-color-blue;
+  color: @site-color-white;
+}
