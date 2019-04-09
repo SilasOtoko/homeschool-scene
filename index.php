@@ -2,40 +2,49 @@
 
 <div class="main-content-container container">
 	<div class="main-content-row row">
+
+		<?php if ( have_posts() ): ?>
+
+			<?php if ( is_home() && ! is_front_page() ): ?>
+
+				<div class="main-content-column content-column">
+					<section class="page-intro">
+
+	          <div class="entry-header text-wrapper">
+
+	            <h1 class="page-main-heading entry-title"><?php single_post_title(); ?></h1>
+	              
+	          </div>
+
+	          <?php 
+
+		          $posts_page_id = get_option( 'page_for_posts' ); 
+		          $posts_page = get_post( $posts_page_id );
+
+		        ?>
+
+		        <?php if( $posts_page->post_content ): ?>
+
+		          <p><?php echo $posts_page->post_content; ?></p>
+
+		        <?php endif; ?>
+
+		      </section>
+				</div>
+
+			<?php endif; ?>
+
+		<?php endif; ?>
+
+	</div>
+
+	<div class="main-content-row row post-list">
+
 		<div class="main-content-column content-column">
 			<section class="main-content">
 
 				<?php
 					if ( have_posts() ) :
-
-						if ( is_home() && ! is_front_page() ) :
-							?>
-
-							<div class="page-intro">
-
-			          <div class="entry-header text-wrapper">
-
-			            <h1 class="page-main-heading entry-title"><?php single_post_title(); ?></h1>
-			              
-			          </div>
-
-			          <?php 
-
-				          $posts_page_id = get_option( 'page_for_posts' ); 
-				          $posts_page = get_post( $posts_page_id );
-
-				        ?>
-
-				        <?php if( $posts_page->post_content ): ?>
-
-				          <p><?php echo $posts_page->post_content; ?></p>
-
-				        <?php endif; ?>
-
-			        </div>
-
-							<?php
-						endif;
 
 						/* Start the Loop */
 						while ( have_posts() ) :

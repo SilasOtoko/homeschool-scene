@@ -14,8 +14,15 @@ article {
     }
   }
   .byline {
-    color: #878787;
+    color: @site-color-gray-dark;
     font-style: italic;
     text-decoration: none;
   }
+  &:first-of-type {
+    padding-top: 0;
+  }
+}
+
+.post-list {
+  padding-top: 0;
 }

@@ -44,18 +44,29 @@ add_action( 'after_setup_theme', 'goshawk_custom_logo_setup' );
 
  // To set post count format in sidebar
 function categories_postcount_filter ($variable) {
-  $variable = str_replace('(', '<span class="post-count">', $variable);
-  $variable = str_replace(')', ' Posts</span>', $variable);
+  $variable = str_replace('(', '<span class="post-count">(', $variable);
+  $variable = str_replace(')', ')</span>', $variable);
   return $variable;
 }
 add_filter('wp_list_categories','categories_postcount_filter');
 
 function archive_postcount_filter ($variable) {
-   $variable = str_replace('(', '<span class="post-count">', $variable);
-   $variable = str_replace(')', ' Posts</span>', $variable);
+   $variable = str_replace('(', '<span class="post-count">(', $variable);
+   $variable = str_replace(')', ')</span>', $variable);
    return $variable;
 }
 add_filter('get_archives_link', 'archive_postcount_filter');
+
+// Add Editor back to default Posts page
+function fix_no_editor_on_posts_page($post) {
+
+   if( $post->ID != get_option( 'page_for_posts' ) ) { return; }
+
+   remove_action( 'edit_form_after_title', '_wp_posts_page_notice' );
+   add_post_type_support( 'page', 'editor' );
+
+}
+add_action( 'edit_form_after_title', 'fix_no_editor_on_posts_page', 0 );
 
 // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );

@@ -10,8 +10,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="text-wrapper">
-    
-    <?php goshawk_post_thumbnail(); ?>
 
     <header class="entry-header">
       <p class="byline"><?php the_time('F jS, Y') ?></p>
@@ -22,6 +20,8 @@
           the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
       endif; ?>
     </header><!-- .entry-header -->
+
+    <?php goshawk_post_thumbnail(); ?>
 
     <div class="entry-content">
       <?php
