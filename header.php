@@ -31,7 +31,7 @@
 			<div class="global-header__logo">
 
 				<?php if( get_custom_logo() ): ?>
-					<?php the_custom_logo(); ?>
+					<?php the_custom_logo( 'logo' ); ?>
 
 					<?php if ( is_front_page() && is_home() ) :
 						?>

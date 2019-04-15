@@ -1,4 +1,3 @@
-console.log('rarebird-include');
 
 //
 // Compiled Site Scripts
