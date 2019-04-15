@@ -6,7 +6,7 @@
 
 // Siloed goshawk function groups
 // ---------------------------------------
-// require_once("custom/helpers.php");
+require_once("custom/helpers.php");
 // require_once("custom/navigation.php");
 require_once("custom/rogue.php");
 require_once("custom/login.php");
