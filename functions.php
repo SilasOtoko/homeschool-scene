@@ -6,7 +6,7 @@
 
 // Siloed goshawk function groups
 // ---------------------------------------
-require_once("custom/helpers.php");
+// require_once("custom/helpers.php");
 // require_once("custom/navigation.php");
 require_once("custom/rogue.php");
 require_once("custom/login.php");
@@ -36,10 +36,14 @@ function goshawk_setup() {
 
 function goshawk_custom_logo_setup() {
     $defaults = array(
-      'flex-width' => true,
+      'height'      => 100,
+      'width'       => 400,
+      'flex-height' => true,
+      'flex-width'  => true,
       'header-text' => array( 'site-title', 'site-description' ),
-    );
-    add_theme_support( 'custom-logo', $defaults );
+  );
+  add_theme_support( 'custom-logo', $defaults );
+
 }
 add_action( 'after_setup_theme', 'goshawk_custom_logo_setup' );
 
