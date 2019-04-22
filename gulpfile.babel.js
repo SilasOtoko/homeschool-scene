@@ -69,6 +69,6 @@ export const scripts = () => {
   .pipe(dest('./js'));
 }
 
-export const dev = series(parallel(styles, images, copy, scripts), watchForChanges);
-export const build = series(parallel(styles, images, copy, scripts));
+export const dev = series(parallel(styles, images, scripts), watchForChanges);
+export const build = series(parallel(styles, images, scripts));
 export default dev;
