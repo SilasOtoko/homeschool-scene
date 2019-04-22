@@ -52,6 +52,12 @@
   }
 }
 
+.no-sidebar {
+  .main-content-row {
+    max-width: auto;
+  }
+}
+
 .main-content-row {
   max-width: 1400px;
   margin: 0 auto;
@@ -95,16 +101,18 @@
       padding: 5px 0;
       transition: padding 250ms;
       line-height: 1.3;
+      &:hover {
+        padding-left: 40px;
+      }
     }
-  }
-
-  .post-count,
-  .post-date {
-    margin-left: auto;
-    font-style: italic;
-    color: @site-color-gray-dark;
-    padding: 5px 0;
-    font-size: 0.875em;
+    .post-count,
+    .post-date {
+      margin-left: auto;
+      font-style: italic;
+      color: @site-color-gray-dark;
+      padding: 5px 0;
+      font-size: 0.875em;
+    }
   }
 
   @media (min-width: 980px) {
