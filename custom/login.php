@@ -22,7 +22,7 @@ class customize_wp_login {
                 background-color: #ffffff;
             }
             .login h1 a {
-                background-image: url('/assets/images/screenshot.png');
+                background-image: url('/images/login-image.png');
                 background-size: 320px 240px;
                 width: 320px;
                 height: 240px;
