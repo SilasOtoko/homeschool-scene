@@ -135,8 +135,8 @@ $_plugin_filters = array('plugins_url', 'script_loader_src', 'style_loader_src')
 $_asset_filters = array('bloginfo', 'stylesheet_directory_uri', 'template_directory_uri');
 
 if(!is_admin() && function_exists('add_filters')){
-	add_filters($_plugin_filters, 'rb_clean_plugins');
-	add_filters($_asset_filters, 'rb_clean_assets');
+	// add_filters($_plugin_filters, 'rb_clean_plugins');
+	// add_filters($_asset_filters, 'rb_clean_assets');
 } // is_admin
 
 
