@@ -6,17 +6,17 @@
 
 // Siloed goshawk function groups
 // ---------------------------------------
-require_once("custom/helpers.php");
-// require_once("custom/navigation.php");
-require_once("custom/rogue.php");
-require_once("custom/login.php");
-// require_once("custom/shortcodes.php");
-// require_once("custom/comments.php");
-require_once("custom/widgets.php");
-require_once("custom/content.php");
-require_once("custom/scripts.php");
-require_once("custom/editor_styles.php");
-require_once("custom/media.php");
+require_once("inc/rarebird-custom/helpers.php");
+// require_once("inc/rarebird-custom/navigation.php");
+require_once("inc/rarebird-custom/rogue.php");
+require_once("inc/rarebird-custom/login.php");
+// require_once("inc/rarebird-custom/shortcodes.php");
+// require_once("inc/rarebird-custom/comments.php");
+require_once("inc/rarebird-custom/widgets.php");
+require_once("inc/rarebird-custom/content.php");
+require_once("inc/rarebird-custom/scripts.php");
+require_once("inc/rarebird-custom/editor_styles.php");
+require_once("inc/rarebird-custom/media.php");
 
 
 // goshawk theme setup
