@@ -1,0 +1,51 @@
+.wp-block-image {
+  margin-bottom: 1em;
+  text-align: center;
+  padding: 1.5rem 0;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  figcaption {
+    background-color: @site-color-gray-light;
+    padding: 0.5rem;
+    margin-top: 0;
+    margin: 0 auto;
+  }
+}
+
+.wp-block-button {
+  .wp-block-button__link {
+    border-radius: @common-border-radius;
+    background-color: @site-color-blue;
+    font-weight: 700;
+  }
+}
+
+.wp-block-quote {
+  margin: 2.5rem 1rem 2.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 7px solid @site-color-blue;
+  p {
+    font-style: italic;
+    font-size: 1.5rem;
+  }
+  cite {
+    color: @site-color-black-lighter;
+  }
+}
+
+.wp-block-media-text {
+  @media (max-width: 680px) {
+    grid-template-columns: 100%!important;
+    grid-template-areas: "media-text-media" "media-text-content";
+  }
+
+  .wp-block-media-text__content {
+    margin-top: 1.5rem;
+  }
+}
+
+.highlight-block {
+  padding: 5rem;
+}
