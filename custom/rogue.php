@@ -103,13 +103,4 @@ if(!is_admin() && !is_login_page()){
 	add_filters($_relative_url_filters, 'rb_relative_url');
 }
 
-/**
- * Filter out content from thumbnails
- */
-add_filter('wp_get_attachment_image_attributes', 'rb_filter_attachment_atts', 99, 3);
-function rb_filter_attachment_atts($attr, $attachment, $size){
-	$attr['src'] = str_replace(get_site_url(null, '/wp-content'), "", $attr['src']);
-	return $attr;
-} //EF
-
 #EOF
