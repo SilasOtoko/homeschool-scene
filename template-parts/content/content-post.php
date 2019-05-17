@@ -11,7 +11,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <div class="text-wrapper">
 
-    <?php goshawk_post_thumbnail(); ?>
+    <?php if( !is_single() ) {
+      goshawk_post_thumbnail();
+    } ?>
 
     <header class="entry-header">
       <p class="byline"><?php the_time('F jS, Y') ?></p>
