@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-  <section id="primary" class="content-area">
-    <main id="main" class="site-main">
+<div class="main-content-container container">
+  <div class="main-content-row row">
 
     <?php if ( have_posts() ) : ?>
 

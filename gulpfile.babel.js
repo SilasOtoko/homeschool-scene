@@ -26,7 +26,7 @@ export const styles = () => {
 export const watchForChanges = () => {
   watch('src/less/**/*.less', styles);
   watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', images);
-  watch(['src/**/*','!src/{images,js,less}','!src/{images/js/less}/**/*'], copy);
+  watch(['src/**/*','!src/{images,js,less}','!src/{images/js/less}/**/*']);
   watch('src/js/**/*.js', scripts);
 }
 
@@ -34,11 +34,6 @@ export const images = () => {
   return src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
     .pipe(gulpif(PRODUCTION, imagemin()))
     .pipe(dest('./images'));
-}
-
-export const copy = () => {
-  return src(['src/**/*', '!src/{images,js,less}','!src/{images,js,scss}/**/*'])
-    .pipe(dest('./'));
 }
 
 export const scripts = () => {
