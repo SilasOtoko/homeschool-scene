@@ -7,7 +7,7 @@ class customize_wp_login {
     function __construct(){
         add_action('login_head', array($this, 'login_head'));
         add_filter('login_headerurl', array($this, 'login_headerurl'));
-        add_filter('login_headertitle', array($this, 'login_headertitle'));
+        add_filter('login_headertext', array($this, 'login_headertext'));
         // add_filter('login_redirect', array($this, 'login_redirect'), 10, 3);
     }
 
@@ -82,7 +82,7 @@ class customize_wp_login {
     }
 
     /* Set header link title to current site name */
-    function login_headertitle(){
+    function login_headertext(){
         return get_bloginfo('name');
     }
 
