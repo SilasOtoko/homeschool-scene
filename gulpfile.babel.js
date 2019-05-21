@@ -9,18 +9,22 @@ import autoprefixer from 'autoprefixer';
 import imagemin from 'gulp-imagemin';
 import del from 'del';
 import webpack from 'webpack-stream';
+import merge2 from 'merge2';
 
 
 const PRODUCTION = yargs.argv.prod;
 
 export const styles = () => {
-  return src('src/less/style.less')
-    .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-    .pipe(less())
-    .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
-    .pipe(gulpif(PRODUCTION, cleanCss({compatibility: 'ie8'})))
-    .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-    .pipe(dest('./'));
+  return merge2(
+    src('src/less/style.less'),
+    src('src/less/editor-style.less')
+  )
+  .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
+  .pipe(less())
+  .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
+  .pipe(gulpif(PRODUCTION, cleanCss({compatibility: 'ie8'})))
+  .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+  .pipe(dest('./'))
 }
 
 export const watchForChanges = () => {

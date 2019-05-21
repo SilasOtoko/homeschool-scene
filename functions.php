@@ -18,6 +18,9 @@ require_once("inc/rarebird-custom/scripts.php");
 require_once("inc/rarebird-custom/editor_styles.php");
 require_once("inc/rarebird-custom/media.php");
 
+// Include ACF Blocks
+require_once("inc/acf-blocks.php");
+
 
 // goshawk theme setup
 // ---------------------------------------
@@ -28,6 +31,8 @@ function goshawk_setup() {
   add_theme_support( 'post-thumbnails' );
   add_theme_support( 'align-wide' );
   add_theme_support( 'title-tag' );
+  add_theme_support( 'editor-styles' );
+  add_editor_style( 'editor-style.css' );
 
 	register_nav_menus(
 		array( 'main-menu' => __( 'Main Menu', 'goshawk' ) )
@@ -76,6 +81,7 @@ add_action( 'edit_form_after_title', 'fix_no_editor_on_posts_page', 0 );
 // Add default posts and comments RSS feed links to head.
   add_theme_support( 'automatic-feed-links' );
 
+
 // Enable Options Tab
 if( function_exists('acf_add_options_page') ) {
   acf_add_options_page();
@@ -85,6 +91,7 @@ if( function_exists('acf_add_options_page') ) {
 function goshawk_theme_styles(){
 
   wp_enqueue_style( 'goshawk-style', get_stylesheet_uri() );
+  wp_enqueue_style( 'editor-style', get_stylesheet_uri( 'editor-style.css' ) );
   wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700' );
 
 }
