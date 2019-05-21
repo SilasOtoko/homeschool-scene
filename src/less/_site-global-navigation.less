@@ -4,6 +4,7 @@
   display: -webkit-flex;
   align-items: center;
   -webkit-align-items: center;
+  display: none;
 }
 
 .main-menu {
@@ -16,5 +17,12 @@
     padding: 10px;
     color: @site-color-white;
     text-decoration: none;
+  }
+}
+
+
+@media (min-width: 1140px) {
+  .main-navigation {
+    display: block;
   }
 }

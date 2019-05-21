@@ -73,6 +73,8 @@
 				?>
 			</nav><!-- #site-navigation -->
 
+			<?php get_template_part( 'template-parts/responsive-overlay-menu' ); ?>
+
 		</header>
 
 		<main id="global-main" class="global-main">
