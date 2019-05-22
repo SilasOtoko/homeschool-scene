@@ -26,9 +26,17 @@
     </header><!-- .entry-header -->
 
     <div class="entry-content">
-      <?php
-      the_excerpt(); ?>
-      <a class="button button--primary" href="<?php the_permalink(); ?>">Read More</a>
+
+      <?php if( !is_single() ): ?>
+
+        <?php the_excerpt(); ?>
+        <a class="button button--primary" href="<?php the_permalink(); ?>">Read More</a>
+
+      <?php else: ?>
+
+        <?php the_content(); ?>
+
+      <?php endif; ?>
 
       <?php wp_link_pages( array(
         'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'goshawk' ),
