@@ -16,12 +16,23 @@
   margin-left  : calc( -100vw / 2 + 100% / 2 );
   margin-right : calc( -100vw / 2 + 100% / 2 );
   max-width    : 100vw;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 2.5rem;
+}
+
+.entry-content > :last-child:not(.alignfull) {
+  padding-bottom: 5rem;
 }
 
 .alignfull img {
   width: 100vw;
+}
+
+.alignfull + :not(.alignfull) {
+  margin-top: 2.5rem;
+}
+
+.alignfull + .alignfull {
+  margin-top: 0;
 }
 
 .has-blue-dark-background-color {

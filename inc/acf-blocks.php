@@ -12,6 +12,17 @@ function register_acf_block_types() {
         'icon'              => 'admin-comments',
         'keywords'          => array( 'testimonial', 'quote' ),
     ));
+
+    acf_register_block_type(array(
+        'name'              => 'cta',
+        'title'             => __('CTA'),
+        'description'       => __('A custom CTA block.'),
+        'render_template'   => 'template-parts/acf-blocks/cta.php',
+        'category'          => 'layout',
+        'icon'              => 'admin-comments',
+        'keywords'          => array( 'cta', 'callout' ),
+        'align'             => array( 'full', 'wide' ),
+    ));
 }
 
 // Check if function exists and hook into setup.
