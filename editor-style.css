@@ -1,0 +1,12 @@
+.testimonial-blockquote {
+  background-color: #E4E7EB;
+  margin: 2.5rem;
+  padding: 2.5rem;
+}
+.testimonial-blockquote .testimonial-message {
+  font-size: 1.75rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImVkaXRvci1zdHlsZS5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUVBO0VBQ0UseUJBQUE7RUFDQSxjQUFBO0VBQ0EsZUFBQTs7QUFIRix1QkFJRTtFQUNFLGtCQUFBO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQSIsInNvdXJjZXNDb250ZW50IjpbIkBpbXBvcnQgXCJfc2l0ZS1nbG9iYWwtdmFyaWFibGVzXCI7XG5cbi50ZXN0aW1vbmlhbC1ibG9ja3F1b3RlIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogQHNpdGUtY29sb3ItZ3JheS1saWdodDtcbiAgbWFyZ2luOiAyLjVyZW07XG4gIHBhZGRpbmc6IDIuNXJlbTtcbiAgLnRlc3RpbW9uaWFsLW1lc3NhZ2Uge1xuICAgIGZvbnQtc2l6ZTogMS43NXJlbTtcbiAgICBmb250LXN0eWxlOiBpdGFsaWM7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIH1cbn0iXSwiZmlsZSI6ImVkaXRvci1zdHlsZS5jc3MifQ== */
