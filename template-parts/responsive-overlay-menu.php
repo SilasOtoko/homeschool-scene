@@ -1,7 +1,7 @@
 <nav class="global-header__navigation--hamburger">
 
   <button tabindex="0" onclick="openNav()" class="toggle-sidebar">
-    <div class="hamburger" style="max-width: 80px;">
+    <span class="hamburger" style="max-width: 80px;">
 
       <span class="hamburger__label">Menu</span>
 
@@ -27,7 +27,7 @@
         </g>
       </svg>
 
-    </div>
+    </span>
   </button>
 
   <div id="overlay-menu-container" class="overlay-menu-container">
