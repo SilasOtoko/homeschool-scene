@@ -9,12 +9,31 @@
   text-decoration: none;
   list-style: none;
   text-align: center;
+  min-width: 200px;
   &:hover {
     cursor: pointer;
   }
 }
 
+.button-wrapper {
+  .button {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  @media (min-width: 480px) {
+    .button {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
 .button--primary {
   background-color: @site-color-blue;
+  color: @site-color-white;
+}
+
+.button--dark {
+  background-color: @site-color-black;
   color: @site-color-white;
 }

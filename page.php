@@ -6,7 +6,7 @@
 
       <?php if ( have_posts() ): ?>
 
-        <?php if ( is_home() && ! is_front_page() ): ?>
+        <?php if ( is_home() && !is_front_page() ): ?>
 
           <div class="page-intro">
 

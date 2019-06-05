@@ -1,0 +1,35 @@
+.hero {
+  padding: 5rem 15%;
+  min-height: 60vh;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  &__content-wrapper {
+    max-width: 1140px;
+  }
+  &__content {
+    max-width: 38em;
+    color: @site-color-white;
+    position: relative;
+    z-index: 1;
+  }
+  &__text {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  &::after {
+    content: '';
+    background: rgba(31, 41, 50, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}

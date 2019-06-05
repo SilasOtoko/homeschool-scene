@@ -91,3 +91,9 @@
 				<p>If you are using a content blocker, check to see that you have not globally turned off Javascript.</p>
 				<p>If you have turned it off manually in your browser, please enable it to better experience this site.</p>
 			</div> -->
+
+			<?php if( function_exists( 'get_field' ) ): ?>
+
+				<?php get_template_part( 'template-parts/content/content', 'hero' ); ?>
+
+			<?php endif; ?>
