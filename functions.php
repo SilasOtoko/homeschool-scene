@@ -91,7 +91,6 @@ if( function_exists('acf_add_options_page') ) {
 function goshawk_theme_styles(){
 
   wp_enqueue_style( 'goshawk-style', get_stylesheet_uri() );
-  wp_enqueue_style( 'editor-style', get_stylesheet_uri( 'editor-style.css' ) );
   wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700' );
 
 }

@@ -25,8 +25,8 @@ if( !empty($block['align']) ) {
 }
 
 // Load values and assing defaults.
-$heading = get_field('heading') ?: 'Your heading here...';
-$message = get_field('message') ?: 'Your message here...';
+$heading = get_field('heading');
+$message = get_field('message');
 $link = get_field('button_link') ?: 'Select Link';
 $button_text = get_field('button_text') ?: 'Set Button Text';
 $background_color = get_field('background_color');
@@ -35,12 +35,33 @@ $alignment = get_field('alignment');
 ?>
 <div id="<?php echo esc_attr($id); ?>" class="<?php echo esc_attr($className); ?> bg-<?php echo $background_color; ?> align<?php echo $alignment; ?>">
 
-    <div class="text-wrapper">
-        <h2><?php echo $heading; ?></h2>
-        <p><?php echo $message; ?></p>
-        <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button--primary">
-            <?php echo $button_text; ?>
-        </a>
-    </div>
+  <div class="text-wrapper">
+
+    <?php if( get_field( 'heading' ) ): ?>
+
+      <h2><?php echo $heading; ?></h2>
+
+    <?php endif; ?>
+
+    <?php if( get_field( 'message' ) ): ?>
+
+      <?php echo $message; ?>
+
+    <?php endif; ?>
+
+    <?php if( get_field( 'button_link' ) && get_field( 'button_text' ) ): ?>
+
+      <?php
+        $link = get_field( 'button_link' );
+        $linkTarget = $link['target'];
+      ?>
+
+      <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button--primary">
+          <?php echo $button_text; ?>
+      </a>
+
+    <?php endif; ?>
+
+  </div>
 
 </div>
