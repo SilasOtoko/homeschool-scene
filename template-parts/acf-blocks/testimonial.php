@@ -34,10 +34,4 @@ $author = get_field('author') ?: 'Author name';
         <span class="testimonial-message"><?php echo $message; ?></span>
         <p><span class="testimonial-author">— <?php echo $author; ?></span></p>
     </blockquote>
-    <style type="text/css">
-        #<?php echo $id; ?> {
-            background: <?php echo $background_color; ?>;
-            color: <?php echo $text_color; ?>;
-        }
-    </style>
 </div>

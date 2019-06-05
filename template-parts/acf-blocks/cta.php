@@ -16,7 +16,7 @@ if( !empty($block['anchor']) ) {
 }
 
 // Create class attribute allowing for custom "className" and "align" values.
-$className = 'cta acf-block';
+$className = 'acf-block--cta acf-block';
 if( !empty($block['className']) ) {
     $className .= ' ' . $block['className'];
 }

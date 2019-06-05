@@ -23,6 +23,17 @@ function register_acf_block_types() {
         'keywords'          => array( 'cta', 'callout' ),
         'align'             => array( 'full', 'wide' ),
     ));
+
+    acf_register_block_type(array(
+        'name'              => 'icon-text-columns',
+        'title'             => __('Icon Text Columns'),
+        'description'       => __('Three icon-text columns'),
+        'render_template'   => 'template-parts/acf-blocks/icon-text-columns.php',
+        'category'          => 'layout',
+        'icon'              => 'admin-comments',
+        'keywords'          => array( 'icons', 'columns' ),
+        'align'             => array( 'full', 'wide' ),
+    ));
 }
 
 // Check if function exists and hook into setup.

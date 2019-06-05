@@ -1,0 +1,50 @@
+.acf-block--icon-text-columns {
+  text-align: center;
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+  .text-wrapper {
+    margin: 0 auto;
+  }
+  .columns {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+  .column {
+    padding: 0 0.5rem;
+    margin-bottom: 2.5rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    &__media {
+      width: 140px;
+      margin: 0 auto;
+      img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+      }
+    }
+    &__heading {
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    &__link {
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: inherit;
+    }
+  }
+
+  @media (min-width: 680px) {
+    .columns {
+      display: flex;
+      display: -webkit-flex;
+    }
+    .column {
+      width: 33%;
+      margin-bottom: 0;
+    }
+  }
+}
