@@ -15,7 +15,6 @@ require_once("inc/rarebird-custom/login.php");
 require_once("inc/rarebird-custom/widgets.php");
 require_once("inc/rarebird-custom/content.php");
 require_once("inc/rarebird-custom/scripts.php");
-require_once("inc/rarebird-custom/editor_styles.php");
 require_once("inc/rarebird-custom/media.php");
 
 // Include ACF Blocks

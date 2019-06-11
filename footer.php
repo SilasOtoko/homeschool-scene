@@ -17,6 +17,14 @@
         <span class="legal">&copy; <?php echo $date; ?> <?php bloginfo( 'name' ); ?></span>
         <span class="credits">by <a href="http:/rarebirdinc.com">Rare Bird Inc</a></span>
 
+        <?php if( function_exists( 'get_field' ) ): ?>
+
+          <div class="social">
+
+          </div>
+
+        <?php endif; ?>
+
       </section>
 
 		</div><!-- /.footer-container -->
