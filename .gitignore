@@ -12,17 +12,3 @@ Thumbs.db
 node_modules/
 vendor/
 logs/*
-
-assets/css/**
-assets/js/**
-assets/third-party/**
-assets/icons/**
-
-!assets/css/
-!assets/js/
-!assets/images/
-!assets/icons/
-
-!assets/js/header-comment.js
-!assets/js/icons-import.js
-!assets/js/sample-es2015-scripts.js
