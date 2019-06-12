@@ -8,7 +8,7 @@
 
         <?php if ( is_home() && !is_front_page() ): ?>
 
-          <div class="page-intro">
+          <div class="page-header">
 
             <div class="entry-header text-wrapper">
 

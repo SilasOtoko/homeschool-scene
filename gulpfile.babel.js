@@ -16,15 +16,27 @@ import info from "./package.json";
 
 const PRODUCTION = yargs.argv.prod;
 
+const server = browserSync.create();
+export const serve = done => {
+  server.init({
+    proxy: "http://dev.goshawk-starter.com" // put your local website link here
+  });
+  done();
+};
+export const reload = done => {
+  server.reload();
+  done();
+};
+
 export const styles = () => {
   return src(['src/less/style.less', 'src/less/editor-style.less'])
-  .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-  .pipe(less())
-  .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
-  .pipe(gulpif(PRODUCTION, cleanCss({compatibility: 'ie8'})))
-  .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
-  .pipe(dest('./'))
-  .pipe(server.stream());
+    .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
+    .pipe(less())
+    .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
+    .pipe(gulpif(PRODUCTION, cleanCss({compatibility: 'ie8'})))
+    .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+    .pipe(dest('./'))
+    .pipe(server.stream());
 }
 
 export const watchForChanges = () => {
@@ -43,30 +55,30 @@ export const images = () => {
 
 export const scripts = () => {
   return src('src/js/bundle.js')
-  .pipe(webpack({
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: []
+    .pipe(webpack({
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: []
+              }
             }
           }
-        }
-      ]
-    },
-    mode: PRODUCTION ? 'production' : 'development',
-    devtool: !PRODUCTION ? 'inline-source-map' : false,
-    output: {
-      filename: 'bundle.js'
-    },
-    externals: {
-      jquery: 'jQuery'
-    },
-  }))
-  .pipe(dest('./dist/js'));
+        ]
+      },
+      mode: PRODUCTION ? 'production' : 'development',
+      devtool: !PRODUCTION ? 'inline-source-map' : false,
+      output: {
+        filename: 'bundle.js'
+      },
+      externals: {
+        jquery: 'jQuery'
+      },
+    }))
+    .pipe(dest('./dist/js'));
 }
 
 export const copy = () => {
@@ -77,18 +89,6 @@ export const copy = () => {
 export const clean = () => {
   return del(['dist']);
 }
-
-const server = browserSync.create();
-export const serve = done => {
-  server.init({
-    proxy: "http://dev.goshawk-starter.com" // put your local website link here
-  });
-  done();
-};
-export const reload = done => {
-  server.reload();
-  done();
-};
 
 export const compress = () => {
   return src([

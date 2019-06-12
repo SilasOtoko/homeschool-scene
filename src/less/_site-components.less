@@ -10,6 +10,7 @@
   list-style: none;
   text-align: center;
   min-width: 200px;
+  transition: color 150ms, background-color 150ms;
   &:hover {
     cursor: pointer;
   }
@@ -31,6 +32,10 @@
 .button--primary {
   background-color: @site-color-blue;
   color: @site-color-white;
+  &:hover,
+  &:focus {
+    background-color: @site-color-blue-light;
+  }
 }
 
 .button--dark {

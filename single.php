@@ -10,34 +10,34 @@
 get_header();
 ?>
 
-  <div class="page-banner">
-    <?php goshawk_post_thumbnail(); ?>
-  </div>
+<div class="page-banner">
+  <?php goshawk_post_thumbnail(); ?>
+</div>
 
-  <div class="main-content-container container">
-    <div class="main-content-row row">
-      <div class="main-content-column col-xs-12">
-        <section class="main-content">
+<section id="primary" class="content-area">
+  <div class="main-content-row row">
 
-          <?php
-            while ( have_posts() ) :
+    <div class="main-content-column content-column">
+      <div class="main-content">
+
+        <?php
+          while ( have_posts() ) :
             the_post();
 
-            get_template_part( 'template-parts/content/content', get_post_type() ); ?>
+            get_template_part( 'template-parts/content/content', get_post_type() );
 
-            <div class="text-wrapper">
+          endwhile;
 
-              <?php the_post_navigation(); ?>
+          the_post_navigation();
+        ?>
 
-            </div>
-
-          <?php endwhile; // End of the loop. ?>
-
-        </section>
       </div>
-
     </div>
+
+    <?php get_sidebar(); ?>
+
   </div>
+</section>
 
 <?php
 get_footer();
