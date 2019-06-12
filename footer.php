@@ -19,9 +19,23 @@
 
         <?php if( function_exists( 'get_field' ) ): ?>
 
-          <div class="social">
+          <?php if( have_rows( 'social', 'options' ) ): ?>
 
-          </div>
+            <div class="social">
+
+              <?php while( have_rows( 'social', 'options' ) ): the_row(); ?>
+
+                <a href="<?php the_sub_field( 'social_link', 'options' ); ?>">
+
+                  <?php the_sub_field( 'social_icon', 'options' ); ?>
+
+                </a>
+
+              <?php endwhile; ?>
+
+            </div>
+
+          <?php endif; ?>
 
         <?php endif; ?>
 

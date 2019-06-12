@@ -12,6 +12,9 @@ import webpack from 'webpack-stream';
 import browserSync from "browser-sync";
 import zip from "gulp-zip";
 import info from "./package.json";
+import rename from "gulp-rename";
+import resolve from "rollup-plugin-node-resolve";
+import rollup from "rollup-stream";
 
 
 const PRODUCTION = yargs.argv.prod;
@@ -53,8 +56,27 @@ export const images = () => {
     .pipe(dest('./dist/images'));
 }
 
+export const icons = () => {
+  return src('src/js/icons-import.js')
+    .pipe(rollup({
+      format: 'es',
+      plugins: [
+        // this is needed for helping Rollup to resolve node paths
+        resolve({
+          // some package.json files have a `browser` field which
+          // specifies alternative files to load for people bundling
+          // for the browser. If that's you, use this option, otherwise
+          // pkg.browser will be ignored
+          browser: true,  // Default: false
+        })
+      ]
+    }))
+    .pipe(rename('tree-shaken-icons.js'))
+    .pipe(dest('src/js'))
+}
+
 export const scripts = () => {
-  return src('src/js/bundle.js')
+  return src('src/js/*.js')
     .pipe(webpack({
       module: {
         rules: [
