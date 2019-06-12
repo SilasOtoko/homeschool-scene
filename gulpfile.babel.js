@@ -106,6 +106,7 @@ export const compress = () => {
       file => file.relative.split(".").pop() !== "zip",
       replace('_themename', info.name)
     )
+  )
   .pipe(zip(`${info.name}.zip`))
   .pipe(dest('bundled'));
 }

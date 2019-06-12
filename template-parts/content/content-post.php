@@ -16,13 +16,13 @@
     } ?>
 
     <header class="entry-header">
-      <p class="byline"><?php the_time('F jS, Y') ?></p>
       <?php
         if ( is_singular() ) :
           the_title( '<h1 class="entry-title">', '</h1>' );
         else :
           the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
       endif; ?>
+      <p class="byline"><?php the_time('F jS, Y') ?></p>
     </header><!-- .entry-header -->
 
     <div class="entry-content">
