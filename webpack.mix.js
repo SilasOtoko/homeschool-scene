@@ -8,9 +8,9 @@ mix.js('src/js/bundle.js', 'dist/js/bundle.js')
      processCssUrls: false,
    })
    .browserSync({
-    proxy: 'dev.goshawk-starter.com',
-    files: [
-      'src/less/style.less',
-      'src/js/bundle.js'
-    ]
-  });
+      proxy: 'dev.goshawk-starter.com',
+      files: [
+        'style.less',
+        'dist/js/bundle.js'
+      ]
+    });
