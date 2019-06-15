@@ -5,16 +5,6 @@
 // they are used *only* for visually shortening path strings
 // and simplifying project setup.
 
-// If changing the Perch location, make sure to also update gulpfile.js
-// Perch via NPM:
-@perch-path: "@{node-modules-path}@rarebirdinc/perch/";
-// Perch via Git or manual install:
-// @perch-path: "../third-party/perch/";
-
-// Where the node modules directory is
-@node-modules-path: "../../node_modules/";
-
-
 // Third Party Plugins
 // ---------------------------------------
 // @import (inline) "@{node-modules-path}prismjs/themes/prism.css";
@@ -32,14 +22,14 @@
 // --------------------------
 
 // Plugins _________
-// @perch-plugins-library-path: "@{perch-path}less/plugins/library/";
+// @perch-plugins-library-path: "node_modules/@rarebirdinc/perch/less/plugins/library/";
 
 // @import "@{perch-plugins-library-path}_modals";
 // @import "@{perch-plugins-library-path}_parsely";
 // // @import "@{perch-plugins-library-path}_tabs";
 
 // // Components _________
-// @perch-components-library-path: "@{perch-path}less/components/library/";
+// @perch-components-library-path: "node_modules/@rarebirdinc/perch/less/components/library/";
 
 // @import "@{perch-components-library-path}_alerts";
 // // @import "@{perch-components-library-path}_accordions";
@@ -70,11 +60,11 @@
 // // @import "@{perch-components-library-path}_star-ratings";
 
 // // (Flickity) Sliders _________
-// // @import "@{perch-path}less/components/library/sliders/_simple-slider";
-// // @import "@{perch-path}less/components/library/sliders/_proportional-slider";
+// // @import "node_modules/@rarebirdinc/perch/less/components/library/sliders/_simple-slider";
+// // @import "node_modules/@rarebirdinc/perch/less/components/library/sliders/_proportional-slider";
 
 // // Ecommerce _________
-// @ecommerce-components-path: "@{perch-path}less/components/library/ecommerce/";
+// @ecommerce-components-path: "node_modules/@rarebirdinc/perch/less/components/library/ecommerce/";
 
 // @import "@{ecommerce-components-path}_cart-table";
 // @import "@{ecommerce-components-path}_checkout-cards";
@@ -86,7 +76,7 @@
 // @import "@{ecommerce-components-path}_product-listing-slider";
 
 // Wordpress _________
-@wordpress-components-path: "@{perch-path}less/components/library/wordpress/";
+@wordpress-components-path: "../../../node_modules/@rarebirdinc/perch/less/components/library/wordpress/";
 
 @import "@{wordpress-components-path}_wp-admin-bar-mobile-fixes";
 // // @import "@{wordpress-components-path}_wp-admin-bar-overrides-for-positioned-layout"; // only used in combination with "Positioned Layout" starter layout
@@ -100,14 +90,14 @@
 
 
 // // Layout Helpers _________
-// @layout-helpers-path: "@{perch-path}less/layout/library/layout_helpers/";
+// @layout-helpers-path: "node_modules/@rarebirdinc/perch/less/layout/library/layout_helpers/";
 
 // @import "@{layout-helpers-path}_layout-main";
 // @import "@{layout-helpers-path}_layout-footer";
 // @import "@{layout-helpers-path}_footer-links";
 
 // // Starter Layouts _________
-// @starter-layouts-path: "@{perch-path}less/layout/library/starter_layouts/";
+// @starter-layouts-path: "node_modules/@rarebirdinc/perch/less/layout/library/starter_layouts/";
 
 // // Positioned Layout
 // @import "@{starter-layouts-path}positioned_layout/_PL--header";
@@ -130,4 +120,4 @@
 // // @import "@{starter-layouts-path}stacked_layout/_SL--search-reveal-button-overrides";
 
 // // Development _________
-// @import (multiple) "@{perch-path}less/components/library/development/_development";
+// @import (multiple) "node_modules/@rarebirdinc/perch/less/components/library/development/_development";

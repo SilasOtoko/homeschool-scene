@@ -17,69 +17,72 @@
 // ---------------------------------------
 
 // First, import the library and DOM manipulation utilities
-import { library, dom } from 'node_modules/@fortawesome/fontawesome-svg-core';
+import { library, dom } from '@fortawesome/fontawesome-svg-core';
 
 
 // Add the icons you want to use here, AND include them in the Library .add() function below
 
 // Common Brands _________
-import { faFacebookF } from 'node_modules/@fortawesome/free-brands-svg-icons';
-import { faTwitter } from 'node_modules/@fortawesome/free-brands-svg-icons';
-import { faPinterest } from 'node_modules/@fortawesome/free-brands-svg-icons';
-import { faInstagram } from 'node_modules/@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from 'node_modules/@fortawesome/free-brands-svg-icons';
-import { faYoutube } from 'node_modules/@fortawesome/free-brands-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
+import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook';
+
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
+// import { faPinterest } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
+// import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+// import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 // Demo: Light, Solid, and Regular versions of the same icon _________
-// import { faEnvelope as falEnvelope } from 'node_modules/@fortawesome/pro-light-svg-icons';
-// import { faEnvelope as fasEnvelope } from 'node_modules/@fortawesome/pro-solid-svg-icons';
-// import { faEnvelope as farEnvelope } from 'node_modules/@fortawesome/pro-regular-svg-icons';
+// import { faEnvelope as falEnvelope } from '@fortawesome/pro-light-svg-icons';
+// import { faEnvelope as fasEnvelope } from '@fortawesome/pro-solid-svg-icons';
+// import { faEnvelope as farEnvelope } from '@fortawesome/pro-regular-svg-icons';
 
 // Common Icons that RB uses on sites _________
-import { faEnvelope } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faFilter } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faFilePdf } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faExclamationTriangle } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faInfoCircle } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faLink } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faSearch } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faPrint } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faPlus } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faMinus } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faTimes } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faChevronUp } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faChevronRight } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faChevronDown } from 'node_modules/@fortawesome/pro-regular-svg-icons';
-import { faChevronLeft } from 'node_modules/@fortawesome/pro-regular-svg-icons';
+// import { faEnvelope } from '@fortawesome/pro-regular-svg-icons';
+// import { faFilter } from '@fortawesome/pro-regular-svg-icons';
+// import { faFilePdf } from '@fortawesome/pro-regular-svg-icons';
+// import { faExclamationTriangle } from '@fortawesome/pro-regular-svg-icons';
+// import { faInfoCircle } from '@fortawesome/pro-regular-svg-icons';
+// import { faLink } from '@fortawesome/pro-regular-svg-icons';
+// import { faSearch } from '@fortawesome/pro-regular-svg-icons';
+// import { faPrint } from '@fortawesome/pro-regular-svg-icons';
+// import { faPlus } from '@fortawesome/pro-regular-svg-icons';
+// import { faMinus } from '@fortawesome/pro-regular-svg-icons';
+// import { faTimes } from '@fortawesome/pro-regular-svg-icons';
+// import { faChevronUp } from '@fortawesome/pro-regular-svg-icons';
+// import { faChevronRight } from '@fortawesome/pro-regular-svg-icons';
+// import { faChevronDown } from '@fortawesome/pro-regular-svg-icons';
+// import { faChevronLeft } from '@fortawesome/pro-regular-svg-icons';
 
 
 // [Step 2] Add desired icons to library
 // ---------------------------------------
 library.add(
-	faEnvelope,
+	// faEnvelope,
 	faFacebookF,
+	faFacebook,
 	faTwitter,
-	faPinterest,
+	// faPinterest,
 	faInstagram,
-	faLinkedin,
-	faYoutube,
+	// faLinkedin,
+	// faYoutube,
 	// falEnvelope,
 	// fasEnvelope,
 	// farEnvelope,
-	faFilter,
-	faFilePdf,
-	faExclamationTriangle,
-	faInfoCircle,
-	faLink,
-	faSearch,
-	faPrint,
-	faPlus,
-	faMinus,
-	faTimes,
-	faChevronUp,
-	faChevronRight,
-	faChevronDown,
-	faChevronLeft,
+	// faFilter,
+	// faFilePdf,
+	// faExclamationTriangle,
+	// faInfoCircle,
+	// faLink,
+	// faSearch,
+	// faPrint,
+	// faPlus,
+	// faMinus,
+	// faTimes,
+	// faChevronUp,
+	// faChevronRight,
+	// faChevronDown,
+	// faChevronLeft,
 );
 
 

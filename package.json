@@ -1,57 +1,39 @@
 {
   "name": "goshawk-theme",
-  "version": "1.0.0-alpha.2",
-  "description": "Goshawk Theme site starter",
+  "version": "1.0.0",
+  "description": "A Rare Bird custom WordPress theme",
+  "main": "dist/bundle.js",
+  "author": {
+    "name": "Josiah Schaefer",
+    "email": "josiah@rarebirdinc.com",
+    "url": "https://rarebirdinc.com"
+  },
   "repository": {
     "type": "git",
-    "url": "ssh://git@gitlab.com:JosiahSchaefer/goshawk-theme.git"
+    "url": "https://gitlab.com/JosiahSchaefer/goshawk-theme?nav_source=navbar"
   },
+  "license": "MIT",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build --prod"
-  },
-  "author": "Rare Bird, Inc.",
-  "license": "UNLICENSED",
-  "private": true,
-  "engines": {
-    "node": ">=8.11.2",
-    "npm": ">=6.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.3.3",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/register": "^7.0.0",
-    "@fortawesome/fontawesome-pro": "^5.9.0",
-    "@fortawesome/free-regular-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "autoprefixer": "^9.4.8",
-    "babel-loader": "^8.0.5",
-    "babel-minify-webpack-plugin": "^0.3.1",
-    "browser-sync": "^2.26.7",
-    "del": "^3.0.0",
-    "gulp": "^4.0.2",
-    "gulp-better-rollup": "^4.0.1",
-    "gulp-clean-css": "^4.0.0",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-less": "^4.0.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sequence": "^1.0.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-zip": "^5.0.0",
-    "rollup": "^1.15.1",
-    "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-node-resolve": "^5.0.1",
-    "rollup-stream": "^1.24.1",
-    "vinyl-named": "^1.1.0",
-    "webpack-stream": "^5.2.1",
-    "yargs": "^13.2.1"
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@rarebirdinc/perch": "git+ssh://git@rarebird.io/diffusion/PERCH/perch.git#v0.9.1",
+    "acorn": "^6.1.1",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@rarebirdinc/perch": "git+ssh://git@rarebird.io/diffusion/PERCH/perch.git#v0.10.0-beta",
-    "rollup-plugin-includepaths": "^0.2.3"
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/pro-light-svg-icons": "^5.9.0",
+    "@fortawesome/pro-regular-svg-icons": "^5.9.0",
+    "@fortawesome/pro-solid-svg-icons": "^5.9.0",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "laravel-mix": "^4.0.16",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "vue-template-compiler": "^2.6.10"
   }
 }
