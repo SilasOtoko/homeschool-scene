@@ -6,11 +6,15 @@ mix.js('src/js/bundle.js', 'dist/js/bundle.js')
    .copyDirectory('src/images', 'dist/images')
    .options({
      processCssUrls: false,
-   })
-   .browserSync({
-      proxy: 'dev.goshawk-starter.com',
-      files: [
-        'style.less',
-        'dist/js/bundle.js'
-      ]
-    });
+   });
+
+
+mix.browserSync({
+  proxy: 'dev.goshawk-starter.com',
+  injectChanges: true,
+  files: [
+    'src/{*,**/*}.less',
+    'src/js/{*,**/*}.js',
+    '{*,**/*}.php'
+  ],
+});
