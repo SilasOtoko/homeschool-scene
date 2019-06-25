@@ -77,6 +77,24 @@
   }
   .main-content-column {
     margin: 0 auto;
+    .main-content article {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+  }
+  .page-header {
+    max-width: 700px;
+  }
+  .pagination {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 980px) {
+  body:not(.no-sidebar) .page-header {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 
@@ -161,13 +179,6 @@
   margin-right: auto;
   margin-top: 5rem;
   margin-bottom: 5rem;
-}
-
-@media (min-width: 980px) {
-  body:not(.no-sidebar) .page-header {
-    margin-right: 0;
-    margin-left: 0;
-  }
 }
 
 

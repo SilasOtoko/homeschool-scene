@@ -45,7 +45,7 @@ $alignment = get_field('alignment');
 
     <?php if( get_field( 'message' ) ): ?>
 
-      <?php echo $message; ?>
+      <div><?php echo $message; ?></div>
 
     <?php endif; ?>
 
@@ -55,10 +55,12 @@ $alignment = get_field('alignment');
         $link = get_field( 'button_link' );
         $linkTarget = $link['target'];
       ?>
-
-      <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button--primary">
+      
+      <div class="button-wrapper">
+        <a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="button button--primary">
           <?php echo $button_text; ?>
-      </a>
+        </a>
+      </div>
 
     <?php endif; ?>
 
