@@ -94,6 +94,6 @@
 
 			<?php if( function_exists( 'get_field' ) ): ?>
 
-				<?php get_template_part( 'template-parts/content/content', 'hero' ); ?>
+				<?php get_template_part( 'template-parts/acf-blocks/hero' ); ?>
 
 			<?php endif; ?>

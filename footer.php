@@ -17,29 +17,29 @@
         <span class="legal">&copy; <?php echo $date; ?> <?php bloginfo( 'name' ); ?></span>
         <span class="credits">by <a href="http:/rarebirdinc.com">Rare Bird Inc</a></span>
 
-        <?php if( function_exists( 'get_field' ) ): ?>
+      </section>
 
-          <?php if( have_rows( 'social', 'options' ) ): ?>
+      <?php if( function_exists( 'get_field' ) ): ?>
 
-            <div class="social">
+        <?php if( have_rows( 'social', 'options' ) ): ?>
 
-              <?php while( have_rows( 'social', 'options' ) ): the_row(); ?>
+          <div class="social">
 
-                <a href="<?php the_sub_field( 'social_link', 'options' ); ?>">
+            <?php while( have_rows( 'social', 'options' ) ): the_row(); ?>
 
-                  <?php the_sub_field( 'social_icon', 'options' ); ?>
+              <a href="<?php the_sub_field( 'social_link', 'options' ); ?>">
 
-                </a>
+                <?php the_sub_field( 'social_icon', 'options' ); ?>
 
-              <?php endwhile; ?>
+              </a>
 
-            </div>
+            <?php endwhile; ?>
 
-          <?php endif; ?>
+          </div>
 
         <?php endif; ?>
 
-      </section>
+      <?php endif; ?>
 
 		</div><!-- /.footer-container -->
 

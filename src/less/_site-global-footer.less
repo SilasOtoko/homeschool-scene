@@ -2,10 +2,28 @@
   background-color: @site-color-black;
   color: @site-color-white;
   padding: 1.5rem @content-container-side-padding;
-  display: flex;
-  display: -webkit-flex;
+  text-align: center;
   a {
     color: @site-color-white;
     text-decoration: none;
+  }
+  .social {
+    margin-top: 1rem;
+    a {
+      margin-right: 0.5rem;
+    }
+  }
+  @media (min-width: 580px) {
+    .footer-container {
+      display: flex;
+      display: -webkit-flex;
+    }
+    .social {
+      margin-left: auto;
+      margin-top: 0;
+      a {
+        margin-right: 0.5rem;
+      }
+    }
   }
 }
