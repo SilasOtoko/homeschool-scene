@@ -1,4 +1,5 @@
 {
     "/dist/js/bundle.js": "/dist/js/bundle.js",
-    "/style.css": "/style.css"
+    "/style.css": "/style.css",
+    "/editor-style.css": "/editor-style.css"
 }
