@@ -1,7 +1,5 @@
 .wp-block-image {
-  margin-bottom: 1em;
   text-align: center;
-  padding: 1.5rem 0;
   img {
     display: block;
     margin: 0 auto;
@@ -23,10 +21,16 @@
 }
 
 .wp-block-button {
+  margin-bottom: 1em;
   .wp-block-button__link {
     border-radius: @common-border-radius;
     background-color: @site-color-blue;
     font-weight: 700;
+    transition: background-color 150ms;
+    &:hover,
+    &:focus {
+      background-color: @site-color-blue-light;
+    }
   }
 }
 
@@ -44,11 +48,14 @@
 }
 
 .wp-block-media-text {
+  min-height: 380px;
   @media (max-width: 680px) {
     grid-template-columns: 100%!important;
     grid-template-areas: "media-text-media" "media-text-content";
   }
-
+  &.alignfull {
+    min-height: 600px;
+  }
   .wp-block-media-text__content {
     margin-top: 1.5rem;
   }
@@ -56,6 +63,11 @@
 
 .highlight-block {
   padding: 5rem;
+}
+
+.wp-block-columns {
+  justify-content: center;
+  -webkit-justify-content: center;
 }
 
 .wp-block-column {

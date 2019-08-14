@@ -1,8 +1,8 @@
 .hero {
   padding: 5rem 5%;
-  min-height: 50vh;
-  height: 60vw;
-  max-height: 500px;
+  min-height: 30vh;
+  height: 50vw;
+  max-height: 600px;
   display: flex;
   display: -webkit-flex;
   align-items: center;
@@ -11,19 +11,18 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  &__content-wrapper {
-    max-width: 1140px;
+  .container {
+    max-width: @site-max-width;
     margin: 0 auto;
   }
   &__content {
-    max-width: 38em;
+    max-width: 48em;
     color: @site-color-white;
     position: relative;
     z-index: 1;
     text-align: center;
   }
   &__text {
-    font-size: 3.75rem;
     font-weight: 700;
     line-height: 1.1;
   }

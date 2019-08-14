@@ -27,54 +27,97 @@
 	<div id="global-wrapper" class="global-wrapper">
 
 		<header id="global-header" class="global-header is-showing-default">
+			<div class="container">
 
-			<div class="global-header__logo">
+				<div class="global-header__logo">
 
-				<?php if( get_custom_logo() ): ?>
-					<?php the_custom_logo( 'logo' ); ?>
+					<?php if( get_custom_logo() ): ?>
 
-					<?php if ( is_front_page() && is_home() ) :
-						?>
-						<h1 class="global-header__site-title sr-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-						<?php
-					else :
-						?>
-						<span class="global-header__site-title sr-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-						<?php
-					endif; ?>
+						<?php if( function_exists( 'get_field' ) ): ?>
 
-				<?php else: ?>
+							<?php
 
-					<?php if ( is_front_page() && is_home() ) : ?>
+		            $image = get_field( 'mobile_logo', 'options' );
+		            $size = 'icon';
+		            $src = $image['url'];
+		            $alt = $image['alt'];
+		            $thumb = $image['sizes'][ $size ];
 
-						<h1 class="global-header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		          if( $image ): ?>
+
+		          	<div class="full-logo">
+
+									<?php the_custom_logo( 'logo' ); ?>
+
+								</div>
+
+		            <div class="small-logo">
+
+		              <img src="<?php echo $thumb; ?>" alt="<?php echo $alt; ?>">
+
+		            </div>
+
+		          <?php else: ?>
+
+		          	<!-- If ACF active but no mobile logo -->
+
+		          	<div>
+									<?php the_custom_logo( 'logo' ); ?>
+								</div>
+
+		          <?php endif; ?>
+
+		        <?php else: ?>
+
+		        	<!-- if ACF not active -->
+
+		        	<div>
+								<?php the_custom_logo( 'logo' ); ?>
+							</div>
+
+		        <?php endif; ?>
+
+						<?php if ( is_front_page() && is_home() ) :
+							?>
+							<h1 class="global-header__site-title sr-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<?php
+						else :
+							?>
+							<span class="global-header__site-title sr-only"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+							<?php
+						endif; ?>
 
 					<?php else: ?>
 
-						<span class="global-header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+						<?php if ( is_front_page() && is_home() ) : ?>
 
-						<?php endif; ?>
+							<h1 class="global-header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-				<?php endif; ?>
-				
-				
-				
-			</div>
+						<?php else: ?>
+
+							<span class="global-header__site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+
+							<?php endif; ?>
+
+					<?php endif; ?>
+
+				</div>
 			
-			<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
-				<?php
-				wp_nav_menu(
-					array(
-						'theme_location' => 'main-menu',
-						'menu_class'     => 'main-menu',
-						'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-					)
-				);
-				?>
-			</nav><!-- #site-navigation -->
+				<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Top Menu', 'twentynineteen' ); ?>">
+					<?php
+					wp_nav_menu(
+						array(
+							'theme_location' => 'main-menu',
+							'menu_class'     => 'main-menu',
+							'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						)
+					);
+					?>
+				</nav><!-- #site-navigation -->
 
-			<?php get_template_part( 'template-parts/responsive-overlay-menu' ); ?>
+				<?php get_template_part( 'template-parts/responsive-overlay-menu' ); ?>
 
+			</div>
 		</header>
 
 		<main id="global-main" class="global-main">

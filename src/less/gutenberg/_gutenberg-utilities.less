@@ -1,4 +1,4 @@
-.entry-content .alignwide {
+.alignwide {
   max-width: 980px;
   width: 100%;
   // Allow for relative positioning
@@ -9,10 +9,10 @@
   transform: translate(-50%);
 
   @media (min-width: 680px) {
-    width: 100vw;
+    width: calc(100vw - 5%); // Simulates padding
   }
 }
-.entry-content .alignfull {
+.alignfull {
   margin-left  : calc( -100vw / 2 + 100% / 2 );
   margin-right : calc( -100vw / 2 + 100% / 2 );
   max-width    : 100vw;
@@ -20,6 +20,44 @@
   margin-top: 2.5rem;
   &[class*='bg-']:not(.bg-white) {
     padding: 5rem 5%;
+  }
+}
+
+.wp-block-group {
+  .wp-block-group__inner-container {
+    .alignfull {
+      width: 100%;
+      max-width: @site-max-width;
+    }
+    .alignwide {
+      width: 100%;
+      max-width: @site-medium-width;
+      @media (min-width: 680px) {
+        width: calc(100vw - 5%);
+      }
+    }
+    > :not(.alignwide):not(.alignfull) {
+      max-width: @text-max-width;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .alignfull {
+    max-width: 1920px;
+    margin-left: calc( -1920px / 2 + 100% / 2 );
+    margin-right: calc( -1920px / 2 + 100% / 2 );
+  }
+}
+
+.has-background {
+  h2 {
+    margin-top: 0;
+  }
+  .wp-block-media-text {
+    margin-top: 0;
   }
 }
 
@@ -57,4 +95,40 @@
 
 .has-white-background-color {
   background-color: @site-color-white;
+}
+
+.has-dark-blue-color {
+  color: @site-color-blue-dark;
+}
+
+.has-blue-color {
+  color: @site-color-blue;
+}
+
+.has-light-blue-color {
+  color: @site-color-blue-light;
+}
+
+.has-dark-gray-color {
+  color: @site-color-gray-dark;
+}
+
+.has-gray-color {
+  color: @site-color-gray;
+}
+
+.has-gray-light-color {
+  color: @site-color-gray-light;
+}
+
+.has-black-color {
+  color: @site-color-black;
+}
+
+.has-lighter-black-color {
+  color: @site-color-black-lighter;
+}
+
+.has-white-color {
+  color: @site-color-white;
 }

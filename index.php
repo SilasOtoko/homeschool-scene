@@ -32,7 +32,7 @@
 
   </div>
 
-  <div class="main-content-row row post-list">
+  <div class="main-content-row row post-list padding-wrapper">
 
   	<div class="main-content-column content-column">
   		<section class="main-content">

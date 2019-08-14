@@ -99,42 +99,42 @@ add_theme_support( 'editor-color-palette', array(
     array(
         'name' => __( 'Dark Blue', 'themeLangDomain' ),
         'slug' => 'blue-dark',
-        'color' => '#323F4B',
+        'color' => '#2d4459',
     ),
     array(
         'name' => __( 'Blue', 'themeLangDomain' ),
         'slug' => 'blue',
-        'color' => '#486581',
+        'color' => '#486582',
     ),
     array(
         'name' => __( 'Light Blue', 'themeLangDomain' ),
         'slug' => 'blue-light',
-        'color' => '#7B8189',
+        'color' => '#5090cd',
     ),
     array(
         'name' => __( 'Dark Gray', 'themeLangDomain' ),
         'slug' => 'gray-dark',
-        'color' => '#7B8189',
+        'color' => '#727b85',
     ),
     array(
         'name' => __( 'Gray', 'themeLangDomain' ),
         'slug' => 'gray',
-        'color' => '#A5A9AF',
+        'color' => '#cbd1d5',
     ),
     array(
         'name' => __( 'Light Gray', 'themeLangDomain' ),
         'slug' => 'gray-light',
-        'color' => '#E4E7EB',
+        'color' => '#e4e9ed',
     ),
     array(
         'name' => __( 'Black', 'themeLangDomain' ),
         'slug' => 'black',
-        'color' => '#212932',
+        'color' => '#26282b',
     ),
     array(
-        'name' => __( 'Light Black', 'themeLangDomain' ),
-        'slug' => 'black-light',
-        'color' => '#666666',
+        'name' => __( 'Lighter Black', 'themeLangDomain' ),
+        'slug' => 'lighter-black',
+        'color' => '#464b52',
     ),
     array(
         'name' => __( 'White', 'themeLangDomain' ),

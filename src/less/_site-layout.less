@@ -2,6 +2,22 @@
 // Site Layout - Layout overrides & unique styles
 // --------------------------------------------------
 
+.container {
+  max-width: @site-max-width;
+  margin: 0 auto;
+}
+
+.global-wrapper {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  min-height: 100vh;
+}
+.global-main {
+  flex: 1 1 auto;
+}
+
 
 // Header
 // ---------------------------------------
@@ -14,16 +30,6 @@
 
 // Main / Main Content
 // ---------------------------------------
-.global-wrapper {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  min-height: 100vh;
-}
-.global-main {
-  flex: 1 1 auto;
-}
 
 .content-area {
   overflow-x: hidden; // to hide scrollbar for alignfull. I'll probably regret this.
@@ -68,6 +74,33 @@
     margin: 0 auto;
     object-fit: cover;
     display: block;
+  }
+}
+
+.entry-content {
+  max-width: @text-max-width;
+  margin: 0 auto;
+  & > :first-child {
+    padding-top: 2.5rem;
+    margin-top: 0;
+  }
+}
+
+.entry-content > .wp-block-group.has-background,
+.entry-content > .wp-block-group.alignfull {
+  padding: 5rem 5%;
+}
+
+@media (min-width: 980px) {
+  .entry-content > :first-child {
+    padding-top: 5rem;
+  }
+}
+
+.post-list .entry-content,
+.single .entry-content {
+  & > :first-child {
+    padding-top: 0;
   }
 }
 

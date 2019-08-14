@@ -1,10 +1,17 @@
 .acf-block--icon-text-columns {
   text-align: center;
+  .container {
+    max-width: @site-medium-width;
+    margin: 0 auto;
+  }
   .section-header {
     margin-bottom: 2.5rem;
   }
   .text-wrapper {
     margin: 0 auto;
+  }
+  &[class*="bg-"]:not(.alignfull) {
+    padding: 2.5rem;
   }
   .columns {
     max-width: 980px;

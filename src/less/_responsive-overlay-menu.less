@@ -51,11 +51,11 @@
   z-index: 15;
   .close-button {
     position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
+    top: 4.5rem;
+    right: 5%;
     z-index: 1;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     background-color: transparent;
     border: 0;
     transform: none;
@@ -82,7 +82,15 @@
   overflow-y: scroll;
   height: 100%;
   text-align: center;
-  .menu {
+  ul.menu {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    padding-top: 40px;
+    padding-left: 0;
+  }
+  ul {
     display: flex;
     display: -webkit-flex;
     flex-direction: column;

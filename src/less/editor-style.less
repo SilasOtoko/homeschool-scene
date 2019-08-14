@@ -4,6 +4,11 @@
 @import "_site-typography";
 @import "_site-layout";
 
+// Gutenberg Blocks
+@import "gutenberg/_gutenberg-layout";
+@import "gutenberg/_gutenberg-elements";
+@import "gutenberg/_gutenberg-utilities";
+
 // ACF Blocks
 @import "acf-blocks/_testimonial";
 @import "acf-blocks/_cta";
@@ -15,4 +20,14 @@
   border: 0;
   line-height: inherit;
   box-shadow: none;
+}
+
+.editor-block-list__block-edit {
+  .wp-block-media-text.is-image-fill {
+    min-height: 440px;
+    grid-template-areas: "media-text-media media-text-content";
+  }
+  .wp-block-media-text.has-media-on-the-right {
+    grid-template-areas: "media-text-content media-text-media";
+  }
 }
