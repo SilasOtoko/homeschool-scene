@@ -56,7 +56,13 @@
 }
 
 .main-content-column {
+  margin: 0 auto;
   flex-grow: 1;
+  max-width: @site-medium-width;
+  .main-content article .text-wrapper {
+    margin: 0 auto;
+    max-width: 840px;
+  }
 }
 
 .text-wrapper {
@@ -118,14 +124,6 @@
   body:not(.no-sidebar) .page-header {
     margin-right: 0;
     margin-left: 0;
-  }
-}
-
-.main-content-column {
-  margin: 0 auto;
-  .main-content article .text-wrapper {
-    margin: 0 auto;
-    max-width: 840px;
   }
 }
 

@@ -2,34 +2,35 @@
 
 <section id="primary" class="content-area">
   <div class="main-content-row row">
+    <div class="container">
 
-  	<?php if ( have_posts() ): ?>
+    	<?php if ( have_posts() ): ?>
 
-  		<?php if ( is_home() && ! is_front_page() ): ?>
+    		<?php if ( is_home() && ! is_front_page() ): ?>
 
-  			<div class="page-header">
+    			<div class="page-header">
 
-          <h1 class="page-title"><?php single_post_title(); ?></h1>
+            <h1 class="page-title"><?php single_post_title(); ?></h1>
 
-          <?php 
+            <?php 
 
-            $posts_page_id = get_option( 'page_for_posts' ); 
-            $posts_page = get_post( $posts_page_id );
+              $posts_page_id = get_option( 'page_for_posts' ); 
+              $posts_page = get_post( $posts_page_id );
 
-          ?>
+            ?>
 
-          <?php if( $posts_page->post_content ): ?>
+            <?php if( $posts_page->post_content ): ?>
 
-            <p><?php echo $posts_page->post_content; ?></p>
+              <p><?php echo $posts_page->post_content; ?></p>
 
-          <?php endif; ?>
+            <?php endif; ?>
 
-  			</div>
+    			</div>
 
-  		<?php endif; ?>
+    		<?php endif; ?>
 
-  	<?php endif; ?>
-
+    	<?php endif; ?>
+    </div>
   </div>
 
   <div class="main-content-row row post-list padding-wrapper">
