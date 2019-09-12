@@ -95,53 +95,59 @@ function goshawk_theme_styles(){
 }
 add_action( 'wp_enqueue_scripts', 'goshawk_theme_styles' );
 
-add_theme_support( 'editor-color-palette', array(
-    array(
-        'name' => __( 'Dark Blue', 'themeLangDomain' ),
-        'slug' => 'blue-dark',
-        'color' => '#2d4459',
-    ),
-    array(
-        'name' => __( 'Blue', 'themeLangDomain' ),
-        'slug' => 'blue',
-        'color' => '#486582',
-    ),
-    array(
-        'name' => __( 'Light Blue', 'themeLangDomain' ),
-        'slug' => 'blue-light',
-        'color' => '#5090cd',
-    ),
-    array(
-        'name' => __( 'Dark Gray', 'themeLangDomain' ),
-        'slug' => 'gray-dark',
-        'color' => '#727b85',
-    ),
-    array(
-        'name' => __( 'Gray', 'themeLangDomain' ),
-        'slug' => 'gray',
-        'color' => '#cbd1d5',
-    ),
-    array(
-        'name' => __( 'Light Gray', 'themeLangDomain' ),
-        'slug' => 'gray-light',
-        'color' => '#e4e9ed',
-    ),
-    array(
-        'name' => __( 'Black', 'themeLangDomain' ),
-        'slug' => 'black',
-        'color' => '#26282b',
-    ),
-    array(
-        'name' => __( 'Lighter Black', 'themeLangDomain' ),
-        'slug' => 'lighter-black',
-        'color' => '#464b52',
-    ),
-    array(
-        'name' => __( 'White', 'themeLangDomain' ),
-        'slug' => 'white',
-        'color' => '#ffffff',
-    ),
-) );
+if(!function_exists( 'editor_color_setup' ) ) {
+  function editor_color_setup() {
+    add_theme_support( 'editor-color-palette', array(
+      array(
+          'name' => __( 'Dark Blue', 'themeLangDomain' ),
+          'slug' => 'blue-dark',
+          'color' => '#2d4459',
+      ),
+      array(
+          'name' => __( 'Blue', 'themeLangDomain' ),
+          'slug' => 'blue',
+          'color' => '#486582',
+      ),
+      array(
+          'name' => __( 'Light Blue', 'themeLangDomain' ),
+          'slug' => 'blue-light',
+          'color' => '#5090cd',
+      ),
+      array(
+          'name' => __( 'Dark Gray', 'themeLangDomain' ),
+          'slug' => 'gray-dark',
+          'color' => '#727b85',
+      ),
+      array(
+          'name' => __( 'Gray', 'themeLangDomain' ),
+          'slug' => 'gray',
+          'color' => '#cbd1d5',
+      ),
+      array(
+          'name' => __( 'Light Gray', 'themeLangDomain' ),
+          'slug' => 'gray-light',
+          'color' => '#e4e9ed',
+      ),
+      array(
+          'name' => __( 'Black', 'themeLangDomain' ),
+          'slug' => 'black',
+          'color' => '#26282b',
+      ),
+      array(
+          'name' => __( 'Lighter Black', 'themeLangDomain' ),
+          'slug' => 'lighter-black',
+          'color' => '#464b52',
+      ),
+      array(
+          'name' => __( 'White', 'themeLangDomain' ),
+          'slug' => 'white',
+          'color' => '#ffffff',
+      ),
+    ) );
+  }
+
+  add_action( 'after_setup_theme', 'editor_color_setup' );
+}
 
 /**
  * Implement the Custom Header feature.
