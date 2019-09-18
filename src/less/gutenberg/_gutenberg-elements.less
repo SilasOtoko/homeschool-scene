@@ -24,9 +24,11 @@
   margin-bottom: 1em;
   .wp-block-button__link {
     border-radius: @common-border-radius;
-    background-color: @site-color-blue;
     font-weight: 700;
     transition: background-color 150ms;
+  }
+  .wp-block-button__link:not(.has-background) {
+    background-color: @site-color-blue;
     &:hover,
     &:focus {
       background-color: @site-color-blue-light;
