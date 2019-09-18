@@ -22429,9 +22429,9 @@ License:  MIT
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/rarebird/Local Sites/goshawk-starter/app/public/wp-content/themes/goshawk/src/js/bundle.js */"./src/js/bundle.js");
-__webpack_require__(/*! /Users/rarebird/Local Sites/goshawk-starter/app/public/wp-content/themes/goshawk/src/less/style.less */"./src/less/style.less");
-module.exports = __webpack_require__(/*! /Users/rarebird/Local Sites/goshawk-starter/app/public/wp-content/themes/goshawk/src/less/editor-style.less */"./src/less/editor-style.less");
+__webpack_require__(/*! /Users/rarebird/Local Sites/indiana-authors-awards/app/public/wp-content/themes/goshawk-theme/src/js/bundle.js */"./src/js/bundle.js");
+__webpack_require__(/*! /Users/rarebird/Local Sites/indiana-authors-awards/app/public/wp-content/themes/goshawk-theme/src/less/style.less */"./src/less/style.less");
+module.exports = __webpack_require__(/*! /Users/rarebird/Local Sites/indiana-authors-awards/app/public/wp-content/themes/goshawk-theme/src/less/editor-style.less */"./src/less/editor-style.less");
 
 
 /***/ })
