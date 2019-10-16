@@ -15,11 +15,6 @@ function goshawk_strip_unnecessary_scripts() {
 	remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
 	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
-
-	// embeds
-	// Remove the REST API endpoint.
-	/* MOVE TO CHILD THEME */
-	remove_action( 'rest_api_init', 'wp_oembed_register_route' );
 }
 add_action('init', 'goshawk_strip_unnecessary_scripts');
 
