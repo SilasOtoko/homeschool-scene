@@ -17,10 +17,6 @@ require_once("inc/rarebird-custom/content.php");
 require_once("inc/rarebird-custom/scripts.php");
 require_once("inc/rarebird-custom/media.php");
 
-// Include ACF Blocks
-require_once("inc/acf-blocks.php");
-
-
 // goshawk theme setup
 // ---------------------------------------
 add_action('after_setup_theme', 'goshawk_setup');

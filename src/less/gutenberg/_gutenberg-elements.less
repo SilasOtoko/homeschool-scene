@@ -51,16 +51,14 @@
 
 .wp-block-media-text {
   min-height: 380px;
+
   &.alignfull {
     min-height: 600px;
   }
+
   .wp-block-media-text__content {
     margin-top: 1.5rem;
   }
-}
-
-.highlight-block {
-  padding: 5rem;
 }
 
 .wp-block-columns {
@@ -68,6 +66,10 @@
   -webkit-justify-content: center;
 }
 
-.wp-block-column {
-  margin-bottom: 0;
+.wp-block-media-text.has-background {
+  
+  &__content {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }

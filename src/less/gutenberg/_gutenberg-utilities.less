@@ -8,7 +8,7 @@
   // Relative to its own width (100vw), it is pulled back 50% to the left
   transform: translate(-50%);
 
-  @media (min-width: 680px) {
+  @media (min-width: 980px) {
     width: calc(100vw - 5%); // Simulates padding
   }
 }
@@ -18,6 +18,7 @@
   max-width    : 100vw;
   width: 100vw;
   margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
   &[class*='bg-']:not(.bg-white) {
     padding: 5rem 5%;
   }
@@ -97,7 +98,7 @@
   background-color: @site-color-white;
 }
 
-.has-dark-blue-color {
+.has-blue-dark-color {
   color: @site-color-blue-dark;
 }
 
@@ -105,11 +106,11 @@
   color: @site-color-blue;
 }
 
-.has-light-blue-color {
+.has-blue-light-color {
   color: @site-color-blue-light;
 }
 
-.has-dark-gray-color {
+.has-gray-dark-color {
   color: @site-color-gray-dark;
 }
 
@@ -125,7 +126,7 @@
   color: @site-color-black;
 }
 
-.has-lighter-black-color {
+.has-black-lighter-color {
   color: @site-color-black-lighter;
 }
 
