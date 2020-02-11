@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<?php if( function_exists( 'get_field' ) ): ?>
+
+  <?php get_template_part( 'template-parts/acf/acf', 'hero' ); ?>
+
+<?php endif; ?>
+
 <section id="primary" class="content-area">
   <div class="main-content-wrapper">
 
@@ -9,20 +15,24 @@
 
   			<div class="page-header">
 
-          <h1 class="page-title"><?php single_post_title(); ?></h1>
+          <div class="text-wrapper">
 
-          <?php 
+            <h1 class="page-title"><?php single_post_title(); ?></h1>
 
-            $posts_page_id = get_option( 'page_for_posts' ); 
-            $posts_page = get_post( $posts_page_id );
+            <?php 
 
-          ?>
+              $posts_page_id = get_option( 'page_for_posts' ); 
+              $posts_page = get_post( $posts_page_id );
 
-          <?php if( $posts_page->post_content ): ?>
+            ?>
 
-            <p><?php echo $posts_page->post_content; ?></p>
+            <?php if( $posts_page->post_content ): ?>
 
-          <?php endif; ?>
+              <p><?php echo $posts_page->post_content; ?></p>
+
+            <?php endif; ?>
+
+          </div>
 
   			</div>
 

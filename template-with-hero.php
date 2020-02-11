@@ -8,7 +8,6 @@
 
 <?php endif; ?>
 
-
 <section id="primary" class="content-area">
   <div class="main-content-wrapper main-content-row">
     <div class="main-content-column">
