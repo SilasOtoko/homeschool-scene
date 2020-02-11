@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+<?php if( function_exists( 'get_field' ) ): ?>
+
+  <?php get_template_part( 'template-parts/acf/acf', 'hero' ); ?>
+
+<?php endif; ?>
+
 <section id="primary" class="content-area">
   <div class="main-content-wrapper main-content-row">
     <div class="main-content-column">
