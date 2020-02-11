@@ -12,3 +12,7 @@ mix.js('src/js/bundle.js', 'dist/js/bundle.js')
 mix.webpackConfig({
   devtool: "inline-source-map"
 });
+
+if (mix.inProduction()) {
+    mix.version();
+}
