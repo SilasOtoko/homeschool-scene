@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
-    "@rarebirdinc/perch": "git+ssh://git@rarebird.io/diffusion/PERCH/perch.git#v0.9.1",
+    "@rarebirdinc/perch": "git+ssh://git@gitlab.com:rare-bird-inc/perch.git#v0.9.1",
     "acorn": "^6.1.1",
     "jquery": "^3.4.1"
   },
