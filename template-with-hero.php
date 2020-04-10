@@ -1,3 +1,5 @@
+<?php /* Template Name: With Hero */ ?>
+
 <?php get_header(); ?>
 
 <?php if( function_exists( 'get_field' ) ): ?>

@@ -17,10 +17,6 @@ require_once("inc/rarebird-custom/content.php");
 require_once("inc/rarebird-custom/scripts.php");
 require_once("inc/rarebird-custom/media.php");
 
-// Include ACF Blocks
-require_once("inc/acf-blocks.php");
-
-
 // goshawk theme setup
 // ---------------------------------------
 add_action('after_setup_theme', 'goshawk_setup');
@@ -90,58 +86,68 @@ if( function_exists('acf_add_options_page') ) {
 function goshawk_theme_styles(){
 
   wp_enqueue_style( 'goshawk-style', get_stylesheet_uri() );
-  wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|Arvo:400,700' );
+  wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|Arvo:400,400i,700' );
 
 }
 add_action( 'wp_enqueue_scripts', 'goshawk_theme_styles' );
 
-add_theme_support( 'editor-color-palette', array(
-    array(
-        'name' => __( 'Dark Blue', 'themeLangDomain' ),
-        'slug' => 'blue-dark',
-        'color' => '#2d4459',
-    ),
-    array(
-        'name' => __( 'Blue', 'themeLangDomain' ),
-        'slug' => 'blue',
-        'color' => '#486582',
-    ),
-    array(
-        'name' => __( 'Light Blue', 'themeLangDomain' ),
-        'slug' => 'blue-light',
-        'color' => '#5090cd',
-    ),
-    array(
-        'name' => __( 'Dark Gray', 'themeLangDomain' ),
-        'slug' => 'gray-dark',
-        'color' => '#727b85',
-    ),
-    array(
-        'name' => __( 'Gray', 'themeLangDomain' ),
-        'slug' => 'gray',
-        'color' => '#cbd1d5',
-    ),
-    array(
-        'name' => __( 'Light Gray', 'themeLangDomain' ),
-        'slug' => 'gray-light',
-        'color' => '#e4e9ed',
-    ),
-    array(
-        'name' => __( 'Black', 'themeLangDomain' ),
-        'slug' => 'black',
-        'color' => '#26282b',
-    ),
-    array(
-        'name' => __( 'Lighter Black', 'themeLangDomain' ),
-        'slug' => 'lighter-black',
-        'color' => '#464b52',
-    ),
-    array(
-        'name' => __( 'White', 'themeLangDomain' ),
-        'slug' => 'white',
-        'color' => '#ffffff',
-    ),
-) );
+$editorColorPalette = array(
+  array(
+      'name' => __( 'Dark Blue', 'themeLangDomain' ),
+      'slug' => 'blue-dark',
+      'color' => '#2d4459',
+  ),
+  array(
+      'name' => __( 'Blue', 'themeLangDomain' ),
+      'slug' => 'blue',
+      'color' => '#486582',
+  ),
+  array(
+      'name' => __( 'Light Blue', 'themeLangDomain' ),
+      'slug' => 'blue-light',
+      'color' => '#5090cd',
+  ),
+  array(
+      'name' => __( 'Dark Gray', 'themeLangDomain' ),
+      'slug' => 'gray-dark',
+      'color' => '#727b85',
+  ),
+  array(
+      'name' => __( 'Gray', 'themeLangDomain' ),
+      'slug' => 'gray',
+      'color' => '#cbd1d5',
+  ),
+  array(
+      'name' => __( 'Light Gray', 'themeLangDomain' ),
+      'slug' => 'gray-light',
+      'color' => '#e4e9ed',
+  ),
+  array(
+      'name' => __( 'Black', 'themeLangDomain' ),
+      'slug' => 'black',
+      'color' => '#26282b',
+  ),
+  array(
+      'name' => __( 'Lighter Black', 'themeLangDomain' ),
+      'slug' => 'lighter-black',
+      'color' => '#464b52',
+  ),
+  array(
+      'name' => __( 'White', 'themeLangDomain' ),
+      'slug' => 'white',
+      'color' => '#ffffff',
+  ),
+);
+
+function editor_color_setup() {
+  global $editorColorPalette;
+
+  $editorColorPalette = apply_filters('rb_editor_color_palette', $editorColorPalette);
+
+  add_theme_support( 'editor-color-palette', $editorColorPalette);
+}
+
+add_action( 'after_setup_theme', 'editor_color_setup' );
 
 /**
  * Implement the Custom Header feature.
