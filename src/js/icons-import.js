@@ -29,7 +29,8 @@ import { faFacebook } from '@fortawesome/free-brands-svg-icons/faFacebook';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 // import { faPinterest } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
-// import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
+import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
 // import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 // Demo: Light, Solid, and Regular versions of the same icon _________
@@ -64,7 +65,8 @@ library.add(
 	faTwitter,
 	// faPinterest,
 	faInstagram,
-	// faLinkedin,
+	faLinkedin,
+	faLinkedinIn,
 	// faYoutube,
 	// falEnvelope,
 	// fasEnvelope,
