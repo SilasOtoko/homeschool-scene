@@ -2,20 +2,34 @@
 // Site Layout - Layout overrides & unique styles
 // --------------------------------------------------
 
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
 .container {
-  max-width: @site-max-width;
-  margin: 0 auto;
+    max-width: @site-max-width;
+    margin: 0 auto;
 }
 
 .global-wrapper {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  min-height: 100vh;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; //Needed to prevent alignfull from pushing off page because of scrollbars
 }
+
 .global-main {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 
@@ -31,221 +45,251 @@
 // Main / Main Content
 // ---------------------------------------
 
-.content-area {
-  overflow-x: hidden; // to hide scrollbar for alignfull. I'll probably regret this.
-}
-
 .post-content-wrapper {
-  max-width: @site-max-width;
-  margin: 0 auto;
+    max-width: @site-max-width;
+    margin: 0 auto;
 }
 
 .main-content-wrapper {
-  max-width: @site-max-width;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin: 0 auto;
+    max-width: @site-max-width;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
 }
 
 .main-content-row {
-  padding-left: @content-container-side-padding;
-  padding-right: @content-container-side-padding;
-  max-width: @site-max-width;
-  margin: 0 auto;
+    padding-left: @content-container-side-padding;
+    padding-right: @content-container-side-padding;
+    max-width: @site-max-width;
+    margin: 0 auto;
 }
 
 .main-content-row + .main-content-row {
-  padding-top: 0;
+    padding-top: 0;
 }
 
 .main-content-column {
-  margin: 0 auto;
-  flex-grow: 1;
-  max-width: @site-medium-width;
-  .main-content article .text-wrapper {
     margin: 0 auto;
-    max-width: 840px;
-  }
+    flex-grow: 1;
+    max-width: @site-medium-width;
+
+    .main-content article .text-wrapper {
+        margin: 0 auto;
+        max-width: 840px;
+    }
 }
 
 .page-banner {
-  img {
-    width: 100%;
-    max-width: 1920px;
-    height: 30vmax;
-    max-height: 400px;
-    min-height: 200px;
-    margin: 0 auto;
-    object-fit: cover;
-    display: block;
-  }
+
+    img {
+        width: 100%;
+        max-width: @site-max-width;
+        height: 30vmax;
+        max-height: 400px;
+        min-height: 200px;
+        margin: 0 auto;
+        object-fit: cover;
+        display: block;
+    }
 }
 
 .entry-header {
-  max-width: @text-max-width;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: @text-max-width;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .entry-content {
-  max-width: @text-max-width;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: @text-max-width;
+    margin-left: auto;
+    margin-right: auto;
+
+    > :not(.alignwide):not(.alignfull) {
+        max-width: @text-max-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.entry-content > :last-child {
+    margin-bottom: 0;
 }
 
 .entry-content > .wp-block-group.has-background,
 .entry-content > .wp-block-group.alignfull {
-  padding: 5rem 5%;
+    padding: 5rem 5%;
+}
+
+.entry-content > .wp-block-group.alignfull:last-child {
+    padding: 5rem 5% 0;
 }
 
 .no-sidebar {
-  .main-content-row {
-    max-width: auto;
-  }
-  .main-content-column {
-    margin: 0 auto;
-    .main-content article {
-      max-width: 700px;
-      margin: 0 auto;
+
+    .main-content-row {
+        max-width: unset;
     }
-  }
-  .page-header {
-    max-width: 700px;
-  }
-  .pagination {
-    max-width: 700px;
-    margin: 0 auto;
-  }
+
+    .main-content-column {
+        margin: 0 auto;
+
+        .main-content article {
+            max-width: @text-max-width;
+            margin: 0 auto;
+        }
+    }
+
+    .page-header {
+        max-width: @text-max-width;
+    }
+
+    .pagination {
+        max-width: @text-max-width;
+        margin: 0 auto;
+    }
 }
 
 .post-list {
-  padding-bottom: 5rem;
-  .main-content-column {
-    margin: 0;
-  }
+    padding-bottom: 5rem;
+
+    .main-content-column {
+        margin: 0;
+    }
 }
 
 .sidebar-content-column {
-  padding-top: 2.5rem;
-  flex-shrink: 0;
-  margin: 0 auto;
-  h2 {
-    font-weight: 400;
-    font-size: 1.5em;
-    position: relative;
-    padding-bottom: 15px;
-    &::after {
-      content: '';
-      height: 2px;
-      position: absolute;
-      width: 100px;
-      bottom: 0;
-      left: 0;
-    }
-  }
-  h3 {
-    background-color: @site-color-gray-light;
-    padding: 1rem;
-    margin-bottom: 0;
-  }
-  ul {
-    padding-left: 0;
-  }
-  li {
-    list-style: none;
-    display: flex;
-    display: -webkit-flex;
-    margin-top: 10px;
-    a {
-      color: @site-color-black-lighter;
-      text-decoration: none;
-      padding: 5px 0;
-      line-height: 1.3;
-    }
-    .post-count,
-    .post-date {
-      margin-left: auto;
-      font-style: italic;
-      color: @site-color-gray-dark;
-      padding: 5px 0;
-      font-size: 0.875em;
-    }
-  }
-
-  @media (min-width: 980px) {
-    max-width: 100%;
-    width: 440px;
+    padding-top: 2.5rem;
+    flex-shrink: 0;
     margin: 0 auto;
-  }
+
+    h2 {
+        font-weight: 400;
+        font-size: 1.5em;
+        position: relative;
+        padding-bottom: 15px;
+
+        &::after {
+            content: '';
+            height: 2px;
+            position: absolute;
+            width: 100px;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    h3 {
+        background-color: @site-color-gray-light;
+        padding: 1rem;
+        margin-bottom: 0;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+
+    li {
+        list-style: none;
+        display: flex;
+        display: -webkit-flex;
+        margin-top: 10px;
+
+        a {
+            color: @site-color-black-lighter;
+            text-decoration: none;
+            padding: 5px 0;
+            line-height: 1.3;
+        }
+
+        .post-count,
+        .post-date {
+            margin-left: auto;
+            font-style: italic;
+            color: @site-color-gray-dark;
+            padding: 5px 0;
+            font-size: 0.875em;
+        }
+    }
+
+    @media (min-width: 980px) {
+        max-width: 100%;
+        width: 440px;
+        margin: 0 auto;
+    }
 }
 
 .sidebar-wrapper {
-  display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
 
-  .widget-container {
-    width: 48%;
-    margin-right: 4%;
+    .widget-container {
+        width: 48%;
+        margin-right: 4%;
 
-    &:nth-of-type(even) {
-      margin-right: 0;
+        &:nth-of-type(even) {
+            margin-right: 0;
+        }
     }
-  }
 }
 
 @media (min-width: 980px) {
-  .sidebar-wrapper {
-    display: block;
 
-    .widget-container {
-      width: 100%;
+    .sidebar-wrapper {
+        display: block;
+
+        .widget-container {
+            width: 100%;
+        }
     }
-  }
 }
 
 .page-header {
-  max-width: @text-max-width;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
-  padding-left: 5%;
-  padding-right: 5%;
+    max-width: @text-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    padding-left: 5%;
+    padding-right: 5%;
 
-  @media (min-width: 780px) {
-    padding: 0;
-  }
+    @media (min-width: 780px) {
+        padding: 0;
+    }
 }
 
 
 .widget-title:first-of-type {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 .searchform {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  div {
-    display: flex;
-    display: -webkit-flex;
-  }
-  input[type="text"] {
-    flex-grow: 1;
-    margin-right: 0.5rem;
-  }
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    div {
+        display: flex;
+        display: -webkit-flex;
+    }
+
+    input[type="text"] {
+        flex-grow: 1;
+        margin-right: 0.5rem;
+    }
 }
 
 @media (min-width: 980px) {
-  .main-content-row {
-    display: flex;
-    display: -webkit-flex;
-  }
-  .sidebar-content-column {
-    padding: 0 0 0 2.5rem;
-    margin-left: auto;
-  }
+
+    .main-content-row {
+        display: flex;
+        display: -webkit-flex;
+    }
+
+    .sidebar-content-column {
+        padding: 0 0 0 2.5rem;
+        margin-left: auto;
+    }
 }
 
 

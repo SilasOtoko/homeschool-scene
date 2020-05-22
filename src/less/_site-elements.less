@@ -1,28 +1,28 @@
 body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */
+    background: #fff; /* Fallback for when there is no custom background color defined. */
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-a {
-  display: inline-block;
+.entry-content a:not(.button):not(.wp-block-button__link) {
+  color: @site-color-blue;
+  text-decoration: none;
 }
 
 input,
 textarea,
 select {
-  border-radius: 5px;
-  border: 1px solid @site-color-gray;
-  padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid @site-color-gray;
+    padding: 0.5rem;
 }
 
 input[type="submit"] {
-  background-color: @site-color-blue;
-  color: @site-color-white;
-  border-color: @site-color-blue;
+    background-color: @site-color-blue;
+    color: @site-color-white;
+    border-color: @site-color-blue;
 }

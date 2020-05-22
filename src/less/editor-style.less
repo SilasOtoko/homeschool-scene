@@ -1,3 +1,7 @@
+/*!
+This is a compiled file
+*/
+
 @import "_site-global-variables";
 @import "_site-utilities";
 @import "_site-components";
@@ -10,19 +14,21 @@
 @import "gutenberg/_gutenberg-utilities";
 
 .acf-block .button {
-  height: auto;
-  font-size: inherit;
-  border: 0;
-  line-height: inherit;
-  box-shadow: none;
+    height: auto;
+    font-size: inherit;
+    border: 0;
+    line-height: inherit;
+    box-shadow: none;
 }
 
 .editor-block-list__block-edit {
-  .wp-block-media-text.is-image-fill {
-    min-height: 440px;
-    grid-template-areas: "media-text-media media-text-content";
-  }
-  .wp-block-media-text.has-media-on-the-right {
-    grid-template-areas: "media-text-content media-text-media";
-  }
+
+    .wp-block-media-text.is-image-fill {
+        min-height: 440px;
+        grid-template-areas: "media-text-media media-text-content";
+    }
+
+    .wp-block-media-text.has-media-on-the-right {
+        grid-template-areas: "media-text-content media-text-media";
+    }
 }

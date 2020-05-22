@@ -1,75 +1,93 @@
 .wp-block-image {
-  text-align: center;
-  img {
-    display: block;
-    margin: 0 auto;
-  }
-  figcaption {
-    background-color: @site-color-gray-light;
-    padding: 0.5rem;
-    margin-top: 0;
-    margin: 0 auto;
-  }
+    text-align: center;
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    figcaption {
+        background-color: @site-color-gray-light;
+        padding: 0.5rem;
+        margin-top: 0;
+        margin: 0 auto;
+    }
 }
 
 .wp-block-cover.alignfull {
-  .wp-block-cover__inner-container {
-    max-width: @site-medium-width;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
+    .wp-block-cover__inner-container {
+        max-width: @site-medium-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .wp-block-button {
-  margin-bottom: 1em;
-  .wp-block-button__link {
-    border-radius: @common-border-radius;
-    font-weight: 700;
-    transition: background-color 150ms;
-  }
-  .wp-block-button__link:not(.has-background) {
-    background-color: @site-color-blue;
-    &:hover,
-    &:focus {
-      background-color: @site-color-blue-light;
+    margin-bottom: 1em;
+
+    .wp-block-button__link {
+        border-radius: @common-border-radius;
+        font-weight: 700;
+        transition: background-color 150ms;
     }
-  }
+
+    .wp-block-button__link:not(.has-background) {
+        background-color: @site-color-blue;
+
+        &:hover,
+        &:focus {
+            background-color: @site-color-blue-light;
+        }
+    }
 }
 
 .wp-block-quote {
-  margin: 2.5rem 1rem 2.5rem 0;
-  padding-left: 1.5rem;
-  border-left: 7px solid @site-color-blue;
-  p {
-    font-style: italic;
-    font-size: 1.5rem;
-  }
-  cite {
-    color: @site-color-black-lighter;
-  }
+    margin: 2.5rem 1rem 2.5rem 0;
+    padding-left: 1.5rem;
+    border-left: 7px solid @site-color-blue;
+
+    p {
+        font-style: italic;
+        font-size: 1.5rem;
+    }
+
+    cite {
+        color: @site-color-black-lighter;
+    }
 }
 
 .wp-block-media-text {
-  min-height: 380px;
+    min-height: 380px;
 
-  &.alignfull {
-    min-height: 600px;
-  }
+    &.alignfull {
+        min-height: 600px;
+    }
 
-  .wp-block-media-text__content {
-    margin-top: 1.5rem;
-  }
+    @media (max-width: 600px) {
+        .wp-block-media-text__content {
+            margin-top: 1.5rem;
+        }
+
+        &.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__media {
+            grid-row: 1;
+        }
+
+        &.is-stacked-on-mobile.has-media-on-the-right .wp-block-media-text__content {
+            grid-row: 2;
+        }
+    }
 }
 
 .wp-block-columns {
-  justify-content: center;
-  -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-justify-content: center;
 }
 
 .wp-block-media-text.has-background {
-  
-  &__content {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
+    
+    &__content {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
 }

@@ -1,110 +1,126 @@
 .main-navigation {
-  margin-left: auto;
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  -webkit-align-items: center;
-  display: none;
-  li {
-    a {
-      border-radius: 5px;
-      padding: 10px;
-      transition: background-color 150ms;
-      font-family: @font-family-serif;
-    }
-  }
-  li:hover a,
-  li:focus a {
-    background-color: @site-color-gray-light;
-    color: @site-color-black;
-  }
-  li a:focus-within { // Declared separately so no issues in IE
-    background-color: @site-color-gray-light;
-    color: @site-color-black;
-  }
-  .menu-item-has-children {
-    position: relative;
-    &:hover,
-    &:focus {
-      .sub-menu {
-        left: 0;
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-    & > a {
-      transition: border-color 150ms, background-color 150ms;
-    }
-    a {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-  }
-  .sub-menu {
-    transform: scale(0);
-    transition: transform 150ms;
-    transform-origin: 20% 0;
-    position: absolute;
-    left: -9999px;
-    top: 100%;
-    z-index: 2;
-    min-width: 250px;
-    background-color: #fff;
-    padding: 0;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
-    overflow: hidden;
-    background-color: @site-color-gray-light;
+    margin-left: auto;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    display: none;
+
     li {
-      padding: 0;
-      margin: 0;
-      width: 100%;
-      a {
-        margin: 0;
-        display: inline-block;
-        width: 100%;
-        cursor: pointer;
-        border-radius: 0;
-        color: @site-color-black;
-        &:hover {
-          margin: 0;
+
+        a {
+            border-radius: 5px;
+            padding: 10px;
+            transition: background-color 150ms;
+            font-family: @font-family-serif;
         }
-      }
     }
-  }
+
+    li:hover a,
+    li:focus a {
+        background-color: @site-color-gray-light;
+        color: @site-color-black;
+    }
+
+    li a:focus-within { // Declared separately so no issues in IE
+        background-color: @site-color-gray-light;
+        color: @site-color-black;
+    }
+
+    .menu-item-has-children {
+        position: relative;
+
+        &:hover,
+        &:focus {
+            .sub-menu {
+                left: 0;
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        & > a {
+            transition: border-color 150ms, background-color 150ms;
+        }
+
+        a {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+
+    .sub-menu {
+        transform: scale(0);
+        transition: transform 150ms;
+        transform-origin: 20% 0;
+        position: absolute;
+        left: -9999px;
+        top: 100%;
+        z-index: 2;
+        min-width: 250px;
+        background-color: #fff;
+        padding: 0;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-top-right-radius: 5px;
+        overflow: hidden;
+        background-color: @site-color-gray-light;
+
+        li {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+
+            a {
+                margin: 0;
+                display: inline-block;
+                width: 100%;
+                cursor: pointer;
+                border-radius: 0;
+                color: @site-color-black;
+                &:hover {
+                    margin: 0;
+                }
+            }
+        }
+    }
 }
 
 .main-menu {
-  padding: 0;
-  margin-bottom: 0;
-  li {
-    display: inline-block;
-  }
-  a {
-    padding: 10px;
-    color: @site-color-white;
-    text-decoration: none;
-  }
+    padding: 0;
+    margin-bottom: 0;
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        padding: 10px;
+        color: @site-color-white;
+        text-decoration: none;
+    }
 }
 
 .edge.menu-item-has-children {
-  &:hover {
-    .sub-menu {
-      transform-origin: 80% 0;
-      left: auto;
-      right: 0;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 0;
+
+    &:hover {
+
+        .sub-menu {
+            transform-origin: 80% 0;
+            left: auto;
+            right: 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 0;
+        }
     }
-  }
 }
 
 
 @media (min-width: 1140px) {
-  .main-navigation {
-    display: block;
-  }
+    
+    .main-navigation {
+        display: block;
+    }
 }

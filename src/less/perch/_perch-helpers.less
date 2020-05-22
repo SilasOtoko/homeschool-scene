@@ -25,45 +25,47 @@
 // Styles
 // ---------------------------------------
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  white-space: nowrap;
-  border: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
 }
+
 .sr-only-focusable:focus,
 .sr-only-focusable:active {
-  position: static;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
+    position: static;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
 }
 
 .skip-link-button {
-  left: -999px;
-  position: absolute;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: -999;
-  &:focus {
-    background-color: #fff;
-    left: auto;
+    left: -999px;
+    position: absolute;
     top: auto;
-    width: auto;
-    height: auto;
-    overflow: auto;
-    padding: 0.5em 1em;
-    text-align: center;
-    font-size: 1.2em;
-    z-index: 999;
-  }
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
+    
+    &:focus {
+        background-color: #fff;
+        left: auto;
+        top: auto;
+        width: auto;
+        height: auto;
+        overflow: auto;
+        padding: 0.5em 1em;
+        text-align: center;
+        font-size: 1.2em;
+        z-index: 999;
+    }
 }
 
 
@@ -73,7 +75,7 @@
 // .clearfix is a helper CSS class
 // --------------------------------------------------
 .clearfix {
-  .clear_float();
+    .clear_float();
 }
 
 
@@ -87,7 +89,7 @@
 .list-bare,
 // end deprecated code ☠☠☠☠
 .list--stripped {
-  .strip_list ();
+    .strip_list ();
 }
 
 
@@ -139,9 +141,9 @@
 // --------------------------------------------------
 .img-fluid, // BS4 class name
 .img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -149,13 +151,13 @@
 // SVGs
 // --------------------------------------------------
 .svg-wrapper {
-  display: block;
+    display: block;
 
-  > svg {
-    max-width: 100%;
-    height: auto;
-    vertical-align: top;
-  }
+    > svg {
+        max-width: 100%;
+        height: auto;
+        vertical-align: top;
+    }
 }
 
 
@@ -190,14 +192,14 @@
 // NOTE: this assumes that the container is centered.
 // --------------------------------------------------
 .make-full-width {
-  // Make width full viewport width
-  width: 100vw;
-  // Allow for relative positioning
-  position: relative;
-  // Relative to its container width, it is pushed 50% to the left
-  left: 50%;
-  // Relative to its own width (100vw), it is pulled back 50% to the left
-  transform: translate(-50%);
+    // Make width full viewport width
+    width: 100vw;
+    // Allow for relative positioning
+    position: relative;
+    // Relative to its container width, it is pushed 50% to the left
+    left: 50%;
+    // Relative to its own width (100vw), it is pulled back 50% to the left
+    transform: translate(-50%);
 }
 
 
