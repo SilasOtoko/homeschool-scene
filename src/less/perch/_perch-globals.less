@@ -15,48 +15,49 @@
 // Wrapper Styles
 // ---------------------------------------
 html {
-  min-height: 100%;
+    min-height: 100%;
 
-  font-family: @font-family-base;
-  // font-size: @font-size-base-mobile;
-  font-weight: normal;
-  color: @global-text-color;
+    font-family: @font-family-base;
+    // font-size: @font-size-base-mobile;
+    font-weight: normal;
+    color: @global-text-color;
 
-  background-color: @html-bg-color;
+    background-color: @html-bg-color;
 
-  // ☠☠☠☠ DEPRECATED ☠☠☠☠
-  // overflow: auto;
+    // ☠☠☠☠ DEPRECATED ☠☠☠☠
+    // overflow: auto;
 
-  // Note: if this is set, then triggering overflow: hidden on the <body> will no longer lock the <body> from scrolling. This reared its ugly head when working with a modal element.
+    // Note: if this is set, then triggering overflow: hidden on the <body> will no longer lock the <body> from scrolling. This reared its ugly head when working with a modal element.
 
-  // Not sure what this overflow setting was being used for other than some scrollbar preferences maybe. But not sure if removing this could be somehow breaking something... KB 2017-02-16
-  // end deprecated code ☠☠☠☠
+    // Not sure what this overflow setting was being used for other than some scrollbar preferences maybe. But not sure if removing this could be somehow breaking something... KB 2017-02-16
+    // end deprecated code ☠☠☠☠
 
-  // Scale up global font size at larger widths
-  // @media (min-width: @viewport-width-font-size-tablet) {
-  //   font-size: @font-size-base-tablet;
-  // }
-  // @media (min-width: @viewport-width-font-size-desktop) {
-  //   font-size: @font-size-base;
-  // }
+    // Scale up global font size at larger widths
+    // @media (min-width: @viewport-width-font-size-tablet) {
+    //   font-size: @font-size-base-tablet;
+    // }
+    // @media (min-width: @viewport-width-font-size-desktop) {
+    //   font-size: @font-size-base;
+    // }
 }
 
 
 body {
-  position: relative;
+    position: relative;
 
-  min-height: 100vh; // Force the body to be at least as high as the viewport
+    min-height: 100vh; // Force the body to be at least as high as the viewport
 
-  background-color: @body-bg-color;
+    background-color: @body-bg-color;
 
-  line-height: @line-height-base;
+    line-height: @line-height-base;
 }
 
 
 .global-wrapper {
-  .clear_float ();
-  position: relative;
-  height: 100%;
+    
+    .clear_float ();
+    position: relative;
+    height: 100%;
 }
 
 

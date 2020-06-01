@@ -3,98 +3,105 @@
 // --------------------------------------------------
 
 .bg-blue {
-  background-color: @site-color-blue;
-  color: @site-color-white;
+    background-color: @site-color-blue;
+    color: @site-color-white;
 }
 
 .bg-gray-light {
-  background-color: @site-color-gray-light;
+    background-color: @site-color-gray-light;
 }
 
 .bg-blue-light {
-  background-color: @site-color-blue-light;
-  color: @site-color-white;
-  h2, h3, h4, h5, h6 {
+    background-color: @site-color-blue-light;
     color: @site-color-white;
-  }
+
+    h2, h3, h4, h5, h6 {
+        color: @site-color-white;
+    }
 }
 
 .bg-blue {
-  background-color: @site-color-blue;
-  color: @site-color-white;
-  h2, h3, h4, h5, h6 {
+    background-color: @site-color-blue;
     color: @site-color-white;
-  }
-  .button {
-    background-color: @site-color-black;
-  }
+
+    h2, h3, h4, h5, h6 {
+        color: @site-color-white;
+    }
+
+    .button {
+        background-color: @site-color-black;
+    }
 }
 
 .bg-blue-dark {
-  background-color: @site-color-blue-dark;
-  color: @site-color-white;
-  h2, h3, h4, h5, h6 {
+    background-color: @site-color-blue-dark;
     color: @site-color-white;
-  }
+
+    h2, h3, h4, h5, h6 {
+        color: @site-color-white;
+    }
 }
 
 .text-wrapper {
-  max-width: @text-max-width;
-  margin: 0 auto;
+    max-width: @text-max-width;
+    margin: 0 auto;
 }
 
 .screen-reader-text {
-  border: 0;
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute !important;
-  width: 1px;
-  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-  &:focus {
-    background-color: #f1f1f1;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-    clip: auto !important;
-    clip-path: none;
-    color: #21759b;
-    display: block;
-    font-size: 14px;
-    font-size: 0.875rem;
-    font-weight: bold;
-    height: auto;
-    left: 5px;
-    line-height: normal;
-    padding: 15px 23px 14px;
-    text-decoration: none;
-    top: 5px;
-    width: auto;
-    z-index: 100000;
-  }
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    
+    &:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        clip-path: none;
+        color: #21759b;
+        display: block;
+        font-size: 14px;
+        font-size: 0.875rem;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000;
+    }
 }
 
 .aspect-ratio-box {
-  background: white;
+    background: white;
 }
+
 .aspect-ratio-box::before {
-  content: "";
-  width: 1px;
-  margin-left: -1px;
-  float: left;
-  height: 0;
-  padding-top: 591.44px / 1127.34px * 100%;
+    content: "";
+    width: 1px;
+    margin-left: -1px;
+    float: left;
+    height: 0;
+    padding-top: 591.44px / 1127.34px * 100%;
 }
+
 .aspect-ratio-box::after { /* to clear float */
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .padding-wrapper {
-  padding-left: @content-container-side-padding;
-  padding-right: @content-container-side-padding;
+    padding-left: @content-container-side-padding;
+    padding-right: @content-container-side-padding;
 }
 

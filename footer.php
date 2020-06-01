@@ -1,55 +1,55 @@
-	</main>
+    </main>
 
-	<footer id="global-footer" class="global-footer">
+    <footer id="global-footer" class="global-footer">
 
-		<div class="footer-container container">
+        <div class="footer-container container">
 
-      <section class="footer-info">
+            <section class="footer-info">
 
-        <?php $currentDate = date("Y"); ?>
-        
-        <?php if ($currentDate == "2019") {
-          $date = $currentDate;
-        } else {
-          $date = "2018-" . $currentDate;
-        }; ?>
+                <?php $currentDate = date("Y"); ?>
+                
+                <?php if ($currentDate == "2020") {
+                    $date = $currentDate;
+                } else {
+                    $date = "2020-" . $currentDate;
+                }; ?>
 
-        <span class="legal">&copy; <?php echo $date; ?> <?php bloginfo( 'name' ); ?></span>
-        <span class="credits">by <a href="http:/rarebirdinc.com">Rare Bird Inc</a></span>
+                <span class="legal">&copy; <?php echo $date; ?> <?php bloginfo( 'name' ); ?></span>
+                <span class="credits">by <a href="http:/rarebirdinc.com">Rare Bird Inc</a></span>
 
-      </section>
+            </section>
 
-      <?php if( function_exists( 'get_field' ) ): ?>
+            <?php if( function_exists( 'get_field' ) ): ?>
 
-        <?php if( have_rows( 'social', 'options' ) ): ?>
+                <?php if( have_rows( 'social', 'options' ) ): ?>
 
-          <div class="social">
+                    <div class="social">
 
-            <?php while( have_rows( 'social', 'options' ) ): the_row(); ?>
+                        <?php while( have_rows( 'social', 'options' ) ): the_row(); ?>
 
-              <a href="<?php the_sub_field( 'social_link', 'options' ); ?>">
+                            <a href="<?php the_sub_field( 'social_link', 'options' ); ?>">
 
-                <?php the_sub_field( 'social_icon', 'options' ); ?>
+                                <?php the_sub_field( 'social_icon', 'options' ); ?>
 
-              </a>
+                            </a>
 
-            <?php endwhile; ?>
+                        <?php endwhile; ?>
 
-          </div>
+                    </div>
 
-        <?php endif; ?>
+                <?php endif; ?>
 
-      <?php endif; ?>
+            <?php endif; ?>
 
-		</div><!-- /.footer-container -->
+        </div><!-- /.footer-container -->
 
-	</footer>
+    </footer>
 
 </div><!-- end .global-wrapper -->
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-* 	Bottom Scripts
+*   Bottom Scripts
 * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 <?php /* WP Footer */ ?>
