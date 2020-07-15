@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-<div class="main-content-row row">
+<div class="main-content-row row post-list">
 
     <div class="main-content-column content-column">
         <section class="main-content text-wrapper">

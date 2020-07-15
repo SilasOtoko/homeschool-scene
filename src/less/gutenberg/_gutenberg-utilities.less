@@ -3,16 +3,20 @@
 }
 
 .alignfull {
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    margin-left: -50vw;
+    margin-right: -50vw;
     max-width: 100vw;
     width: 100vw;
+    left: 50%;
+    right: 50%;
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
     position: relative;
 
     &[class*='bg-']:not(.bg-white) {
-        padding: 5rem 5%;
+        padding: 5rem @content-container-side-padding;
     }
 }
 
@@ -26,6 +30,19 @@
         .alignfull {
             width: 100%;
             max-width: @site-max-width;
+        }
+
+        .alignwide {
+            width: 100%;
+            max-width: @site-medium-width;
+        }
+    }
+
+    &.alignfull,
+    &.alignwide {
+
+        .wp-block-group__inner-container {
+            max-width: unset;
         }
     }
 }

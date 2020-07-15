@@ -29,6 +29,8 @@
 
                             <a href="<?php the_sub_field( 'social_link', 'options' ); ?>">
 
+                                <span class="sr-only"><?php the_sub_field( 'text_label', 'options' ); ?></span>
+
                                 <?php the_sub_field( 'social_icon', 'options' ); ?>
 
                             </a>

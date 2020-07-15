@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html class="mod-no-js" <?php language_attributes(); ?>>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <head>
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     * Built with love by...

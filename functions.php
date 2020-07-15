@@ -79,7 +79,14 @@ add_action( 'edit_form_after_title', 'fix_no_editor_on_posts_page', 0 );
 
 // Enable Options Tab
 if( function_exists('acf_add_options_page') ) {
-    acf_add_options_page();
+    $parent = acf_add_options_page(array(
+        'page_title' => 'Global Fields',
+        'menu_title' => 'ACF Global Fields',
+        'menu_slug'  => 'rb-settings',
+        'capability' => 'manage_options',
+        'icon_url'   => 'dashicons-admin-settings',
+        'redirect'   => false
+    ));
 }
 
 // Set up Style References
@@ -148,6 +155,29 @@ function editor_color_setup() {
 }
 
 add_action( 'after_setup_theme', 'editor_color_setup' );
+
+// -- Editor Font Sizes
+add_theme_support( 'editor-font-sizes', array(
+  array(
+    'name'      => __( 'Small', 'goshawk' ),
+    'shortName' => __( 'S', 'goshawk' ),
+    'size'      => 16,
+    'slug'      => 'small'
+  ),
+  array(
+    'name'      => __( 'Medium', 'goshawk' ),
+    'shortName' => __( 'M', 'goshawk' ),
+    'size'      => 24,
+    'slug'      => 'medium'
+  ),
+  array(
+    'name'      => __( 'Large', 'goshawk' ),
+    'shortName' => __( 'L', 'goshawk' ),
+    'size'      => 36,
+    'slug'      => 'large'
+  ),
+) );
+
 
 /**
  * Implement the Custom Header feature.
