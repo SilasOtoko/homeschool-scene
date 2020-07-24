@@ -1,11 +1,10 @@
 .global-footer {
-    background-color: @site-color-black;
-    color: @site-color-white;
+    background-color: @site-color-white;
     padding: 1.5rem @content-container-side-padding;
     text-align: center;
 
     a {
-        color: @site-color-white;
+        color: @site-color-purple;
         text-decoration: none;
     }
 
@@ -27,9 +26,32 @@
         .social {
             margin-left: auto;
             margin-top: 0;
+            display: flex;
+            display: -webkit-flex;
             
             a {
                 margin-right: 0.5rem;
+                display: flex;
+                display: -webkit-flex;
+                align-items: center;
+                -webkit-align-items: center;
+                justify-content: center;
+                -webkit-justify-content: center;
+                background-color: fade(@site-color-black, 70%);
+                border-radius: 100%;
+                padding: 0.5rem;
+                width: 35px;
+                height: 35px;
+                color: @site-color-white;
+                text-decoration: none;
+                transition: background-color 250ms, transform 250ms;
+
+                &:hover,
+                &:focus {
+                    background-color: @site-color-purple;
+                    transform: scale(1.1);
+                    outline: 0;
+                }
             }
         }
     }

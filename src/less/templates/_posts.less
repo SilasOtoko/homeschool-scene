@@ -49,7 +49,7 @@
     }
 
     article + article {
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid @site-color-gray-light;
     }
 }
 
@@ -80,14 +80,14 @@
             list-style: none;
             text-align: center;
             min-width: 200px;
-            border: 1px solid @site-color-black-lighter;
+            border: 1px solid @site-color-gray-dark;
             text-decoration: none;
-            color: @site-color-black-lighter;
+            color: @site-color-gray-dark;
             &:hover,
             &:focus {
-                background-color: @site-color-blue;
+                background-color: @site-color-teal;
                 color: @site-color-white;
-                border: 1px solid @site-color-blue;
+                border: 1px solid @site-color-teal;
             }
         }
     }
@@ -125,11 +125,11 @@
         text-align: center;
         font-weight: 600;
         text-decoration: none;
-        color: #555e61;
+        color: @site-color-gray-medium;
 
         &.current {
-            background:   #dddfdf;
-            border-color: #dddfdf;
+            background:   @site-color-gray-light;
+            border-color: @site-color-gray-light;
         }
 
         &.dots {
@@ -144,8 +144,8 @@
         
         &:focus,
         &:hover {
-            border-color:     @site-color-blue;
-            background-color: @site-color-blue;
+            border-color:     @site-color-teal;
+            background-color: @site-color-teal;
             color: #FFF;
         }
     }

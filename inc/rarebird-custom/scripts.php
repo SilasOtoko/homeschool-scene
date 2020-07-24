@@ -37,6 +37,15 @@ function goshawk_include_custom_jquery() {
 }
 add_action('wp_enqueue_scripts', 'goshawk_include_custom_jquery');
 
+function hs_add_scripts() {
+    wp_enqueue_script(
+        'hs-gutenberg-js',
+        get_stylesheet_directory_uri() . '/src/js/hs-gutenberg.js'
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'hs_add_scripts' );
+
+
 function dashItAll($string) {
   //Lower case everything
   $string = strtolower($string);

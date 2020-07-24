@@ -1,16 +1,12 @@
 /*!
-Theme Name: Goshawk Theme
-Description: Rare Bird Wordpress site starter theme
-Author: Rare Bird Inc
-Author URI: https://rarebirdinc.com/
-Version: 1.2.1
+Theme Name: Homeschool Scene
+Description: Custom theme for Homeschool Scene
+Author: Josiah Schaefer
+Author URI: https://josiahschaefer.com/
+Version: 1.0.0
 */
 
-// Site / App styles
-// ---------------------------------------
-
-// Perch global variables customization & overrides
-@import "perch/_perch-bundle";
+@import "_normalize";
 
 // // Site Styles
 @import "_site-global-variables";
@@ -28,9 +24,11 @@ Version: 1.2.1
 @import "gutenberg/_gutenberg-elements";
 @import "gutenberg/_gutenberg-utilities";
 @import "gutenberg/_gutenberg-layout";
+@import "gutenberg/_gutenberg-variations";
 
 // ACF Blocks
 @import "acf/_hero";
 
 // Templates
 @import "templates/_posts";
+@import "templates/_home";

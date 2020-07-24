@@ -1,10 +1,10 @@
 <?php
 //
-// goshawk Functions
+// homeschoolscene Functions
 // --------------------------------------------------
 
 
-// Siloed goshawk function groups
+// Siloed homeschoolscene function groups
 // ---------------------------------------
 require_once("inc/rarebird-custom/helpers.php");
 // require_once("inc/rarebird-custom/navigation.php");
@@ -17,11 +17,11 @@ require_once("inc/rarebird-custom/content.php");
 require_once("inc/rarebird-custom/scripts.php");
 require_once("inc/rarebird-custom/media.php");
 
-// goshawk theme setup
+// homeschoolscene theme setup
 // ---------------------------------------
-add_action('after_setup_theme', 'goshawk_setup');
+add_action('after_setup_theme', 'homeschoolscene_setup');
 
-function goshawk_setup() {
+function homeschoolscene_setup() {
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'post-thumbnails' );
     add_theme_support( 'align-wide' );
@@ -30,11 +30,11 @@ function goshawk_setup() {
     add_editor_style( 'editor-style.css' );
 
     register_nav_menus(
-        array( 'main-menu' => __( 'Main Menu', 'goshawk' ) )
+        array( 'main-menu' => __( 'Main Menu', 'homeschoolscene' ) )
     );
 }
 
-function goshawk_custom_logo_setup() {
+function homeschoolscene_custom_logo_setup() {
         $defaults = array(
             'height'      => 100,
             'width'       => 400,
@@ -45,7 +45,7 @@ function goshawk_custom_logo_setup() {
     add_theme_support( 'custom-logo', $defaults );
 
 }
-add_action( 'after_setup_theme', 'goshawk_custom_logo_setup' );
+add_action( 'after_setup_theme', 'homeschoolscene_custom_logo_setup' );
 
  // To set post count format in sidebar
 function categories_postcount_filter ($variable) {
@@ -90,34 +90,34 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 // Set up Style References
-function goshawk_theme_styles(){
+function homeschoolscene_theme_styles(){
 
-    wp_enqueue_style( 'goshawk-style', get_stylesheet_uri() );
-    wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css?family=Lato:400,400i,700|Arvo:400,400i,700' );
+    wp_enqueue_style( 'homeschoolscene-style', get_stylesheet_uri() );
+    wp_enqueue_style( 'fonts', 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Satisfy&display=swap' );
 
 }
-add_action( 'wp_enqueue_scripts', 'goshawk_theme_styles' );
+add_action( 'wp_enqueue_scripts', 'homeschoolscene_theme_styles' );
 
 $editorColorPalette = array(
     array(
-            'name' => __( 'Dark Blue', 'themeLangDomain' ),
-            'slug' => 'blue-dark',
-            'color' => '#2d4459',
+            'name' => __( 'Teal Dark', 'themeLangDomain' ),
+            'slug' => 'teal-dark',
+            'color' => '#346B76',
     ),
     array(
-            'name' => __( 'Blue', 'themeLangDomain' ),
-            'slug' => 'blue',
-            'color' => '#486582',
+            'name' => __( 'Teal', 'themeLangDomain' ),
+            'slug' => 'teal',
+            'color' => '#5D929D',
     ),
     array(
-            'name' => __( 'Light Blue', 'themeLangDomain' ),
-            'slug' => 'blue-light',
-            'color' => '#5090cd',
+            'name' => __( 'Teal Light', 'themeLangDomain' ),
+            'slug' => 'teal-light',
+            'color' => '#B1CDD3',
     ),
     array(
             'name' => __( 'Dark Gray', 'themeLangDomain' ),
             'slug' => 'gray-dark',
-            'color' => '#727b85',
+            'color' => '#323E40',
     ),
     array(
             'name' => __( 'Gray', 'themeLangDomain' ),
@@ -135,14 +135,24 @@ $editorColorPalette = array(
             'color' => '#26282b',
     ),
     array(
-            'name' => __( 'Lighter Black', 'themeLangDomain' ),
-            'slug' => 'lighter-black',
-            'color' => '#464b52',
-    ),
-    array(
             'name' => __( 'White', 'themeLangDomain' ),
             'slug' => 'white',
             'color' => '#ffffff',
+    ),
+    array(
+            'name' => __( 'Purple', 'themeLangDomain' ),
+            'slug' => 'purple',
+            'color' => '#6E5D9D',
+    ),
+    array(
+            'name' => __( 'Purple Light', 'themeLangDomain' ),
+            'slug' => 'purple-light',
+            'color' => '#9B8DC2',
+    ),
+    array(
+            'name' => __( 'Salmon', 'themeLangDomain' ),
+            'slug' => 'salmon',
+            'color' => '#AD6F72',
     ),
 );
 
@@ -159,20 +169,20 @@ add_action( 'after_setup_theme', 'editor_color_setup' );
 // -- Editor Font Sizes
 add_theme_support( 'editor-font-sizes', array(
   array(
-    'name'      => __( 'Small', 'goshawk' ),
-    'shortName' => __( 'S', 'goshawk' ),
+    'name'      => __( 'Small', 'homeschoolscene' ),
+    'shortName' => __( 'S', 'homeschoolscene' ),
     'size'      => 16,
     'slug'      => 'small'
   ),
   array(
-    'name'      => __( 'Medium', 'goshawk' ),
-    'shortName' => __( 'M', 'goshawk' ),
+    'name'      => __( 'Medium', 'homeschoolscene' ),
+    'shortName' => __( 'M', 'homeschoolscene' ),
     'size'      => 24,
     'slug'      => 'medium'
   ),
   array(
-    'name'      => __( 'Large', 'goshawk' ),
-    'shortName' => __( 'L', 'goshawk' ),
+    'name'      => __( 'Large', 'homeschoolscene' ),
+    'shortName' => __( 'L', 'homeschoolscene' ),
     'size'      => 36,
     'slug'      => 'large'
   ),
@@ -211,3 +221,18 @@ require get_template_directory() . '/inc/customizer.php';
 //     }
 //     return $result;
 // });
+
+function homeschoolscene_block_categories( $categories, $post ) {
+
+    return array_merge(
+        $categories,
+        array(
+            array(
+                'slug' => 'homeschoolscene-blocks',
+                'title' => __( 'Homeschool Scene Blocks', 'homeschoolscene' ),
+            ),
+        )
+    );
+}
+add_filter( 'block_categories', 'homeschoolscene_block_categories', 10, 2 );
+

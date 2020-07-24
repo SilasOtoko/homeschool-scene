@@ -3,8 +3,6 @@
     <button tabindex="0" onclick="openNav()" class="toggle-sidebar">
         <span class="hamburger">
 
-            <span class="hamburger__label">Menu</span>
-
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                  viewBox="0 0 512 512" xml:space="preserve" style="max-width: 25px;">
                 <g>

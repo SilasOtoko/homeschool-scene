@@ -10,21 +10,21 @@
 
         a {
             border-radius: 5px;
-            padding: 10px;
+            padding: 0.5rem 1rem;
             transition: background-color 150ms;
-            font-family: @font-family-serif;
+            font-family: @font-family-sans;
         }
     }
 
     li:hover a,
     li:focus a {
         background-color: @site-color-gray-light;
-        color: @site-color-black;
+        color: @site-color-purple;
     }
 
     li a:focus-within { // Declared separately so no issues in IE
         background-color: @site-color-gray-light;
-        color: @site-color-black;
+        color: @site-color-purple;
     }
 
     .menu-item-has-children {
@@ -46,6 +46,21 @@
         a {
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
+        }
+    }
+
+    .current-menu-item {
+        position: relative;
+        z-index: 2;
+
+        &::after {
+            content: url('src/images/brush-underline-purple.svg');
+            position: absolute;
+            bottom: -0.25rem;
+            width: 100px;
+            left: 0;
+            height: 20px;
+            z-index: -1;
         }
     }
 
@@ -98,9 +113,10 @@
     }
 
     a {
-        padding: 10px;
-        color: @site-color-white;
+        padding: 0.5rem 1rem;
+        color: @site-color-gray-dark;
         text-decoration: none;
+        font-weight: 500;
     }
 }
 

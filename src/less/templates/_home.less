@@ -1,0 +1,83 @@
+.home-hero-wrapper {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+
+    .main-menu a {
+        color: @site-color-white;
+    }
+
+    .hamburger svg {
+        fill: @site-color-white;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: .4;
+        background: rgb(50,62,64);
+        background: -webkit-linear-gradient(180deg, rgba(50,62,64,1) 0%, rgba(96,216,214,0.25) 100%);
+        background: -o-linear-gradient(180deg, rgba(50,62,64,1) 0%, rgba(96,216,214,0.25) 100%);
+        background: linear-gradient(180deg, rgba(50,62,64,1) 0%, rgba(96,216,214,0.25) 100%);
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.home-hero {
+    color: @site-color-white;
+    padding: 2.5rem @content-container-side-padding;
+    z-index: 1;
+    display: flex;
+    display: -webkit-flex;
+    height: 600px;
+    height: 70vh;
+    min-height: 400px;
+
+    &__content-wrapper {
+        max-width: @site-medium-width;
+    }
+
+    h1 {
+        display: inline-block;
+        color: @site-color-white;
+        text-align: center;
+        transform: rotate(-10deg);
+        line-height: 0.875;
+    }
+
+    &__social {
+        margin-top: auto;
+        margin-left: auto;
+
+        a {
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            background-color: fade(@site-color-salmon, 70%);
+            border-radius: 100%;
+            padding: 0.5rem;
+            width: 35px;
+            height: 35px;
+            color: @site-color-white;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: background-color 250ms, transform 250ms;
+
+            &:hover,
+            &:focus {
+                background-color: @site-color-salmon;
+                transform: scale(1.1);
+                outline: 0;
+            }
+        }
+    }
+}

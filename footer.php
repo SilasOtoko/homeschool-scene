@@ -15,7 +15,6 @@
                 }; ?>
 
                 <span class="legal">&copy; <?php echo $date; ?> <?php bloginfo( 'name' ); ?></span>
-                <span class="credits">by <a href="http:/rarebirdinc.com">Rare Bird Inc</a></span>
 
             </section>
 

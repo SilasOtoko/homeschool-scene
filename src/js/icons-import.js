@@ -31,7 +31,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons/faLinkedin';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons/faLinkedinIn';
-// import { faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 
 // Demo: Light, Solid, and Regular versions of the same icon _________
 // import { faEnvelope as falEnvelope } from '@fortawesome/pro-light-svg-icons';
@@ -67,7 +67,7 @@ library.add(
 	faInstagram,
 	faLinkedin,
 	faLinkedinIn,
-	// faYoutube,
+	faYoutube,
 	// falEnvelope,
 	// fasEnvelope,
 	// farEnvelope,

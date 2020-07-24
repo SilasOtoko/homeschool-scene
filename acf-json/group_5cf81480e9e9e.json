@@ -158,7 +158,7 @@
                         "button--primary": "Primary",
                         "button--dark": "Dark"
                     },
-                    "default_value": [],
+                    "default_value": false,
                     "allow_null": 0,
                     "multiple": 0,
                     "ui": 0,
@@ -175,6 +175,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "265"
             }
         ]
     ],
@@ -186,5 +191,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594842698
+    "modified": 1595544923
 }
