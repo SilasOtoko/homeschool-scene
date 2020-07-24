@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "jquery": "^3.4.1"
   },
   "devDependencies": {
