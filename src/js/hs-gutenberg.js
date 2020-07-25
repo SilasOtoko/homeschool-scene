@@ -8,6 +8,11 @@ jQuery(document).ready(function($) {
         name: "right-aligned",
         label: "Align Content Right"
     });
+
+    wp.blocks.registerBlockStyle("core/group", {
+        name: "centered",
+        label: "Align Content Center"
+    });
      
     wp.blocks.registerBlockStyle("core/button", {
         name: "arrow-right-link",
@@ -22,5 +27,10 @@ jQuery(document).ready(function($) {
     wp.blocks.registerBlockStyle("core/image", {
         name: "round-artistic-large",
         label: "Round Artistic large"
+    });
+
+    wp.blocks.registerBlockStyle("core/heading", {
+        name: "small",
+        label: "Small"
     });
 });

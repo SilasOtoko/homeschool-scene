@@ -1,0 +1,93 @@
+.acf-block--post-cards {
+
+    .post-card {
+        margin-bottom: 1.5rem;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        border-radius: @common-border-radius;
+        overflow: hidden;
+        transition: box-shadow 250ms, transform 250ms;
+        position: relative;
+        background-color: @site-color-white;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:hover,
+        &:focus {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(-0.25rem);
+
+            a {
+                color: @site-color-purple;
+            }
+        }
+
+        &__header {
+            padding-top: 56%;
+            margin-bottom: 1rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &__body {
+            padding: 1rem;
+        }
+
+        a {
+            color: @site-color-black;
+            transition: color 250ms;
+
+            &::after {
+                content: '';
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                position: absolute;
+            }
+        }
+
+        .post-date {
+            font-size: 0.875rem;
+            color: @site-color-gray-medium;
+            font-style: italic;
+        }
+    }
+
+    @media (min-width: 680px) {
+
+        .post-cards {
+            display: flex;
+            display: -webkit-flex;
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+        }
+
+        .post-card {
+            margin-right: 1.5rem;
+            margin-left: 0;
+            width: calc((100% / 2) - 1.5rem);
+
+            &:nth-of-type(even) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    @media (min-width: 980px) {
+
+        .post-card {
+
+            width: calc((100% / 3) - 1.5rem);
+
+            &:nth-of-type(even) {
+                margin-right: 1.5rem;
+            }
+
+            &:nth-of-type(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+}

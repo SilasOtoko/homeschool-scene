@@ -1,4 +1,4 @@
-.wp-block-group.is-style-left-aligned .wp-block-group__inner-container {
+.wp-block-group.is-style-left-aligned > .wp-block-group__inner-container {
 
     & > * {
         margin-left: 0;
@@ -11,8 +11,16 @@
 
     }
 
-    .wp-block-group__inner-container > * {
+    & > .wp-block-group__inner-container > * {
         margin-right: calc(50% - (50vw - 5%));
+    }
+}
+
+.wp-block-group.is-style-centered > .wp-block-group__inner-container {
+
+    & > * {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -79,28 +87,9 @@
     }
 }
 
-.wp-block-image.is-style-round-artistic-large {
-    margin: 0;
-    text-align: left;
-    position: relative;
-    z-index: 1;
+h3 {
 
-    img {
-        width: 500px;
-        height: 500px;
-        max-width: 100%;
-        border-radius: 100%;
-        object-fit: cover;
-        margin-left: 0;
-    }
-
-    &::after {
-        content: url('../dist/images/swirl.svg');
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 520px;
-        width: 520px;
-        z-index: -1;
+    &.is-style-small {
+        font-size: 1.375rem;
     }
 }

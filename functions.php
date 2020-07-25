@@ -16,6 +16,7 @@ require_once("inc/rarebird-custom/widgets.php");
 require_once("inc/rarebird-custom/content.php");
 require_once("inc/rarebird-custom/scripts.php");
 require_once("inc/rarebird-custom/media.php");
+require_once("inc/acf-blocks.php");
 
 // homeschoolscene theme setup
 // ---------------------------------------
@@ -30,7 +31,10 @@ function homeschoolscene_setup() {
     add_editor_style( 'editor-style.css' );
 
     register_nav_menus(
-        array( 'main-menu' => __( 'Main Menu', 'homeschoolscene' ) )
+        array( 
+            'main-menu' => __( 'Main Menu', 'homeschoolscene' ),
+            'responsive-menu' => __( 'Responsive Menu', 'homeschoolscene' ),
+         )
     );
 }
 

@@ -3,37 +3,24 @@
 if( !function_exists( 'register_acf_block_types' ) ) { // in case child theme wants to use this
     function register_acf_block_types() {
 
-        // register a testimonial block.
         acf_register_block_type(array(
-            'name'              => 'testimonial',
-            'title'             => __('Testimonial'),
-            'description'       => __('A custom testimonial block.'),
-            'render_template'   => 'template-parts/acf-blocks/testimonial.php',
-            'category'          => 'formatting',
-            'icon'              => 'admin-comments',
-            'keywords'          => array( 'testimonial', 'quote' ),
+            'name'              => 'post-cards',
+            'title'             => __('Post Cards'),
+            'description'       => __('A grid of posts in card format'),
+            'render_template'   => 'template-parts/acf/post-cards.php',
+            'category'          => 'homeschoolscene-blocks',
+            'icon'              => 'screenoptions',
+            'keywords'          => array( 'posts', 'cards' ),
         ));
 
         acf_register_block_type(array(
-            'name'              => 'cta',
-            'title'             => __('CTA'),
-            'description'       => __('A custom CTA block.'),
-            'render_template'   => 'template-parts/acf-blocks/cta.php',
-            'category'          => 'layout',
-            'icon'              => 'admin-comments',
-            'keywords'          => array( 'cta', 'callout' ),
-            'align'             => array( 'full', 'wide' ),
-        ));
-
-        acf_register_block_type(array(
-            'name'              => 'icon-text-columns',
-            'title'             => __('Icon Text Columns'),
-            'description'       => __('Three icon-text columns'),
-            'render_template'   => 'template-parts/acf-blocks/icon-text-columns.php',
-            'category'          => 'layout',
-            'icon'              => 'admin-comments',
-            'keywords'          => array( 'icons', 'columns' ),
-            'align'             => array( 'full', 'wide' ),
+            'name'              => 'product-cards',
+            'title'             => __('Product Cards'),
+            'description'       => __('A grid of products in card format'),
+            'render_template'   => 'template-parts/acf/product-cards.php',
+            'category'          => 'homeschoolscene-blocks',
+            'icon'              => 'screenoptions',
+            'keywords'          => array( 'products', 'cards' ),
         ));
     }
 

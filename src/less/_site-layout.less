@@ -87,7 +87,7 @@ html {
 }
 
 .entry-header {
-    max-width: @text-max-width;
+    max-width: @site-small-width;
     margin-left: auto;
     margin-right: auto;
 }
@@ -246,12 +246,16 @@ html {
 }
 
 .page-header {
-    max-width: @text-max-width;
+    max-width: @site-small-width;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 3rem;
     padding-left: 5%;
     padding-right: 5%;
+
+    .text-wrapper {
+        margin-left: 0;
+    }
 
     @media (min-width: 780px) {
         padding: 0;

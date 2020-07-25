@@ -17,7 +17,7 @@
 
                     <div class="text-wrapper">
 
-                        <h1 class="page-title"><?php single_post_title(); ?></h1>
+                        <h1 class="page-title page-title-artistic"><?php single_post_title(); ?></h1>
 
                         <?php 
 

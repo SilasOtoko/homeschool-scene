@@ -26,82 +26,6 @@
         background-color: @site-color-gray-light;
         color: @site-color-purple;
     }
-
-    .menu-item-has-children {
-        position: relative;
-
-        &:hover,
-        &:focus {
-            .sub-menu {
-                left: 0;
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        & > a {
-            transition: border-color 150ms, background-color 150ms;
-        }
-
-        a {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-    }
-
-    .current-menu-item {
-        position: relative;
-        z-index: 2;
-
-        &::after {
-            content: url('src/images/brush-underline-purple.svg');
-            position: absolute;
-            bottom: -0.25rem;
-            width: 100px;
-            left: 0;
-            height: 20px;
-            z-index: -1;
-        }
-    }
-
-    .sub-menu {
-        transform: scale(0);
-        transition: transform 150ms;
-        transform-origin: 20% 0;
-        position: absolute;
-        left: -9999px;
-        top: 100%;
-        z-index: 2;
-        min-width: 250px;
-        background-color: #fff;
-        padding: 0;
-        flex-wrap: wrap;
-        -webkit-flex-wrap: wrap;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        border-top-right-radius: 5px;
-        overflow: hidden;
-        background-color: @site-color-gray-light;
-
-        li {
-            padding: 0;
-            margin: 0;
-            width: 100%;
-
-            a {
-                margin: 0;
-                display: inline-block;
-                width: 100%;
-                cursor: pointer;
-                border-radius: 0;
-                color: @site-color-black;
-                
-                &:hover {
-                    margin: 0;
-                }
-            }
-        }
-    }
 }
 
 .main-menu {
@@ -118,18 +42,34 @@
         text-decoration: none;
         font-weight: 500;
     }
+
+    & > li.current-menu-item,
+    & > li.current-menu-parent {
+        position: relative;
+        z-index: 2;
+
+        &::after {
+            content: url('src/images/brush-underline-teal.svg');
+            position: absolute;
+            bottom: -0.125rem;
+            width: 100%;
+            left: 0;
+            height: 20px;
+            z-index: -1;
+        }
+    }
 }
 
-.edge.menu-item-has-children {
+.home {
 
-    &:hover {
+    .main-menu {
 
-        .sub-menu {
-            transform-origin: 80% 0;
-            left: auto;
-            right: 0;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 0;
+        & > li.current-menu-item,
+        & > li.current-menu-parent {
+
+            &::after {
+                content: url('src/images/brush-underline-purple.svg');
+            }
         }
     }
 }
