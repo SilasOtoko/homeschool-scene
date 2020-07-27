@@ -36,6 +36,14 @@ if( !empty($block['align']) ) {
                 <div class="card">
 
                     <?php
+                        // override $post
+                        $post_object = get_sub_field( 'post_object');
+                        $post = $post_object;
+                        setup_postdata( $post );
+                    ?>
+
+
+                    <?php
 
                         $image = get_sub_field( 'card_image' );
                         $size = 'medium';
@@ -54,7 +62,7 @@ if( !empty($block['align']) ) {
                     <div class="card__body">
 
                         <?php
-                            $link = get_sub_field( 'link' );
+                            $link = get_sub_field( 'card_link' );
                             $linkTarget = $link['target'];
                           ?>
 
