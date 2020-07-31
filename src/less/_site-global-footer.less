@@ -14,9 +14,34 @@
 
     .social {
         margin-top: 1rem;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
 
         a {
             margin-right: 0.5rem;
+            display: flex;
+            display: -webkit-flex;
+            align-items: center;
+            -webkit-align-items: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            background-color: @site-color-salmon;
+            border-radius: 100%;
+            padding: 0.5rem;
+            width: 35px;
+            height: 35px;
+            color: @site-color-white;
+            text-decoration: none;
+            transition: background-color 250ms, transform 250ms;
+
+            &:hover,
+            &:focus {
+                background-color: @site-color-purple;
+                transform: scale(1.1);
+                outline: 0;
+            }
         }
     }
 
@@ -29,34 +54,7 @@
 
         .social {
             margin-left: auto;
-            margin-top: 0;
-            display: flex;
-            display: -webkit-flex;
-            
-            a {
-                margin-right: 0.5rem;
-                display: flex;
-                display: -webkit-flex;
-                align-items: center;
-                -webkit-align-items: center;
-                justify-content: center;
-                -webkit-justify-content: center;
-                background-color: @site-color-salmon;
-                border-radius: 100%;
-                padding: 0.5rem;
-                width: 35px;
-                height: 35px;
-                color: @site-color-white;
-                text-decoration: none;
-                transition: background-color 250ms, transform 250ms;
-
-                &:hover,
-                &:focus {
-                    background-color: @site-color-purple;
-                    transform: scale(1.1);
-                    outline: 0;
-                }
-            }
+            margin-right: auto;
         }
     }
 }
